@@ -1,0 +1,2297 @@
+{
+  "eng.3": {
+    "events": [
+      {
+        "id": "401880772",
+        "uid": "s:600~l:3915~e:401880772",
+        "date": "2026-10-24T11:30Z",
+        "name": "Wigan Athletic at Huddersfield Town",
+        "shortName": "WGA @ HUD",
+        "season": {
+          "year": 2026,
+          "type": 14336,
+          "slug": "regular-season"
+        },
+        "competitions": [
+          {
+            "id": "401880772",
+            "uid": "s:600~l:3915~e:401880772~c:401880772",
+            "date": "2026-10-24T11:30Z",
+            "startDate": "2026-10-24T11:30Z",
+            "attendance": 0,
+            "timeValid": true,
+            "recent": false,
+            "status": {
+              "clock": 0.0,
+              "displayClock": "0'",
+              "type": {
+                "id": "1",
+                "name": "STATUS_SCHEDULED",
+                "state": "pre",
+                "completed": false,
+                "description": "Scheduled",
+                "detail": "Sat, October 24th at 7:30 AM EDT",
+                "shortDetail": "Scheduled"
+              }
+            },
+            "venue": {
+              "id": "10866",
+              "fullName": "John Smith's Stadium",
+              "address": {
+                "city": "Huddersfield",
+                "country": "England"
+              }
+            },
+            "format": {
+              "regulation": {
+                "periods": 2
+              }
+            },
+            "altGameNote": "EFL League One",
+            "notes": [],
+            "geoBroadcasts": [],
+            "broadcasts": [],
+            "broadcast": "",
+            "competitors": [
+              {
+                "id": "335",
+                "uid": "s:600~t:335",
+                "type": "team",
+                "order": 0,
+                "homeAway": "home",
+                "winner": false,
+                "form": "DWDWW",
+                "score": "0",
+                "records": [
+                  {
+                    "name": "All Splits",
+                    "type": "total",
+                    "summary": "6-4-1",
+                    "abbreviation": "Total"
+                  }
+                ],
+                "team": {
+                  "id": "335",
+                  "uid": "s:600~t:335",
+                  "abbreviation": "HUD",
+                  "displayName": "Huddersfield Town",
+                  "shortDisplayName": "Huddersfield",
+                  "name": "Huddersfield Town",
+                  "location": "Huddersfield Town",
+                  "color": "0074d0",
+                  "alternateColor": "f4e874",
+                  "isActive": true,
+                  "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/335.png",
+                  "links": [
+                    {
+                      "rel": [
+                        "clubhouse",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/club/_/id/335/huddersfield-town",
+                      "text": "Clubhouse",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "stats",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/team/stats/_/id/335/huddersfield-town",
+                      "text": "Stats",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "stats",
+                        "sportscenter",
+                        "app",
+                        "team"
+                      ],
+                      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:335&section=stats",
+                      "text": "Stats",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "schedule",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/team/fixtures/_/id/335/huddersfield-town",
+                      "text": "Fixtures",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "schedule",
+                        "sportscenter",
+                        "app",
+                        "team"
+                      ],
+                      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:335&section=scores",
+                      "text": "Fixtures",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "squad",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/team/squad/_/id/335/huddersfield-town",
+                      "text": "Squad",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "squad",
+                        "sportscenter",
+                        "app",
+                        "team"
+                      ],
+                      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:335&section=squad",
+                      "text": "Squad",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    }
+                  ],
+                  "venue": {
+                    "id": "10866"
+                  }
+                },
+                "statistics": [],
+                "leaders": [
+                  {
+                    "name": "goals",
+                    "displayName": "Goals",
+                    "shortDisplayName": "Goals",
+                    "abbreviation": "G",
+                    "leaders": [
+                      {
+                        "displayValue": "8",
+                        "value": 8.0,
+                        "athlete": {
+                          "id": "207774",
+                          "displayName": "Joseph Taylor",
+                          "shortName": "J. Taylor",
+                          "fullName": "Joseph Taylor",
+                          "jersey": "9",
+                          "active": true,
+                          "team": {
+                            "id": "335"
+                          },
+                          "links": [
+                            {
+                              "rel": [
+                                "playercard",
+                                "desktop",
+                                "athlete"
+                              ],
+                              "href": "https://www.espn.com/soccer/player/_/id/207774/joseph-taylor",
+                              "isHidden": false
+                            }
+                          ],
+                          "position": {
+                            "abbreviation": "F"
+                          }
+                        },
+                        "team": {
+                          "id": "335"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "goalsLeaders",
+                    "displayName": "Goals",
+                    "shortDisplayName": "Goals",
+                    "abbreviation": "G",
+                    "leaders": [
+                      {
+                        "displayValue": "8",
+                        "value": 8.0,
+                        "athlete": {
+                          "id": "207774",
+                          "displayName": "Joseph Taylor",
+                          "shortName": "J. Taylor",
+                          "fullName": "Joseph Taylor",
+                          "jersey": "9",
+                          "active": true,
+                          "team": {
+                            "id": "335"
+                          },
+                          "links": [
+                            {
+                              "rel": [
+                                "playercard",
+                                "desktop",
+                                "athlete"
+                              ],
+                              "href": "https://www.espn.com/soccer/player/_/id/207774/joseph-taylor",
+                              "isHidden": false
+                            }
+                          ],
+                          "position": {
+                            "abbreviation": "F"
+                          }
+                        },
+                        "team": {
+                          "id": "335"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "350",
+                "uid": "s:600~t:350",
+                "type": "team",
+                "order": 1,
+                "homeAway": "away",
+                "winner": false,
+                "form": "DWLWL",
+                "score": "0",
+                "records": [
+                  {
+                    "name": "All Splits",
+                    "type": "total",
+                    "summary": "2-1-7",
+                    "abbreviation": "Total"
+                  }
+                ],
+                "team": {
+                  "id": "350",
+                  "uid": "s:600~t:350",
+                  "abbreviation": "WGA",
+                  "displayName": "Wigan Athletic",
+                  "shortDisplayName": "Wigan",
+                  "name": "Wigan Athletic",
+                  "location": "Wigan Athletic",
+                  "color": "0000fa",
+                  "alternateColor": "1a1a1a",
+                  "isActive": true,
+                  "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/350.png",
+                  "links": [
+                    {
+                      "rel": [
+                        "clubhouse",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/club/_/id/350/wigan-athletic",
+                      "text": "Clubhouse",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "stats",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/team/stats/_/id/350/wigan-athletic",
+                      "text": "Stats",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "stats",
+                        "sportscenter",
+                        "app",
+                        "team"
+                      ],
+                      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:350&section=stats",
+                      "text": "Stats",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "schedule",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/team/fixtures/_/id/350/wigan-athletic",
+                      "text": "Fixtures",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "schedule",
+                        "sportscenter",
+                        "app",
+                        "team"
+                      ],
+                      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:350&section=scores",
+                      "text": "Fixtures",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "squad",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/team/squad/_/id/350/wigan-athletic",
+                      "text": "Squad",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "squad",
+                        "sportscenter",
+                        "app",
+                        "team"
+                      ],
+                      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:350&section=squad",
+                      "text": "Squad",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    }
+                  ],
+                  "venue": {
+                    "id": "10867"
+                  }
+                },
+                "statistics": [],
+                "leaders": [
+                  {
+                    "name": "goals",
+                    "displayName": "Goals",
+                    "shortDisplayName": "Goals",
+                    "abbreviation": "G",
+                    "leaders": [
+                      {
+                        "displayValue": "2",
+                        "value": 2.0,
+                        "athlete": {
+                          "id": "267880",
+                          "displayName": "Jensen Weir",
+                          "shortName": "J. Weir",
+                          "fullName": "Jensen Weir",
+                          "jersey": "6",
+                          "active": true,
+                          "team": {
+                            "id": "350"
+                          },
+                          "links": [
+                            {
+                              "rel": [
+                                "playercard",
+                                "desktop",
+                                "athlete"
+                              ],
+                              "href": "https://www.espn.com/soccer/player/_/id/267880/jensen-weir",
+                              "isHidden": false
+                            }
+                          ],
+                          "position": {
+                            "abbreviation": "M"
+                          }
+                        },
+                        "team": {
+                          "id": "350"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "goalsLeaders",
+                    "displayName": "Goals",
+                    "shortDisplayName": "Goals",
+                    "abbreviation": "G",
+                    "leaders": [
+                      {
+                        "displayValue": "2",
+                        "value": 2.0,
+                        "athlete": {
+                          "id": "267880",
+                          "displayName": "Jensen Weir",
+                          "shortName": "J. Weir",
+                          "fullName": "Jensen Weir",
+                          "jersey": "6",
+                          "active": true,
+                          "team": {
+                            "id": "350"
+                          },
+                          "links": [
+                            {
+                              "rel": [
+                                "playercard",
+                                "desktop",
+                                "athlete"
+                              ],
+                              "href": "https://www.espn.com/soccer/player/_/id/267880/jensen-weir",
+                              "isHidden": false
+                            }
+                          ],
+                          "position": {
+                            "abbreviation": "M"
+                          }
+                        },
+                        "team": {
+                          "id": "350"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "details": [],
+            "odds": [
+              {
+                "overUnder": 2.5,
+                "link": {
+                  "language": "en-US",
+                  "rel": [
+                    "game",
+                    "desktop",
+                    "bets"
+                  ],
+                  "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34873284",
+                  "text": "Game",
+                  "shortText": "Game",
+                  "isExternal": true,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                "provider": {
+                  "id": "100",
+                  "name": "DraftKings",
+                  "priority": 1,
+                  "displayName": "DraftKings",
+                  "logos": [
+                    {
+                      "href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg",
+                      "rel": [
+                        "light"
+                      ]
+                    },
+                    {
+                      "href": "https://a.espncdn.com/i/betting/Draftkings_Dark.svg",
+                      "rel": [
+                        "dark"
+                      ]
+                    }
+                  ]
+                },
+                "drawOdds": {
+                  "moneyLine": 450,
+                  "link": {
+                    "language": "en-US",
+                    "rel": [
+                      "draw",
+                      "desktop",
+                      "bets",
+                      "draftkings"
+                    ],
+                    "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34873284%3Foutcomes%3D0ML86856566_2",
+                    "text": "Draw Bet",
+                    "shortText": "Draw Bet",
+                    "isExternal": true,
+                    "isPremium": false,
+                    "isHidden": false
+                  }
+                },
+                "total": {
+                  "displayName": "Total",
+                  "shortDisplayName": "Total",
+                  "over": {
+                    "open": {
+                      "line": "o2.5",
+                      "odds": "-190"
+                    },
+                    "close": {
+                      "line": "o2.5",
+                      "odds": "-175",
+                      "link": {
+                        "rel": [
+                          "over",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34873284%3Foutcomes%3D0OU86856727O250_1",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.3",
+                            "sport": "soccer",
+                            "gameId": 401880772,
+                            "betSide": "over",
+                            "betType": "straight",
+                            "betDetails": "Over:2.5"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "under": {
+                    "open": {
+                      "line": "u2.5",
+                      "odds": "+130"
+                    },
+                    "close": {
+                      "line": "u2.5",
+                      "odds": "+135",
+                      "link": {
+                        "rel": [
+                          "under",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34873284%3Foutcomes%3D0OU86856727U250_3",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.3",
+                            "sport": "soccer",
+                            "gameId": 401880772,
+                            "betSide": "under",
+                            "betType": "straight",
+                            "betDetails": "Under:2.5"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "pointSpread": {
+                  "displayName": "Spread",
+                  "shortDisplayName": "Spread",
+                  "home": {
+                    "open": {
+                      "line": "-1.5",
+                      "odds": "-105"
+                    },
+                    "close": {
+                      "line": "-1.5",
+                      "odds": "-110",
+                      "link": {
+                        "rel": [
+                          "homeSpread",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34873284%3Foutcomes%3D0HC86856732N150_1",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.3",
+                            "sport": "soccer",
+                            "gameId": 401880772,
+                            "betSide": "home",
+                            "betType": "straight",
+                            "betDetails": "Spread:HUD-1.5"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "away": {
+                    "open": {
+                      "line": "+1.5",
+                      "odds": "-145"
+                    },
+                    "close": {
+                      "line": "+1.5",
+                      "odds": "-130",
+                      "link": {
+                        "rel": [
+                          "awaySpread",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34873284%3Foutcomes%3D0HC86856732P150_3",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.3",
+                            "sport": "soccer",
+                            "gameId": 401880772,
+                            "betSide": "away",
+                            "betType": "straight",
+                            "betDetails": "Spread:WGA+1.5"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "moneyline": {
+                  "displayName": "Moneyline",
+                  "shortDisplayName": "ML",
+                  "home": {
+                    "open": {
+                      "odds": "-285"
+                    },
+                    "close": {
+                      "odds": "-300",
+                      "link": {
+                        "rel": [
+                          "home",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34873284%3Foutcomes%3D0ML86856566_1",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.3",
+                            "sport": "soccer",
+                            "gameId": 401880772,
+                            "betSide": "home",
+                            "betType": "straight"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "away": {
+                    "open": {
+                      "odds": "+600"
+                    },
+                    "close": {
+                      "odds": "+700",
+                      "link": {
+                        "rel": [
+                          "away",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34873284%3Foutcomes%3D0ML86856566_3",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.3",
+                            "sport": "soccer",
+                            "gameId": 401880772,
+                            "betSide": "away",
+                            "betType": "straight"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "draw": {
+                    "open": {
+                      "odds": "+400"
+                    },
+                    "close": {
+                      "odds": "+450",
+                      "link": {
+                        "rel": [
+                          "draw",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34873284%3Foutcomes%3D0ML86856566_2",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.3",
+                            "sport": "soccer",
+                            "gameId": 401880772,
+                            "betSide": "draw",
+                            "betType": "straight"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "details": "HUD -300"
+              }
+            ],
+            "wasSuspended": false,
+            "playByPlayAvailable": true,
+            "playByPlayAthletes": true
+          }
+        ],
+        "status": {
+          "clock": 0.0,
+          "displayClock": "0'",
+          "type": {
+            "id": "1",
+            "name": "STATUS_SCHEDULED",
+            "state": "pre",
+            "completed": false,
+            "description": "Scheduled",
+            "detail": "Sat, October 24th at 7:30 AM EDT",
+            "shortDetail": "Scheduled"
+          }
+        },
+        "venue": {
+          "displayName": "John Smith's Stadium"
+        },
+        "links": [
+          {
+            "language": "en-US",
+            "rel": [
+              "summary",
+              "desktop",
+              "event"
+            ],
+            "href": "https://www.espn.com/soccer/match/_/gameId/401880772/wigan-athletic-huddersfield-town",
+            "text": "Summary",
+            "shortText": "Summary",
+            "isExternal": false,
+            "isPremium": false,
+            "isHidden": false
+          }
+        ]
+      }
+    ]
+  },
+  "eng.4": {
+    "events": [
+      {
+        "id": "401881299",
+        "uid": "s:600~l:3916~e:401881299",
+        "date": "2026-10-24T11:30Z",
+        "name": "Swindon Town at Bristol Rovers",
+        "shortName": "SWI @ BRI",
+        "season": {
+          "year": 2026,
+          "type": 14339,
+          "slug": "regular-season"
+        },
+        "competitions": [
+          {
+            "id": "401881299",
+            "uid": "s:600~l:3916~e:401881299~c:401881299",
+            "date": "2026-10-24T11:30Z",
+            "startDate": "2026-10-24T11:30Z",
+            "attendance": 0,
+            "timeValid": true,
+            "recent": false,
+            "status": {
+              "clock": 0.0,
+              "displayClock": "0'",
+              "type": {
+                "id": "1",
+                "name": "STATUS_SCHEDULED",
+                "state": "pre",
+                "completed": false,
+                "description": "Scheduled",
+                "detail": "Sat, October 24th at 7:30 AM EDT",
+                "shortDetail": "Scheduled"
+              }
+            },
+            "venue": {
+              "id": "10815",
+              "fullName": "Memorial Stadium",
+              "address": {
+                "city": "Bristol",
+                "country": "England"
+              }
+            },
+            "format": {
+              "regulation": {
+                "periods": 2
+              }
+            },
+            "altGameNote": "EFL League Two",
+            "notes": [],
+            "geoBroadcasts": [],
+            "broadcasts": [],
+            "broadcast": "",
+            "competitors": [
+              {
+                "id": "308",
+                "uid": "s:600~t:308",
+                "type": "team",
+                "order": 0,
+                "homeAway": "home",
+                "winner": false,
+                "form": "DLLLL",
+                "score": "0",
+                "records": [
+                  {
+                    "name": "All Splits",
+                    "type": "total",
+                    "summary": "5-0-7",
+                    "abbreviation": "Total"
+                  }
+                ],
+                "team": {
+                  "id": "308",
+                  "uid": "s:600~t:308",
+                  "abbreviation": "BRI",
+                  "displayName": "Bristol Rovers",
+                  "shortDisplayName": "Bristol Rovers",
+                  "name": "Bristol Rovers",
+                  "location": "Bristol Rovers",
+                  "color": "000099",
+                  "alternateColor": "425679",
+                  "isActive": true,
+                  "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/308.png",
+                  "links": [
+                    {
+                      "rel": [
+                        "clubhouse",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/club/_/id/308/bristol-rovers",
+                      "text": "Clubhouse",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "stats",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/team/stats/_/id/308/bristol-rovers",
+                      "text": "Stats",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "stats",
+                        "sportscenter",
+                        "app",
+                        "team"
+                      ],
+                      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:308&section=stats",
+                      "text": "Stats",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "schedule",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/team/fixtures/_/id/308/bristol-rovers",
+                      "text": "Fixtures",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "schedule",
+                        "sportscenter",
+                        "app",
+                        "team"
+                      ],
+                      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:308&section=scores",
+                      "text": "Fixtures",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "squad",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/team/squad/_/id/308/bristol-rovers",
+                      "text": "Squad",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "squad",
+                        "sportscenter",
+                        "app",
+                        "team"
+                      ],
+                      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:308&section=squad",
+                      "text": "Squad",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    }
+                  ],
+                  "venue": {
+                    "id": "10815"
+                  }
+                },
+                "statistics": [],
+                "leaders": [
+                  {
+                    "name": "goals",
+                    "displayName": "Goals",
+                    "shortDisplayName": "Goals",
+                    "abbreviation": "G",
+                    "leaders": [
+                      {
+                        "displayValue": "3",
+                        "value": 3.0,
+                        "athlete": {
+                          "id": "350122",
+                          "displayName": "Fabrizio Cavegn",
+                          "shortName": "F. Cavegn",
+                          "fullName": "Fabrizio Cavegn",
+                          "jersey": "29",
+                          "active": true,
+                          "team": {
+                            "id": "308"
+                          },
+                          "links": [
+                            {
+                              "rel": [
+                                "playercard",
+                                "desktop",
+                                "athlete"
+                              ],
+                              "href": "https://www.espn.com/soccer/player/_/id/350122/fabrizio-cavegn",
+                              "isHidden": false
+                            }
+                          ],
+                          "position": {
+                            "abbreviation": "F"
+                          }
+                        },
+                        "team": {
+                          "id": "308"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "goalsLeaders",
+                    "displayName": "Goals",
+                    "shortDisplayName": "Goals",
+                    "abbreviation": "G",
+                    "leaders": [
+                      {
+                        "displayValue": "3",
+                        "value": 3.0,
+                        "athlete": {
+                          "id": "350122",
+                          "displayName": "Fabrizio Cavegn",
+                          "shortName": "F. Cavegn",
+                          "fullName": "Fabrizio Cavegn",
+                          "jersey": "29",
+                          "active": true,
+                          "team": {
+                            "id": "308"
+                          },
+                          "links": [
+                            {
+                              "rel": [
+                                "playercard",
+                                "desktop",
+                                "athlete"
+                              ],
+                              "href": "https://www.espn.com/soccer/player/_/id/350122/fabrizio-cavegn",
+                              "isHidden": false
+                            }
+                          ],
+                          "position": {
+                            "abbreviation": "F"
+                          }
+                        },
+                        "team": {
+                          "id": "308"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "341",
+                "uid": "s:600~t:341",
+                "type": "team",
+                "order": 1,
+                "homeAway": "away",
+                "winner": false,
+                "form": "DDLLD",
+                "score": "0",
+                "records": [
+                  {
+                    "name": "All Splits",
+                    "type": "total",
+                    "summary": "4-3-5",
+                    "abbreviation": "Total"
+                  }
+                ],
+                "team": {
+                  "id": "341",
+                  "uid": "s:600~t:341",
+                  "abbreviation": "SWI",
+                  "displayName": "Swindon Town",
+                  "shortDisplayName": "Swindon",
+                  "name": "Swindon Town",
+                  "location": "Swindon Town",
+                  "color": "C8142F",
+                  "alternateColor": "cdcdcd",
+                  "isActive": true,
+                  "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/341.png",
+                  "links": [
+                    {
+                      "rel": [
+                        "clubhouse",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/club/_/id/341/swindon-town",
+                      "text": "Clubhouse",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "stats",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/team/stats/_/id/341/swindon-town",
+                      "text": "Stats",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "stats",
+                        "sportscenter",
+                        "app",
+                        "team"
+                      ],
+                      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:341&section=stats",
+                      "text": "Stats",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "schedule",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/team/fixtures/_/id/341/swindon-town",
+                      "text": "Fixtures",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "schedule",
+                        "sportscenter",
+                        "app",
+                        "team"
+                      ],
+                      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:341&section=scores",
+                      "text": "Fixtures",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "squad",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/team/squad/_/id/341/swindon-town",
+                      "text": "Squad",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "squad",
+                        "sportscenter",
+                        "app",
+                        "team"
+                      ],
+                      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:341&section=squad",
+                      "text": "Squad",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    }
+                  ],
+                  "venue": {
+                    "id": "10756"
+                  }
+                },
+                "statistics": [],
+                "leaders": [
+                  {
+                    "name": "goals",
+                    "displayName": "Goals",
+                    "shortDisplayName": "Goals",
+                    "abbreviation": "G",
+                    "leaders": [
+                      {
+                        "displayValue": "8",
+                        "value": 8.0,
+                        "athlete": {
+                          "id": "258483",
+                          "displayName": "Aaron Drinan",
+                          "shortName": "A. Drinan",
+                          "fullName": "Aaron Drinan",
+                          "jersey": "23",
+                          "active": true,
+                          "team": {
+                            "id": "341"
+                          },
+                          "links": [
+                            {
+                              "rel": [
+                                "playercard",
+                                "desktop",
+                                "athlete"
+                              ],
+                              "href": "https://www.espn.com/soccer/player/_/id/258483/aaron-drinan",
+                              "isHidden": false
+                            }
+                          ],
+                          "position": {
+                            "abbreviation": "F"
+                          }
+                        },
+                        "team": {
+                          "id": "341"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "goalsLeaders",
+                    "displayName": "Goals",
+                    "shortDisplayName": "Goals",
+                    "abbreviation": "G",
+                    "leaders": [
+                      {
+                        "displayValue": "8",
+                        "value": 8.0,
+                        "athlete": {
+                          "id": "258483",
+                          "displayName": "Aaron Drinan",
+                          "shortName": "A. Drinan",
+                          "fullName": "Aaron Drinan",
+                          "jersey": "23",
+                          "active": true,
+                          "team": {
+                            "id": "341"
+                          },
+                          "links": [
+                            {
+                              "rel": [
+                                "playercard",
+                                "desktop",
+                                "athlete"
+                              ],
+                              "href": "https://www.espn.com/soccer/player/_/id/258483/aaron-drinan",
+                              "isHidden": false
+                            }
+                          ],
+                          "position": {
+                            "abbreviation": "F"
+                          }
+                        },
+                        "team": {
+                          "id": "341"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "details": [],
+            "odds": [
+              {
+                "overUnder": 2.5,
+                "link": {
+                  "language": "en-US",
+                  "rel": [
+                    "game",
+                    "desktop",
+                    "bets"
+                  ],
+                  "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34873488",
+                  "text": "Game",
+                  "shortText": "Game",
+                  "isExternal": true,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                "provider": {
+                  "id": "100",
+                  "name": "DraftKings",
+                  "priority": 1,
+                  "displayName": "DraftKings",
+                  "logos": [
+                    {
+                      "href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg",
+                      "rel": [
+                        "light"
+                      ]
+                    },
+                    {
+                      "href": "https://a.espncdn.com/i/betting/Draftkings_Dark.svg",
+                      "rel": [
+                        "dark"
+                      ]
+                    }
+                  ]
+                },
+                "drawOdds": {
+                  "moneyLine": 330,
+                  "link": {
+                    "language": "en-US",
+                    "rel": [
+                      "draw",
+                      "desktop",
+                      "bets",
+                      "draftkings"
+                    ],
+                    "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34873488%3Foutcomes%3D0ML86857107_2",
+                    "text": "Draw Bet",
+                    "shortText": "Draw Bet",
+                    "isExternal": true,
+                    "isPremium": false,
+                    "isHidden": false
+                  }
+                },
+                "total": {
+                  "displayName": "Total",
+                  "shortDisplayName": "Total",
+                  "over": {
+                    "open": {
+                      "line": "o2.5",
+                      "odds": "-170"
+                    },
+                    "close": {
+                      "line": "o2.5",
+                      "odds": "-165",
+                      "link": {
+                        "rel": [
+                          "over",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34873488%3Foutcomes%3D0OU86857405O250_1",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.4",
+                            "sport": "soccer",
+                            "gameId": 401881299,
+                            "betSide": "over",
+                            "betType": "straight",
+                            "betDetails": "Over:2.5"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "under": {
+                    "open": {
+                      "line": "u2.5",
+                      "odds": "+115"
+                    },
+                    "close": {
+                      "line": "u2.5",
+                      "odds": "+125",
+                      "link": {
+                        "rel": [
+                          "under",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34873488%3Foutcomes%3D0OU86857405U250_3",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.4",
+                            "sport": "soccer",
+                            "gameId": 401881299,
+                            "betSide": "under",
+                            "betType": "straight",
+                            "betDetails": "Under:2.5"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "pointSpread": {
+                  "displayName": "Spread",
+                  "shortDisplayName": "Spread",
+                  "home": {
+                    "open": {
+                      "line": "-0.5",
+                      "odds": "-195"
+                    },
+                    "close": {
+                      "line": "-0.5",
+                      "odds": "-185",
+                      "link": {
+                        "rel": [
+                          "homeSpread",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34873488%3Foutcomes%3D0HC86857410N50_1",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.4",
+                            "sport": "soccer",
+                            "gameId": 401881299,
+                            "betSide": "home",
+                            "betType": "straight",
+                            "betDetails": "Spread:BRI-0.5"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "away": {
+                    "open": {
+                      "line": "+0.5",
+                      "odds": "+125"
+                    },
+                    "close": {
+                      "line": "+0.5",
+                      "odds": "+130",
+                      "link": {
+                        "rel": [
+                          "awaySpread",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34873488%3Foutcomes%3D0HC86857410P50_3",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.4",
+                            "sport": "soccer",
+                            "gameId": 401881299,
+                            "betSide": "away",
+                            "betType": "straight",
+                            "betDetails": "Spread:SWI+0.5"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "moneyline": {
+                  "displayName": "Moneyline",
+                  "shortDisplayName": "ML",
+                  "home": {
+                    "open": {
+                      "odds": "-180"
+                    },
+                    "close": {
+                      "odds": "-170",
+                      "link": {
+                        "rel": [
+                          "home",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34873488%3Foutcomes%3D0ML86857107_1",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.4",
+                            "sport": "soccer",
+                            "gameId": 401881299,
+                            "betSide": "home",
+                            "betType": "straight"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "away": {
+                    "open": {
+                      "odds": "+380"
+                    },
+                    "close": {
+                      "odds": "+400",
+                      "link": {
+                        "rel": [
+                          "away",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34873488%3Foutcomes%3D0ML86857107_3",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.4",
+                            "sport": "soccer",
+                            "gameId": 401881299,
+                            "betSide": "away",
+                            "betType": "straight"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "draw": {
+                    "open": {
+                      "odds": "+330"
+                    },
+                    "close": {
+                      "odds": "+330",
+                      "link": {
+                        "rel": [
+                          "draw",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34873488%3Foutcomes%3D0ML86857107_2",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.4",
+                            "sport": "soccer",
+                            "gameId": 401881299,
+                            "betSide": "draw",
+                            "betType": "straight"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "details": "BRI -170"
+              }
+            ],
+            "wasSuspended": false,
+            "playByPlayAvailable": true,
+            "playByPlayAthletes": true
+          }
+        ],
+        "status": {
+          "clock": 0.0,
+          "displayClock": "0'",
+          "type": {
+            "id": "1",
+            "name": "STATUS_SCHEDULED",
+            "state": "pre",
+            "completed": false,
+            "description": "Scheduled",
+            "detail": "Sat, October 24th at 7:30 AM EDT",
+            "shortDetail": "Scheduled"
+          }
+        },
+        "venue": {
+          "displayName": "Memorial Stadium"
+        },
+        "links": [
+          {
+            "language": "en-US",
+            "rel": [
+              "summary",
+              "desktop",
+              "event"
+            ],
+            "href": "https://www.espn.com/soccer/match/_/gameId/401881299/swindon-town-bristol-rovers",
+            "text": "Summary",
+            "shortText": "Summary",
+            "isExternal": false,
+            "isPremium": false,
+            "isHidden": false
+          }
+        ]
+      }
+    ]
+  },
+  "eng.5": {
+    "events": [
+      {
+        "id": "401889244",
+        "uid": "s:600~l:3917~e:401889244",
+        "date": "2026-10-24T11:30Z",
+        "name": "Boston United at Eastleigh",
+        "shortName": "BOST @ ELH",
+        "season": {
+          "year": 2026,
+          "type": 14386,
+          "slug": "regular-season"
+        },
+        "competitions": [
+          {
+            "id": "401889244",
+            "uid": "s:600~l:3917~e:401889244~c:401889244",
+            "date": "2026-10-24T11:30Z",
+            "startDate": "2026-10-24T11:30Z",
+            "attendance": 0,
+            "timeValid": true,
+            "recent": false,
+            "status": {
+              "clock": 0.0,
+              "displayClock": "0'",
+              "type": {
+                "id": "1",
+                "name": "STATUS_SCHEDULED",
+                "state": "pre",
+                "completed": false,
+                "description": "Scheduled",
+                "detail": "Sat, October 24th at 7:30 AM EDT",
+                "shortDetail": "Scheduled"
+              }
+            },
+            "venue": {
+              "id": "5866",
+              "fullName": "Silverlake Stadium",
+              "address": {
+                "city": "Eastleigh",
+                "country": "England"
+              }
+            },
+            "format": {
+              "regulation": {
+                "periods": 2
+              }
+            },
+            "altGameNote": "National League",
+            "notes": [],
+            "geoBroadcasts": [],
+            "broadcasts": [],
+            "broadcast": "",
+            "competitors": [
+              {
+                "id": "3897",
+                "uid": "s:600~t:3897",
+                "type": "team",
+                "order": 0,
+                "homeAway": "home",
+                "winner": false,
+                "form": "DLLDL",
+                "score": "0",
+                "records": [
+                  {
+                    "name": "All Splits",
+                    "type": "total",
+                    "summary": "4-3-6",
+                    "abbreviation": "Total"
+                  }
+                ],
+                "team": {
+                  "id": "3897",
+                  "uid": "s:600~t:3897",
+                  "abbreviation": "ELH",
+                  "displayName": "Eastleigh",
+                  "shortDisplayName": "Eastleigh",
+                  "name": "Eastleigh",
+                  "location": "Eastleigh",
+                  "color": "0000FF",
+                  "alternateColor": "e1e1e1",
+                  "isActive": true,
+                  "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/3897.png",
+                  "links": [
+                    {
+                      "rel": [
+                        "clubhouse",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/club/_/id/3897/eastleigh",
+                      "text": "Clubhouse",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "stats",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/team/stats/_/id/3897/eastleigh",
+                      "text": "Stats",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "stats",
+                        "sportscenter",
+                        "app",
+                        "team"
+                      ],
+                      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:3897&section=stats",
+                      "text": "Stats",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "schedule",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/team/fixtures/_/id/3897/eastleigh",
+                      "text": "Fixtures",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "schedule",
+                        "sportscenter",
+                        "app",
+                        "team"
+                      ],
+                      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:3897&section=scores",
+                      "text": "Fixtures",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "squad",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/team/squad/_/id/3897/eastleigh",
+                      "text": "Squad",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "squad",
+                        "sportscenter",
+                        "app",
+                        "team"
+                      ],
+                      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:3897&section=squad",
+                      "text": "Squad",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    }
+                  ],
+                  "venue": {
+                    "id": "5866"
+                  }
+                },
+                "statistics": [],
+                "leaders": [
+                  {
+                    "name": "goals",
+                    "displayName": "Goals",
+                    "shortDisplayName": "Goals",
+                    "abbreviation": "G",
+                    "leaders": [
+                      {
+                        "displayValue": "4",
+                        "value": 4.0,
+                        "athlete": {
+                          "id": "325414",
+                          "displayName": "Aaron Blair",
+                          "shortName": "A. Blair",
+                          "fullName": "Aaron Blair",
+                          "jersey": "11",
+                          "active": true,
+                          "team": {
+                            "id": "3897"
+                          },
+                          "links": [
+                            {
+                              "rel": [
+                                "playercard",
+                                "desktop",
+                                "athlete"
+                              ],
+                              "href": "https://www.espn.com/soccer/player/_/id/325414/aaron-blair",
+                              "isHidden": false
+                            }
+                          ],
+                          "position": {
+                            "abbreviation": "F"
+                          }
+                        },
+                        "team": {
+                          "id": "3897"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "goalsLeaders",
+                    "displayName": "Goals",
+                    "shortDisplayName": "Goals",
+                    "abbreviation": "G",
+                    "leaders": [
+                      {
+                        "displayValue": "4",
+                        "value": 4.0,
+                        "athlete": {
+                          "id": "325414",
+                          "displayName": "Aaron Blair",
+                          "shortName": "A. Blair",
+                          "fullName": "Aaron Blair",
+                          "jersey": "11",
+                          "active": true,
+                          "team": {
+                            "id": "3897"
+                          },
+                          "links": [
+                            {
+                              "rel": [
+                                "playercard",
+                                "desktop",
+                                "athlete"
+                              ],
+                              "href": "https://www.espn.com/soccer/player/_/id/325414/aaron-blair",
+                              "isHidden": false
+                            }
+                          ],
+                          "position": {
+                            "abbreviation": "F"
+                          }
+                        },
+                        "team": {
+                          "id": "3897"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "3256",
+                "uid": "s:600~t:3256",
+                "type": "team",
+                "order": 1,
+                "homeAway": "away",
+                "winner": false,
+                "form": "DLLDL",
+                "score": "0",
+                "records": [
+                  {
+                    "name": "All Splits",
+                    "type": "total",
+                    "summary": "3-3-7",
+                    "abbreviation": "Total"
+                  }
+                ],
+                "team": {
+                  "id": "3256",
+                  "uid": "s:600~t:3256",
+                  "abbreviation": "BOST",
+                  "displayName": "Boston United",
+                  "shortDisplayName": "Boston Utd",
+                  "name": "Boston United",
+                  "location": "Boston United",
+                  "color": "ffff00",
+                  "alternateColor": "792DCD",
+                  "isActive": true,
+                  "logo": "",
+                  "links": [
+                    {
+                      "rel": [
+                        "clubhouse",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/club/_/id/3256/boston-united",
+                      "text": "Clubhouse",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "stats",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/team/stats/_/id/3256/boston-united",
+                      "text": "Stats",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "stats",
+                        "sportscenter",
+                        "app",
+                        "team"
+                      ],
+                      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:3256&section=stats",
+                      "text": "Stats",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "schedule",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/team/fixtures/_/id/3256/boston-united",
+                      "text": "Fixtures",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "schedule",
+                        "sportscenter",
+                        "app",
+                        "team"
+                      ],
+                      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:3256&section=scores",
+                      "text": "Fixtures",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "squad",
+                        "desktop",
+                        "team"
+                      ],
+                      "href": "https://www.espn.com/soccer/team/squad/_/id/3256/boston-united",
+                      "text": "Squad",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    },
+                    {
+                      "rel": [
+                        "squad",
+                        "sportscenter",
+                        "app",
+                        "team"
+                      ],
+                      "href": "sportscenter://x-callback-url/showClubhouse?uid=s:600~t:3256&section=squad",
+                      "text": "Squad",
+                      "isExternal": false,
+                      "isPremium": false,
+                      "isHidden": false
+                    }
+                  ],
+                  "venue": {
+                    "id": "10757"
+                  }
+                },
+                "statistics": [],
+                "leaders": [
+                  {
+                    "name": "goals",
+                    "displayName": "Goals",
+                    "shortDisplayName": "Goals",
+                    "abbreviation": "G",
+                    "leaders": [
+                      {
+                        "displayValue": "3",
+                        "value": 3.0,
+                        "athlete": {
+                          "id": "380607",
+                          "displayName": "Kenneth Aboh",
+                          "shortName": "K. Aboh",
+                          "fullName": "Kenneth Aboh",
+                          "jersey": "11",
+                          "active": true,
+                          "team": {
+                            "id": "3256"
+                          },
+                          "links": [
+                            {
+                              "rel": [
+                                "playercard",
+                                "desktop",
+                                "athlete"
+                              ],
+                              "href": "https://www.espn.com/soccer/player/_/id/380607/kenneth-aboh",
+                              "isHidden": false
+                            }
+                          ],
+                          "position": {
+                            "abbreviation": "F"
+                          }
+                        },
+                        "team": {
+                          "id": "3256"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "name": "goalsLeaders",
+                    "displayName": "Goals",
+                    "shortDisplayName": "Goals",
+                    "abbreviation": "G",
+                    "leaders": [
+                      {
+                        "displayValue": "3",
+                        "value": 3.0,
+                        "athlete": {
+                          "id": "380607",
+                          "displayName": "Kenneth Aboh",
+                          "shortName": "K. Aboh",
+                          "fullName": "Kenneth Aboh",
+                          "jersey": "11",
+                          "active": true,
+                          "team": {
+                            "id": "3256"
+                          },
+                          "links": [
+                            {
+                              "rel": [
+                                "playercard",
+                                "desktop",
+                                "athlete"
+                              ],
+                              "href": "https://www.espn.com/soccer/player/_/id/380607/kenneth-aboh",
+                              "isHidden": false
+                            }
+                          ],
+                          "position": {
+                            "abbreviation": "F"
+                          }
+                        },
+                        "team": {
+                          "id": "3256"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "details": [],
+            "odds": [
+              {
+                "overUnder": 2.5,
+                "link": {
+                  "language": "en-US",
+                  "rel": [
+                    "game",
+                    "desktop",
+                    "bets"
+                  ],
+                  "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34852682",
+                  "text": "Game",
+                  "shortText": "Game",
+                  "isExternal": true,
+                  "isPremium": false,
+                  "isHidden": false
+                },
+                "provider": {
+                  "id": "100",
+                  "name": "DraftKings",
+                  "priority": 1,
+                  "displayName": "DraftKings",
+                  "logos": [
+                    {
+                      "href": "https://a.espncdn.com/i/betting/Draftkings_Light.svg",
+                      "rel": [
+                        "light"
+                      ]
+                    },
+                    {
+                      "href": "https://a.espncdn.com/i/betting/Draftkings_Dark.svg",
+                      "rel": [
+                        "dark"
+                      ]
+                    }
+                  ]
+                },
+                "drawOdds": {
+                  "moneyLine": 255,
+                  "link": {
+                    "language": "en-US",
+                    "rel": [
+                      "draw",
+                      "desktop",
+                      "bets",
+                      "draftkings"
+                    ],
+                    "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34852682%3Foutcomes%3D0ML86801182_2",
+                    "text": "Draw Bet",
+                    "shortText": "Draw Bet",
+                    "isExternal": true,
+                    "isPremium": false,
+                    "isHidden": false
+                  }
+                },
+                "total": {
+                  "displayName": "Total",
+                  "shortDisplayName": "Total",
+                  "over": {
+                    "open": {
+                      "line": "o2.5",
+                      "odds": "-165"
+                    },
+                    "close": {
+                      "line": "o2.5",
+                      "odds": "-165",
+                      "link": {
+                        "rel": [
+                          "over",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34852682%3Foutcomes%3D0OU86801514O250_1",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.5",
+                            "sport": "soccer",
+                            "gameId": 401889244,
+                            "betSide": "over",
+                            "betType": "straight",
+                            "betDetails": "Over:2.5"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "under": {
+                    "open": {
+                      "line": "u2.5",
+                      "odds": "+115"
+                    },
+                    "close": {
+                      "line": "u2.5",
+                      "odds": "+115",
+                      "link": {
+                        "rel": [
+                          "under",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34852682%3Foutcomes%3D0OU86801514U250_3",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.5",
+                            "sport": "soccer",
+                            "gameId": 401889244,
+                            "betSide": "under",
+                            "betType": "straight",
+                            "betDetails": "Under:2.5"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "pointSpread": {
+                  "displayName": "Spread",
+                  "shortDisplayName": "Spread",
+                  "home": {
+                    "open": {
+                      "line": "-0.5",
+                      "odds": "+115"
+                    },
+                    "close": {
+                      "line": "-0.5",
+                      "odds": "+105",
+                      "link": {
+                        "rel": [
+                          "homeSpread",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34852682%3Foutcomes%3D0HC86801517N50_1",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.5",
+                            "sport": "soccer",
+                            "gameId": 401889244,
+                            "betSide": "home",
+                            "betType": "straight",
+                            "betDetails": "Spread:ELH-0.5"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "away": {
+                    "open": {
+                      "line": "+0.5",
+                      "odds": "-180"
+                    },
+                    "close": {
+                      "line": "+0.5",
+                      "odds": "-160",
+                      "link": {
+                        "rel": [
+                          "awaySpread",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34852682%3Foutcomes%3D0HC86801517P50_3",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.5",
+                            "sport": "soccer",
+                            "gameId": 401889244,
+                            "betSide": "away",
+                            "betType": "straight",
+                            "betDetails": "Spread:BOST+0.5"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "moneyline": {
+                  "displayName": "Moneyline",
+                  "shortDisplayName": "ML",
+                  "home": {
+                    "open": {
+                      "odds": "+125"
+                    },
+                    "close": {
+                      "odds": "+115",
+                      "link": {
+                        "rel": [
+                          "home",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34852682%3Foutcomes%3D0ML86801182_1",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.5",
+                            "sport": "soccer",
+                            "gameId": 401889244,
+                            "betSide": "home",
+                            "betType": "straight"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "away": {
+                    "open": {
+                      "odds": "+170"
+                    },
+                    "close": {
+                      "odds": "+185",
+                      "link": {
+                        "rel": [
+                          "away",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34852682%3Foutcomes%3D0ML86801182_3",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.5",
+                            "sport": "soccer",
+                            "gameId": 401889244,
+                            "betSide": "away",
+                            "betType": "straight"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "draw": {
+                    "open": {
+                      "odds": "+250"
+                    },
+                    "close": {
+                      "odds": "+255",
+                      "link": {
+                        "rel": [
+                          "draw",
+                          "bets"
+                        ],
+                        "href": "https://sportsbook.draftkings.com/gateway?s=__s__&wpcid=__wpcid__&wpsrc=413&wpcn=ESPN&wpscn=Widget&wpcrn=BetSlipDeepLink&wpscid=__wpscid__&wpcrid=xx&preurl=https%3A%2F%2Fsportsbook.draftkings.com%2Fevent%2F34852682%3Foutcomes%3D0ML86801182_2",
+                        "tracking": {
+                          "campaign": "betting-integrations",
+                          "tags": {
+                            "league": "eng.5",
+                            "sport": "soccer",
+                            "gameId": 401889244,
+                            "betSide": "draw",
+                            "betType": "straight"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "details": "ELH +115"
+              }
+            ],
+            "wasSuspended": false,
+            "playByPlayAvailable": true,
+            "playByPlayAthletes": true
+          }
+        ],
+        "status": {
+          "clock": 0.0,
+          "displayClock": "0'",
+          "type": {
+            "id": "1",
+            "name": "STATUS_SCHEDULED",
+            "state": "pre",
+            "completed": false,
+            "description": "Scheduled",
+            "detail": "Sat, October 24th at 7:30 AM EDT",
+            "shortDetail": "Scheduled"
+          }
+        },
+        "venue": {
+          "displayName": "Silverlake Stadium"
+        },
+        "links": [
+          {
+            "language": "en-US",
+            "rel": [
+              "summary",
+              "desktop",
+              "event"
+            ],
+            "href": "https://www.espn.com/soccer/match/_/gameId/401889244/boston-united-eastleigh",
+            "text": "Summary",
+            "shortText": "Summary",
+            "isExternal": false,
+            "isPremium": false,
+            "isHidden": false
+          }
+        ]
+      }
+    ]
+  }
+}

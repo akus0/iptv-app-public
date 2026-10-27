@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "purpose": "Pinned native source/build references; retain these materials with a binary release. A link list alone is not a complete corresponding-source archive.",
+  "flutter": {
+    "frameworkVersion": "3.47.7",
+    "frameworkRevision": "abaf9c523780a608bd46686fd5e53740a07077f8",
+    "engineRevision": "deb287481e3ce9468f3434937ced4240a70539ca",
+    "dartSdkVersion": "3.13.5"
+  },
+  "android": [
+    {
+      "component": "Jellyfin Media3 FFmpeg decoder",
+      "coordinate": "org.jellyfin.media3:media3-ffmpeg-decoder:1.9.0+1",
+      "license": "GPL-3.0 (published Maven declaration)",
+      "artifactSha256": "dfc726c8bc9d9db02e15b160f886a03bdd6dd51e88ba2de89aa74caf5e8cd181",
+      "repository": "https://github.com/jellyfin/jellyfin-androidx-media",
+      "revision": "af9ee4e26b2045e3ea6f2ebf4a18ac8ebfeae396",
+      "tag": "v1.9.0+1",
+      "sourceArchive": "https://github.com/jellyfin/jellyfin-androidx-media/archive/af9ee4e26b2045e3ea6f2ebf4a18ac8ebfeae396.tar.gz",
+      "buildScript": "build.sh",
+      "ndk": "26.1.10909125",
+      "submodules": [
+        {
+          "path": "media",
+          "repository": "https://github.com/androidx/media",
+          "revision": "7cc1056f840ce226598d3b990d4a6f7cd17e2831"
+        },
+        {
+          "path": "ffmpeg",
+          "repository": "https://git.ffmpeg.org/ffmpeg.git",
+          "revision": "37c90f55d8b6c3948c79449b04755527b4ae1351",
+          "mirror": "https://github.com/FFmpeg/FFmpeg"
+        }
+      ],
+      "sourceNote": "The published sources JAR excludes FFmpeg. Preserve the root build project AND both pinned submodule trees. Source mapping was checked; no from-source decoder rebuild was performed."
+    },
+    {
+      "component": "AndroidX Media3 playback",
+      "version": "1.9.2",
+      "license": "Apache-2.0",
+      "repository": "https://github.com/androidx/media/tree/1.9.2",
+      "note": "The application playback dependency is newer than the wrapper build submodule. Both versions must remain identified."
+    },
+    {
+      "component": "SQLite native assets",
+      "package": "sqlite3",
+      "version": "3.5.2",
+      "repository": "https://github.com/simolus3/sqlite3.dart/tree/sqlite3-3.5.2",
+      "buildScript": "tool/build_sqlite.dart",
+      "hashManifest": "sqlite3/lib/src/hook/asset_hashes.dart",
+      "license": "Dart wrapper MIT; SQLite core public domain; see its exact build recipe for additional components."
+    },
+    {
+      "component": "Flutter engine and embedding",
+      "engineRevision": "deb287481e3ce9468f3434937ced4240a70539ca",
+      "frameworkRevision": "abaf9c523780a608bd46686fd5e53740a07077f8",
+      "source": "https://github.com/flutter/flutter/tree/abaf9c523780a608bd46686fd5e53740a07077f8",
+      "notices": "Flutter SDK LICENSE and sky_engine/LICENSE; included by Flutter in NOTICES.Z"
+    },
+    {
+      "component": "Dart JNI native support",
+      "package": "jni",
+      "version": "1.0.3",
+      "source": "https://pub.dev/api/archives/jni-1.0.3.tar.gz",
+      "notices": "Dart package licence and corresponding source files"
+    },
+    {
+      "component": "AndroidX DataStore shared counter and protobuf",
+      "source": "https://cs.android.com/androidx/platform/frameworks/support",
+      "notices": "Apache-2.0 and repackaged Protobuf BSD-3-Clause; resolved module versions in android-runtime.json"
+    }
+  ],
+  "windows": {
+    "status": "Do not distribute Windows binaries until exact corresponding sources/build materials are established. Windows playback is unchanged.",
+    "package": "media_kit_libs_windows_video",
+    "version": "1.0.11",
+    "binaryArchive": "https://github.com/media-kit/libmpv-win32-video-build/releases/download/2023-09-24/mpv-dev-x86_64-20230924-git-652a1dd.7z",
+    "packageExpectedMd5": "a832ef24b3a6ff97cd2560b5b9d04cd8",
+    "sourceEnquiry": "https://github.com/media-kit/media-kit/issues/1460",
+    "note": "The wrapper MIT licence does not settle the native libmpv/FFmpeg obligations. The exact old build recipe remains unresolved; no untested binary replacement was made."
+  }
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Grants the FileProvider declared in AndroidManifest.xml access to just
+     the app's internal cache directory — where AppUpdateService saves a
+     downloaded APK (path_provider's getTemporaryDirectory() resolves to
+     this same directory), nothing broader. -->
+<paths>
+    <cache-path name="apk_downloads" path="." />
+</paths>

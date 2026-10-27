@@ -1,0 +1,91 @@
+name: nox_iptv
+description: "iptv-app - an M3U/EPG IPTV player for Android phones, boxes, and Firesticks."
+publish_to: 'none'
+version: 0.1.0+1320
+
+environment:
+  # Preserve the package language version; locked dependencies require Dart 3.12+.
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: '>=3.44.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  video_player_hdr: ^1.2.0
+  http: ^1.2.0
+  xml: ^6.5.0
+  provider: ^6.1.5+1
+  shared_preferences: ^2.2.0
+  intl: ^0.20.2
+  path_provider: ^2.1.6
+  cupertino_icons: ^1.0.6
+  sqflite: ^2.3.0
+  path: ^1.9.0
+  wakelock_plus: ^1.8.0
+  cached_network_image: ^3.4.1
+  package_info_plus: ^10.2.1
+  # Direct dependencies for the persistent poster cache.
+  flutter_cache_manager: ^3.4.1
+  file: ^7.0.0
+  # Parental PIN hashing.
+  crypto: ^3.0.3
+  # Database backend for Windows/Linux; other platforms use native sqflite.
+  sqflite_common_ffi: ^2.3.3
+  # Separate Windows playback backend and native runtime.
+  media_kit: ^1.1.11
+  media_kit_video: ^1.2.5
+  media_kit_libs_windows_video: ^1.0.10
+  # Direct access to the vendored Android player's track controls.
+  video_player_android: ^2.12.2
+  video_player_platform_interface: ^6.9.0
+  # External links used by platform integrations.
+  url_launcher: ^6.3.1
+  # Desktop window lifecycle and remembered fullscreen/windowed state.
+  window_manager: ^0.5.2
+  # QR pairing and AES-GCM encryption for the optional relay.
+  qr_flutter: ^4.1.0
+  cryptography: ^2.9.0
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  # Local TV CPU profiling tool; never linked into the release entry point.
+  vm_service: ^15.3.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter:
+  uses-material-design: true
+  # Original TV/play artwork; native licence text is loaded only from About.
+  assets:
+    - assets/icon/icon_flat.png
+    - assets/licenses/
+    # Phone pairing form, shared by the LAN server and optional relay.
+    - assets/pair/pair.html
+
+# Launcher resources use the fork's own icon. Resource names stay stable for
+# existing platform projects; assets/icon/gen_icon.py regenerates the artwork.
+flutter_launcher_icons:
+  android: "vespertv_launcher"
+  ios: true
+  image_path: "assets/icon/icon_flat.png"
+  adaptive_icon_background: "assets/icon/icon_background.png"
+  adaptive_icon_foreground: "assets/icon/icon_foreground.png"
+  min_sdk_android: 24
+  web:
+    generate: true
+    image_path: "assets/icon/icon_flat.png"
+  windows:
+    generate: true
+    image_path: "assets/icon/icon_flat.png"
+  macos:
+    generate: true
+    image_path: "assets/icon/icon_flat.png"
+
+# Patched Android player, including FFmpeg audio fallback and surface handling.
+# Keep native versions and downstream notices in sync when updating it.
+dependency_overrides:
+  video_player_android:
+    path: third_party/video_player_android

@@ -1,0 +1,11 @@
+name: Source privacy check
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  privacy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/audit_repository.py
+      - run: python3 -m unittest discover -s tools/tests

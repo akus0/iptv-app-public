@@ -1,0 +1,3322 @@
+[
+  {
+    "type": "vod",
+    "title": "TOP MOVIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "vod",
+    "title": "TOP MOVIES BLURAY (MULTI-SUBS)"
+  },
+  {
+    "type": "vod",
+    "title": "TOP KIDS BLURAY (MULTI-SUBS)"
+  },
+  {
+    "type": "vod",
+    "title": "ASIA MOVIES (MULTI-SUBS)"
+  },
+  {
+    "type": "vod",
+    "title": "NETFLIX MOVIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "vod",
+    "title": "NETFLIX MOVIES DOLBY AUDIO"
+  },
+  {
+    "type": "vod",
+    "title": "NETFLIX DOCU-MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "NETFLIX MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "NETFLIX ASIA"
+  },
+  {
+    "type": "vod",
+    "title": "NETFLIX KIDS"
+  },
+  {
+    "type": "vod",
+    "title": "NETFLIX STAND-UP COMEDY"
+  },
+  {
+    "type": "vod",
+    "title": "NETFLIX ANIMI"
+  },
+  {
+    "type": "vod",
+    "title": "NETFLIX KIDS \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "vod",
+    "title": "NETFLIX MUSIC"
+  },
+  {
+    "type": "vod",
+    "title": "NETFLIX HEVC"
+  },
+  {
+    "type": "vod",
+    "title": "AMAZON MOVIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "vod",
+    "title": "AMAZON MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "AMAZON DOCU-MOVIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "vod",
+    "title": "AMAZON DOCU-MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "AMAZON KIDS"
+  },
+  {
+    "type": "vod",
+    "title": "JAMES BOND 007"
+  },
+  {
+    "type": "vod",
+    "title": "AMAZON KIDS \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "vod",
+    "title": "DISNEY+ KIDS MOVIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "vod",
+    "title": "DISNEY+ MOVIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "vod",
+    "title": "DISNEY+ DOCU-MOVIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "vod",
+    "title": "DISNEY+ MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "DISNEY+ STAND-UP COMEDY"
+  },
+  {
+    "type": "vod",
+    "title": "DISNEY+ DOCU-MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "DISNEY+ KIDS MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "APPLE+ MOVIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "vod",
+    "title": "APPLE+ MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "APPLE+ KIDS \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "vod",
+    "title": "APPLE+ KIDS"
+  },
+  {
+    "type": "vod",
+    "title": "DISCOVERY+ MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "VIAPLAY MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "VIAPLAY KIDS"
+  },
+  {
+    "type": "vod",
+    "title": "DREAMWORKS ANIMATION"
+  },
+  {
+    "type": "vod",
+    "title": "UNIVERSAL"
+  },
+  {
+    "type": "vod",
+    "title": "PARAMOUNT PICTURES"
+  },
+  {
+    "type": "vod",
+    "title": "MARVEL MOVIES 3840P (MULTI)"
+  },
+  {
+    "type": "vod",
+    "title": "MARVEL MOVIES (MULTI)"
+  },
+  {
+    "type": "vod",
+    "title": "EN - 2020 & OLD"
+  },
+  {
+    "type": "vod",
+    "title": "EN - NEW RELEASE"
+  },
+  {
+    "type": "vod",
+    "title": "EN - COMEDY"
+  },
+  {
+    "type": "vod",
+    "title": "EN - ADVENTURE"
+  },
+  {
+    "type": "vod",
+    "title": "EN - THRILLER"
+  },
+  {
+    "type": "vod",
+    "title": "EN - WWE"
+  },
+  {
+    "type": "vod",
+    "title": "EN - ACTION"
+  },
+  {
+    "type": "vod",
+    "title": "EN - DOCUMENTARIES"
+  },
+  {
+    "type": "vod",
+    "title": "EN - HORROR"
+  },
+  {
+    "type": "vod",
+    "title": "EN - DRAMA"
+  },
+  {
+    "type": "vod",
+    "title": "EN - KIDS"
+  },
+  {
+    "type": "vod",
+    "title": "EN - MANGA/ANIME"
+  },
+  {
+    "type": "vod",
+    "title": "EN - ROMANCE"
+  },
+  {
+    "type": "vod",
+    "title": "EN - Biblical"
+  },
+  {
+    "type": "vod",
+    "title": "EN - UFC"
+  },
+  {
+    "type": "vod",
+    "title": "EN - CONCERTS"
+  },
+  {
+    "type": "vod",
+    "title": "EN - SCIENCE FICTION"
+  },
+  {
+    "type": "vod",
+    "title": "EN - CHRISTMAS"
+  },
+  {
+    "type": "vod",
+    "title": "EN - WESTERNS"
+  },
+  {
+    "type": "vod",
+    "title": "EN - MUSICAL"
+  },
+  {
+    "type": "vod",
+    "title": "EN - FAMILY"
+  },
+  {
+    "type": "vod",
+    "title": "EN - ITALIAN SUB ENG"
+  },
+  {
+    "type": "vod",
+    "title": "EN - MOVIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "vod",
+    "title": "EN - BOXING"
+  },
+  {
+    "type": "vod",
+    "title": "EN - IMDB TOP 250"
+  },
+  {
+    "type": "vod",
+    "title": "EN - KIDS \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "vod",
+    "title": "EN - COLLECTIONS"
+  },
+  {
+    "type": "vod",
+    "title": "EN - WORKOUT"
+  },
+  {
+    "type": "vod",
+    "title": "CHRISTIAN MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "SOCCER AMERICAN FOOTBALL"
+  },
+  {
+    "type": "vod",
+    "title": "SOCCER UFC"
+  },
+  {
+    "type": "vod",
+    "title": "SOCCER HOCKEY"
+  },
+  {
+    "type": "vod",
+    "title": "SOCCER FOOTBALL"
+  },
+  {
+    "type": "vod",
+    "title": "SOCCER RUGBY"
+  },
+  {
+    "type": "vod",
+    "title": "SOCCER BASKETBALL"
+  },
+  {
+    "type": "vod",
+    "title": "SOCCER BASEBALL"
+  },
+  {
+    "type": "vod",
+    "title": "SOCCER FORMULA 1"
+  },
+  {
+    "type": "vod",
+    "title": "SOCCER AFL"
+  },
+  {
+    "type": "vod",
+    "title": "DE - FILME 1940/2024"
+  },
+  {
+    "type": "vod",
+    "title": "DE - FILME 2025/2026"
+  },
+  {
+    "type": "vod",
+    "title": "DE - NETFLIX PRODUKTION"
+  },
+  {
+    "type": "vod",
+    "title": "DE - \u00b2\u00b9\u2076\u2070\u1d56 DV \u1d34\u1d30\u1d3f\u00b9\u2070/PLUS"
+  },
+  {
+    "type": "vod",
+    "title": "DE - APPLE+ FILME PRODUKTION"
+  },
+  {
+    "type": "vod",
+    "title": "DE - KINDER FILME"
+  },
+  {
+    "type": "vod",
+    "title": "DE - BLURAY FILME \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "vod",
+    "title": "DE - FILME \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "vod",
+    "title": "DE - DOKUMENTATION"
+  },
+  {
+    "type": "vod",
+    "title": "DE - AMAZON PRIME PRODUKTION"
+  },
+  {
+    "type": "vod",
+    "title": "DE - ANIME FILME"
+  },
+  {
+    "type": "vod",
+    "title": "DE - FUSSBALL"
+  },
+  {
+    "type": "vod",
+    "title": "DE - WEIHNACHTS FILME"
+  },
+  {
+    "type": "vod",
+    "title": "DE - BOLLYWOOD"
+  },
+  {
+    "type": "vod",
+    "title": "DE - ANIME \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "vod",
+    "title": "DE - WESTERN"
+  },
+  {
+    "type": "vod",
+    "title": "DE - ANIME MOVIES SUBS"
+  },
+  {
+    "type": "vod",
+    "title": "DE - KINDER FILME \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "vod",
+    "title": "DE - DISNEY+ PRODUKTION"
+  },
+  {
+    "type": "vod",
+    "title": "DE -  BUD SPENCER & TERENCE HILL"
+  },
+  {
+    "type": "vod",
+    "title": "DE - FILME 3D"
+  },
+  {
+    "type": "vod",
+    "title": "DE - KINDER 3D"
+  },
+  {
+    "type": "vod",
+    "title": "DE - IMDB TOP 100"
+  },
+  {
+    "type": "vod",
+    "title": "DE - JAMES BOND 007"
+  },
+  {
+    "type": "vod",
+    "title": "DE - STUDIO GHIBLI"
+  },
+  {
+    "type": "vod",
+    "title": "DE - MARVEL VS DC"
+  },
+  {
+    "type": "vod",
+    "title": "DE - FORMULA 1"
+  },
+  {
+    "type": "vod",
+    "title": "DE - WRESTLING"
+  },
+  {
+    "type": "vod",
+    "title": "IT - DOCUMENTARIO"
+  },
+  {
+    "type": "vod",
+    "title": "IT - FILM 2024-2026"
+  },
+  {
+    "type": "vod",
+    "title": "IT - WESTERN"
+  },
+  {
+    "type": "vod",
+    "title": "IT - HORROR/THRILLER"
+  },
+  {
+    "type": "vod",
+    "title": "IT - DRAMMA/ROMANCE"
+  },
+  {
+    "type": "vod",
+    "title": "IT - ANIMAZIONE"
+  },
+  {
+    "type": "vod",
+    "title": "IT - COMMEDIA"
+  },
+  {
+    "type": "vod",
+    "title": "IT - 4K MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "IT - FILM 1990-2023"
+  },
+  {
+    "type": "vod",
+    "title": "IT - CLASSICO"
+  },
+  {
+    "type": "vod",
+    "title": "IT - AVVENTURA/AZIONE"
+  },
+  {
+    "type": "vod",
+    "title": "IT - BIOGRAFICO"
+  },
+  {
+    "type": "vod",
+    "title": "IT - ANIME"
+  },
+  {
+    "type": "vod",
+    "title": "IT - FANTASTICO/FANTASCIENZA"
+  },
+  {
+    "type": "vod",
+    "title": "NL - AMAZON PRIME"
+  },
+  {
+    "type": "vod",
+    "title": "NL - BIOSCOOP"
+  },
+  {
+    "type": "vod",
+    "title": "NL - KINDEREN"
+  },
+  {
+    "type": "vod",
+    "title": "NL - KERST FILMS"
+  },
+  {
+    "type": "vod",
+    "title": "NL - SHOWTIME"
+  },
+  {
+    "type": "vod",
+    "title": "NL - VIDEOLAND"
+  },
+  {
+    "type": "vod",
+    "title": "NL - 2022 & OUD"
+  },
+  {
+    "type": "vod",
+    "title": "NL - NPO+"
+  },
+  {
+    "type": "vod",
+    "title": "NL - VIDEOLAND KIDS"
+  },
+  {
+    "type": "vod",
+    "title": "NL - BIOSCOOP \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "vod",
+    "title": "NL - KINDEREN \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "vod",
+    "title": "BE - DOCU-MOVIES (NL)"
+  },
+  {
+    "type": "vod",
+    "title": "PT/BR - FILMES 1960-2023"
+  },
+  {
+    "type": "vod",
+    "title": "PT/BR - A\u00c7\u00c3O"
+  },
+  {
+    "type": "vod",
+    "title": "PT/BR - FILMES 2025-2026"
+  },
+  {
+    "type": "vod",
+    "title": "PT/BR - DOCUMENTACAO"
+  },
+  {
+    "type": "vod",
+    "title": "PT/BR - TERROR"
+  },
+  {
+    "type": "vod",
+    "title": "PT/BR - ANIMA\u00c7\u00c3O"
+  },
+  {
+    "type": "vod",
+    "title": "PT/BR - NETFLIX"
+  },
+  {
+    "type": "vod",
+    "title": "PT/BR - SUSPENSE"
+  },
+  {
+    "type": "vod",
+    "title": "PT/BR - AMAZON PRIME"
+  },
+  {
+    "type": "vod",
+    "title": "PT/BR - APPLE TV+"
+  },
+  {
+    "type": "vod",
+    "title": "ES - PEL\u00cdCULAS TERROR"
+  },
+  {
+    "type": "vod",
+    "title": "ES - PEL\u00cdCULAS"
+  },
+  {
+    "type": "vod",
+    "title": "ES - PEL\u00cdCULAS 2026"
+  },
+  {
+    "type": "vod",
+    "title": "ES - PEL\u00cdCULAS 2025"
+  },
+  {
+    "type": "vod",
+    "title": "ES - DOCUMENTALES"
+  },
+  {
+    "type": "vod",
+    "title": "ES - PEL\u00cdCULAS 2024"
+  },
+  {
+    "type": "vod",
+    "title": "ES - PEL\u00cdCULAS ANTIGUAS Y SAGAS"
+  },
+  {
+    "type": "vod",
+    "title": "ES - PEL\u00cdCULAS ANIMACION"
+  },
+  {
+    "type": "vod",
+    "title": "ES - INFANTILES Y FAMILIAS"
+  },
+  {
+    "type": "vod",
+    "title": "ES - PEL\u00cdCULAS CLASICO"
+  },
+  {
+    "type": "vod",
+    "title": "ES - PEL\u00cdCULAS \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "vod",
+    "title": "ES - PEL\u00cdCULAS SUBTITLES"
+  },
+  {
+    "type": "vod",
+    "title": "ES - PEL\u00cdCULAS \u2074\u1d37 \u1d34\u1d30\u1d3f \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u2c7d\u1d35\u02e2\u1d35\u00d3\u1d3a"
+  },
+  {
+    "type": "vod",
+    "title": "ES - PEL\u00cdCULAS DE NAVIDAD"
+  },
+  {
+    "type": "vod",
+    "title": "ES - PARTIDOS DE LALIGA"
+  },
+  {
+    "type": "vod",
+    "title": "ES - PEL\u00cdCULAS \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "vod",
+    "title": "ES - MOTOGP"
+  },
+  {
+    "type": "vod",
+    "title": "ES - FORMULA 1"
+  },
+  {
+    "type": "vod",
+    "title": "ES - NETFLIX"
+  },
+  {
+    "type": "vod",
+    "title": "ES - PRIME+"
+  },
+  {
+    "type": "vod",
+    "title": "LA - PEL\u00cdCULAS"
+  },
+  {
+    "type": "vod",
+    "title": "LA - INFANTILES"
+  },
+  {
+    "type": "vod",
+    "title": "LA - ANIME"
+  },
+  {
+    "type": "vod",
+    "title": "AF - CINAF TV"
+  },
+  {
+    "type": "vod",
+    "title": "AF - IBAKA TV"
+  },
+  {
+    "type": "vod",
+    "title": "AF - IROKO TV"
+  },
+  {
+    "type": "vod",
+    "title": "FR - FILM \u2074\u1d37 \u1d34\u1d30\u1d3f \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "vod",
+    "title": "FR - ANIMATION \u2074\u1d37 \u1d34\u1d30\u1d3f \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "vod",
+    "title": "FR - FILM CAM"
+  },
+  {
+    "type": "vod",
+    "title": "FR - LE DRENIER AJOUTEE"
+  },
+  {
+    "type": "vod",
+    "title": "FR - HORREUR"
+  },
+  {
+    "type": "vod",
+    "title": "FR - COMEDIE"
+  },
+  {
+    "type": "vod",
+    "title": "FR - NETFLIX 2025"
+  },
+  {
+    "type": "vod",
+    "title": "FR - DOCUMENTAIRS"
+  },
+  {
+    "type": "vod",
+    "title": "FR - ACTION"
+  },
+  {
+    "type": "vod",
+    "title": "FR - 2021 ANCIEN FILM"
+  },
+  {
+    "type": "vod",
+    "title": "FR - MUSIQUE"
+  },
+  {
+    "type": "vod",
+    "title": "FR - VOSTFR"
+  },
+  {
+    "type": "vod",
+    "title": "FR - ENFANTS"
+  },
+  {
+    "type": "vod",
+    "title": "FR - DRAME"
+  },
+  {
+    "type": "vod",
+    "title": "FR - THRILLER"
+  },
+  {
+    "type": "vod",
+    "title": "FR - CRIME"
+  },
+  {
+    "type": "vod",
+    "title": "FR - FILM 1940-1980"
+  },
+  {
+    "type": "vod",
+    "title": "FR - FANTASTIQUE AVENTURE"
+  },
+  {
+    "type": "vod",
+    "title": "FR - SCIENCE-FICTION"
+  },
+  {
+    "type": "vod",
+    "title": "FR - GUERRE FILMS"
+  },
+  {
+    "type": "vod",
+    "title": "FR - ACTEURS FRANCAIS"
+  },
+  {
+    "type": "vod",
+    "title": "FR - HISTORIQUE BIOPIC"
+  },
+  {
+    "type": "vod",
+    "title": "FR - ANIMEE"
+  },
+  {
+    "type": "vod",
+    "title": "FR - FILM 2022"
+  },
+  {
+    "type": "vod",
+    "title": "FR - LE DRENIER AJOUTEE \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "vod",
+    "title": "FR - NETFLIX FILMS"
+  },
+  {
+    "type": "vod",
+    "title": "FR - FILM \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "vod",
+    "title": "FR - ENFANTS \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "vod",
+    "title": "FR - ART MARTIAUX"
+  },
+  {
+    "type": "vod",
+    "title": "FR - FILMS EN SAGA \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "vod",
+    "title": "FR - EXCLUSIVIT\u00c9"
+  },
+  {
+    "type": "vod",
+    "title": "FR - AUDIO-DESCRIPTION"
+  },
+  {
+    "type": "vod",
+    "title": "FR - FILM 2023"
+  },
+  {
+    "type": "vod",
+    "title": "FR - FILM 2024"
+  },
+  {
+    "type": "vod",
+    "title": "FR - ASIATIQUE"
+  },
+  {
+    "type": "vod",
+    "title": "FR - PARAMOUNT+"
+  },
+  {
+    "type": "vod",
+    "title": "FR - DISNEY"
+  },
+  {
+    "type": "vod",
+    "title": "FR - BOX OFFICE"
+  },
+  {
+    "type": "vod",
+    "title": "FR - AMAZONE"
+  },
+  {
+    "type": "vod",
+    "title": "FR - MANGA"
+  },
+  {
+    "type": "vod",
+    "title": "FR - COMBAT FILMS"
+  },
+  {
+    "type": "vod",
+    "title": "FR - RUGBY"
+  },
+  {
+    "type": "vod",
+    "title": "QC - FILMS VIEILLE"
+  },
+  {
+    "type": "vod",
+    "title": "QC - FILMS NOUVELLE VERSION"
+  },
+  {
+    "type": "vod",
+    "title": "QC - DOCUMENTAIRE"
+  },
+  {
+    "type": "vod",
+    "title": "QC - SPECTACLES"
+  },
+  {
+    "type": "vod",
+    "title": "QC - ANIMATION"
+  },
+  {
+    "type": "vod",
+    "title": "QC - NO\u00cbL"
+  },
+  {
+    "type": "vod",
+    "title": "QC - NETFLIX"
+  },
+  {
+    "type": "vod",
+    "title": "FR - WRC"
+  },
+  {
+    "type": "vod",
+    "title": "FR - GOLF"
+  },
+  {
+    "type": "vod",
+    "title": "FR - FOOTBALL"
+  },
+  {
+    "type": "vod",
+    "title": "FR - F1"
+  },
+  {
+    "type": "vod",
+    "title": "FR - MOTO"
+  },
+  {
+    "type": "vod",
+    "title": "FR - CYCLISME"
+  },
+  {
+    "type": "vod",
+    "title": "FR - BASKETBALL"
+  },
+  {
+    "type": "vod",
+    "title": "FR - HANDBALL"
+  },
+  {
+    "type": "vod",
+    "title": "PL - KINO"
+  },
+  {
+    "type": "vod",
+    "title": "PL - FILMY 4K"
+  },
+  {
+    "type": "vod",
+    "title": "PL - DZIECI"
+  },
+  {
+    "type": "vod",
+    "title": "PL - KIDS 4K"
+  },
+  {
+    "type": "vod",
+    "title": "PL - \u015aWI\u0104TECZNIE"
+  },
+  {
+    "type": "vod",
+    "title": "GR - \u039a\u0399\u039d\u0397\u039c\u0391\u03a4\u039f\u0393\u03a1\u0391\u03a6\u039f\u03a3"
+  },
+  {
+    "type": "vod",
+    "title": "GR - FORMULA 1"
+  },
+  {
+    "type": "vod",
+    "title": "GR - NEW RELEASES"
+  },
+  {
+    "type": "vod",
+    "title": "GR - \u03a0\u0391\u0399\u0394\u0399\u039a\u0391"
+  },
+  {
+    "type": "vod",
+    "title": "GR - NETFLIX"
+  },
+  {
+    "type": "vod",
+    "title": "GR - PRIME AMAZON"
+  },
+  {
+    "type": "vod",
+    "title": "GR - DISNEY+"
+  },
+  {
+    "type": "vod",
+    "title": "GR - \u0395\u039b\u039b\u0397\u039d\u0399\u039a\u0395\u03a3 \u03a4\u0391\u0399\u039d\u0395\u03a3"
+  },
+  {
+    "type": "vod",
+    "title": "GR - DOCUMENTARY"
+  },
+  {
+    "type": "vod",
+    "title": "GR - CHRISTMAS MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "GR - APPLE+"
+  },
+  {
+    "type": "vod",
+    "title": "GR - GREEK THEATER"
+  },
+  {
+    "type": "vod",
+    "title": "GR - MARVEL MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "GR - \u039a\u0391\u03a1\u0391\u039f\u039a\u0395"
+  },
+  {
+    "type": "vod",
+    "title": "GR - HORROR"
+  },
+  {
+    "type": "vod",
+    "title": "GR - TURKISH MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "GR - HBO MAX"
+  },
+  {
+    "type": "vod",
+    "title": "GR - ANIME"
+  },
+  {
+    "type": "vod",
+    "title": "GR - FIFA WORLD CUP 2026"
+  },
+  {
+    "type": "vod",
+    "title": "IL - HEBREW DOCU-MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "IL - HEBREW EN MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "IL - HEBREW EN KIDS MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "IL - FREE TV - \u05e1\u05e8\u05d8\u05d9\u05dd"
+  },
+  {
+    "type": "vod",
+    "title": "IL - \u05d3\u05d9\u05e1\u05e0\u05d9+ \u05e1\u05e8\u05d8\u05d9\u05dd"
+  },
+  {
+    "type": "vod",
+    "title": "IL - \u05e1\u05e8\u05d8\u05d9\u05dd 2023 + \u05d4\u05d0\u05d7\u05e8\u05d5\u05df"
+  },
+  {
+    "type": "vod",
+    "title": "IL - \u05e1\u05e8\u05d8\u05d9\u05dd 2022 + \u05d9\u05e9\u05df"
+  },
+  {
+    "type": "vod",
+    "title": "NORDIC FILM  \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "vod",
+    "title": "NORDIC \u2074\u1d37 \u1d34\u1d30\u1d3f"
+  },
+  {
+    "type": "vod",
+    "title": "NORDIC BARN \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "vod",
+    "title": "NORDIC FILM 2022 & OLD"
+  },
+  {
+    "type": "vod",
+    "title": "NORDIC FILM NEW RELEASE"
+  },
+  {
+    "type": "vod",
+    "title": "NORDIC KIDS"
+  },
+  {
+    "type": "vod",
+    "title": "NORDIC MUSIC"
+  },
+  {
+    "type": "vod",
+    "title": "NORDIC SPORT"
+  },
+  {
+    "type": "vod",
+    "title": "SVENSKA NYA UTG\u00c5VAN"
+  },
+  {
+    "type": "vod",
+    "title": "NORDIC BECK COMPLETE"
+  },
+  {
+    "type": "vod",
+    "title": "NORDIC FILM \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "vod",
+    "title": "SVENSKA 2020 & GAMMAL"
+  },
+  {
+    "type": "vod",
+    "title": "SVENSKA BARN"
+  },
+  {
+    "type": "vod",
+    "title": "SVENSKA AUDIOBOOKS"
+  },
+  {
+    "type": "vod",
+    "title": "DANSKE FILM"
+  },
+  {
+    "type": "vod",
+    "title": "DANSKE B\u00d8RN"
+  },
+  {
+    "type": "vod",
+    "title": "NORGE FILM"
+  },
+  {
+    "type": "vod",
+    "title": "NORGE BARN"
+  },
+  {
+    "type": "vod",
+    "title": "NORGE FILM \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "vod",
+    "title": "SUOMEN ELOKUVAT"
+  },
+  {
+    "type": "vod",
+    "title": "SUOMEN LAPSET"
+  },
+  {
+    "type": "vod",
+    "title": "\u00cdSLANDS MOVIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "vod",
+    "title": "\u00cdSLANDS MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "VIAPLAY \u00cdSLANDS KVIKMYNDIR"
+  },
+  {
+    "type": "vod",
+    "title": "VIAPLAY \u00cdSLANDS KRAKKAR"
+  },
+  {
+    "type": "vod",
+    "title": "RU - MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "RU - NEW RELEASE"
+  },
+  {
+    "type": "vod",
+    "title": "RU - RUSSIAN 2025&OLD"
+  },
+  {
+    "type": "vod",
+    "title": "RU - KIDS"
+  },
+  {
+    "type": "vod",
+    "title": "MT - MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "BG - \u0411\u042a\u041b\u0413\u0410\u0420\u0418\u042f \u0424\u0418\u041b\u041c"
+  },
+  {
+    "type": "vod",
+    "title": "BG - \u041f\u041e\u0421\u041b\u0415\u0414\u041d\u0418 \u0414\u041e\u041f\u042a\u041b\u041d\u0415\u041d\u0418\u042f"
+  },
+  {
+    "type": "vod",
+    "title": "BG - \u0411\u042a\u041b\u0413\u0410\u0420\u0418\u042f \u0414\u0415\u0426\u0410"
+  },
+  {
+    "type": "vod",
+    "title": "BG - MOMVIES"
+  },
+  {
+    "type": "vod",
+    "title": "RO - VOYO"
+  },
+  {
+    "type": "vod",
+    "title": "RO - MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "AL - ARKIVA 1980/2023"
+  },
+  {
+    "type": "vod",
+    "title": "AL - FILMA 24/25"
+  },
+  {
+    "type": "vod",
+    "title": "AL - P\u00cbR F\u00cbMIJ\u00cb"
+  },
+  {
+    "type": "vod",
+    "title": "AL - FILMA SHQIPTAR"
+  },
+  {
+    "type": "vod",
+    "title": "EX - MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "KU - CARTOON SORANI"
+  },
+  {
+    "type": "vod",
+    "title": "KU - CARTOON BADINI"
+  },
+  {
+    "type": "vod",
+    "title": "KU - SORANI"
+  },
+  {
+    "type": "vod",
+    "title": "KU - BADINI"
+  },
+  {
+    "type": "vod",
+    "title": "KU - KURDISH MOVIES SUB"
+  },
+  {
+    "type": "vod",
+    "title": "TR - NETFLIX"
+  },
+  {
+    "type": "vod",
+    "title": "TR - COCUK FILM"
+  },
+  {
+    "type": "vod",
+    "title": "TR - YERL\u0130 F\u0130LMLER"
+  },
+  {
+    "type": "vod",
+    "title": "TR - ANIME"
+  },
+  {
+    "type": "vod",
+    "title": "TR - SINEMA"
+  },
+  {
+    "type": "vod",
+    "title": "TR - MOVIES \u2074\u1d37 \u1d34\u1d30\u1d3f"
+  },
+  {
+    "type": "vod",
+    "title": "TR - F\u0130LMLER \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "vod",
+    "title": "TR - \u00c7OCUK \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "vod",
+    "title": "TR - HBO MAX & BLUTV FILMLERI"
+  },
+  {
+    "type": "vod",
+    "title": "TR - ALT YAZI"
+  },
+  {
+    "type": "vod",
+    "title": "TR - IMD FILMER"
+  },
+  {
+    "type": "vod",
+    "title": "TR - YESIL CAM SINEMA"
+  },
+  {
+    "type": "vod",
+    "title": "FOR ADULTS"
+  },
+  {
+    "type": "vod",
+    "title": "IR - PERSIAN SUB/DUB"
+  },
+  {
+    "type": "vod",
+    "title": "IR - PERSIAN \u06a9\u0627\u0631\u062a\u0648\u0646"
+  },
+  {
+    "type": "vod",
+    "title": "IR - PERSIAN MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "IR - PERSIAN \u06a9\u0644\u0627\u0633\u06cc\u06a9 \u062f\u0648\u0628\u0644\u0647"
+  },
+  {
+    "type": "vod",
+    "title": "IR - PERSIAN \u0642\u062f\u06cc\u0645\u06cc"
+  },
+  {
+    "type": "vod",
+    "title": "SO - HOLLYWOOD"
+  },
+  {
+    "type": "vod",
+    "title": "SO - BOLLYWOOD"
+  },
+  {
+    "type": "vod",
+    "title": "IN - MALAYALAM"
+  },
+  {
+    "type": "vod",
+    "title": "IN - NEW RELEASE"
+  },
+  {
+    "type": "vod",
+    "title": "IN - TAMIL"
+  },
+  {
+    "type": "vod",
+    "title": "IN - HINDI"
+  },
+  {
+    "type": "vod",
+    "title": "IN - TELUGU"
+  },
+  {
+    "type": "vod",
+    "title": "IN - EN HINDI"
+  },
+  {
+    "type": "vod",
+    "title": "IN - HINDI \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "vod",
+    "title": "IN - PUNJABI"
+  },
+  {
+    "type": "vod",
+    "title": "IN - CAM & NEW RELEASE"
+  },
+  {
+    "type": "vod",
+    "title": "IN - KANNADA"
+  },
+  {
+    "type": "vod",
+    "title": "IN - ANIMATION"
+  },
+  {
+    "type": "vod",
+    "title": "IN - KIDS"
+  },
+  {
+    "type": "vod",
+    "title": "IN - MARATHI"
+  },
+  {
+    "type": "vod",
+    "title": "PK - PAKISTANI MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "IN - GUJARATI MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "IN - KOREAN HINDI DABBLING"
+  },
+  {
+    "type": "vod",
+    "title": "IN - GUJARATI NATAK"
+  },
+  {
+    "type": "vod",
+    "title": "IN - BOLLYWOOD'S"
+  },
+  {
+    "type": "vod",
+    "title": "BN - BENGALI"
+  },
+  {
+    "type": "vod",
+    "title": "PK - NAATS"
+  },
+  {
+    "type": "vod",
+    "title": "PK - KIDS"
+  },
+  {
+    "type": "vod",
+    "title": "PK -  NAATS NASHEED"
+  },
+  {
+    "type": "vod",
+    "title": "BR - MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "BR - KIDS"
+  },
+  {
+    "type": "vod",
+    "title": "CN - CHINA FILM"
+  },
+  {
+    "type": "vod",
+    "title": "PH - PHILIPPINES FILM"
+  },
+  {
+    "type": "vod",
+    "title": "PH - OLD MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "PH - RATED R"
+  },
+  {
+    "type": "vod",
+    "title": "PH - TAGALOG DUB MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "PH - PHILIPPINES REQUESTS"
+  },
+  {
+    "type": "vod",
+    "title": "PH - TAGALOG SUB MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "PH - EVENTS"
+  },
+  {
+    "type": "vod",
+    "title": "JP - NETFLIX"
+  },
+  {
+    "type": "vod",
+    "title": "JP - JAPANESE FILM"
+  },
+  {
+    "type": "vod",
+    "title": "OSN+ MOVIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0639\u0631\u0628\u064a\u0629 \u0641\u0627\u0626\u0642\u0629 \u0627\u0644\u0648\u0636\u0648\u062d"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u062c\u0646\u0628\u064a\u0629 \u0642\u062f\u064a\u0645\u0647"
+  },
+  {
+    "type": "vod",
+    "title": "\u0633\u062a\u0627\u0646\u062f \u0627\u0628 \u0643\u0648\u0645\u064a\u062f\u064a"
+  },
+  {
+    "type": "vod",
+    "title": "\u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c \u0627\u0641\u0644\u0627\u0645 \u0639\u0631\u0628\u064a\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0645\u0633\u0631\u062d\u064a\u0627\u062a \u0641\u0627\u0626\u0642\u0629 \u0627\u0644\u0648\u0636\u0648\u062d"
+  },
+  {
+    "type": "vod",
+    "title": "\u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c \u0627\u0641\u0644\u0627\u0645 \u0639\u0631\u0628\u064a\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0633\u062a\u0627\u0646\u062f \u0627\u0628 \u0643\u0648\u0645\u064a\u062f\u064a \u0639\u0631\u0628\u064a"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0646\u062c\u0648\u0645 \u0627\u0644\u0639\u0631\u0628"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u0641\u0644\u0627\u0645 \u0639\u0627\u062f\u0644 \u0627\u0645\u0627\u0645"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0627\u062d\u0645\u062f \u062d\u0644\u0645\u064a"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0627\u062d\u0645\u062f \u0639\u0632"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0643\u0631\u064a\u0645 \u0639\u0628\u062f \u0627\u0644\u0639\u0632\u064a\u0632"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0627\u062d\u0645\u062f \u0627\u0644\u0633\u0642\u0627"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0645\u062d\u0645\u062f \u0647\u0646\u064a\u062f\u064a"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u0641\u0644\u0627\u0645 \u0647\u0627\u0646\u064a \u0631\u0645\u0632\u064a"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u0641\u0644\u0627\u0645 \u062f\u0631\u064a\u062f \u0644\u062d\u0627\u0645"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0639\u0631\u0628\u064a\u0629 \u062d\u062f\u064a\u062b\u0647"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0639\u0631\u0628\u064a\u0629 \u0642\u062f\u064a\u0645\u0647"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0634\u0627\u0647\u062f \u0627\u0644\u0623\u0635\u0644\u064a\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0634\u0627\u0645\u064a\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0645\u0635\u0631\u064a\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u062e\u0644\u064a\u062c\u064a\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0645\u063a\u0631\u0628\u064a\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u062a\u0648\u0646\u0633\u064a\u0647"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u062c\u0632\u0627\u0626\u0631\u064a\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0644\u064a\u0628\u064a\u0627"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0639\u0631\u0628\u064a\u0629 \u0643\u0644\u0627\u0633\u064a\u0643"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0645\u062f\u0628\u0644\u062c\u0629 \u0644\u0644\u0639\u0631\u0628\u064a\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0643\u0648\u0645\u064a\u062f\u064a\u0647"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u0641\u0644\u0627\u0645 \u062a\u0639\u0631\u0636 \u0641\u064a \u0627\u0644\u0633\u064a\u0646\u0645\u0627 \u0627\u0644\u0639\u0631\u0628\u064a\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u0641\u0644\u0627\u0645 \u0645\u0633\u064a\u062d\u064a\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0645\u0633\u0631\u062d\u064a\u0627\u062a \u0645\u0635\u0631\u064a\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0645\u0633\u0631\u062d\u064a\u0627\u062a \u062e\u0644\u064a\u062c\u064a\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0645\u0633\u0631\u062d\u064a\u0627\u062a \u0639\u0631\u0628\u064a\u0647"
+  },
+  {
+    "type": "vod",
+    "title": "\u0645\u0633\u0631\u062d\u064a\u0627\u062a \u0645\u063a\u0631\u0628\u064a\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u062c\u0646\u0628\u064a\u0647 \u0641\u0627\u0626\u0642\u0629 \u0627\u0644\u0648\u0636\u0648\u062d"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u0641\u0644\u0627\u0645 \u0647\u0646\u062f\u064a\u0629 \u0641\u0627\u0626\u0642\u0629 \u0627\u0644\u0648\u0636\u0648\u062d"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u0641\u0644\u0627\u0645 \u0627\u062c\u0646\u0628\u064a\u0629 \u062a\u0631\u0646\u062f"
+  },
+  {
+    "type": "vod",
+    "title": "\u0633\u0644\u0627\u0633\u0644 \u0627\u0644\u0627\u0641\u0644\u0627\u0645"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u062c\u0646\u0628\u064a\u0629 2026"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u062c\u0646\u0628\u064a\u0629 2025"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u062c\u0646\u0628\u064a\u0629 2024"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u062c\u0646\u0628\u064a\u0629 2023"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u062c\u0646\u0628\u064a\u0629 2022"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u062c\u0646\u0628\u064a\u0629 2021"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u062c\u0646\u0628\u064a\u0629 2020"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u062c\u0646\u0628\u064a\u0629 2019"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u062c\u0646\u0628\u064a\u0629 2018"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0647\u0646\u062f\u064a\u0629 \u0642\u062f\u064a\u0645\u0647"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u0641\u0644\u0627\u0645 \u062a\u0639\u0631\u0636 \u0641\u064a \u0627\u0644\u0633\u064a\u0646\u0645\u0627 \u0627\u0644\u0627\u062c\u0646\u0628\u064a\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0627\u0644\u0643\u0631\u064a\u0633\u0645\u0627\u0633"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u0641\u0644\u0627\u0645 \u0627\u0633\u064a\u0648\u064a\u0629 \u0641\u0627\u0626\u0642\u0629 \u0627\u0644\u0648\u0636\u0648\u062d"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u0633\u064a\u0648\u064a\u0629 2026"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u0633\u064a\u0648\u064a\u0629 2025"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u0633\u064a\u0648\u064a\u0629 2024"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u0633\u064a\u0648\u064a\u0629 2023"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0622\u0633\u064a\u0648\u064a\u0629 2022"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u0633\u064a\u0648\u064a\u0629 \u0642\u062f\u064a\u0645\u0647"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0647\u0646\u062f\u064a\u0629 2026"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0647\u0646\u062f\u064a\u0629 2025"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0647\u0646\u062f\u064a\u0629 2024"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0647\u0646\u062f\u064a\u0629 2023"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0647\u0646\u062f\u064a\u0629 \u0645\u062f\u0628\u0644\u062c\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u0641\u0644\u0627\u0645 \u0627\u0645\u064a\u062a\u0627\u0628 \u0628\u0627\u062a\u0634\u0627\u0646"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u0644\u0645\u0627\u0646\u064a\u0647 2026-2027"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u0644\u0645\u0627\u0646\u064a\u0647 2025"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u0644\u0645\u0627\u0646\u064a\u0647 2024"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u0644\u0645\u0627\u0646\u064a\u0647 2023"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u0644\u0645\u0627\u0646\u064a\u0647 \u0642\u062f\u064a\u0645\u0647"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0631\u0639\u0628"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u0641\u0644\u0627\u0645 \u0641\u0631\u0646\u0633\u064a\u0629 \u0645\u062a\u0631\u062c\u0645\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0623\u0637\u0641\u0627\u0644 \u0641\u0627\u0626\u0642\u0629 \u0627\u0644\u0648\u0636\u0648\u062d"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0627\u0637\u0641\u0627\u0644 \u0645\u062f\u0628\u0644\u062c\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0627\u0637\u0641\u0627\u0644 \u0645\u062a\u0631\u062c\u0645\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u0641\u0644\u0627\u0645 \u0627\u0646\u0645\u064a \u0645\u062a\u0631\u062c\u0645\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u0641\u0644\u0627\u0645 \u0627\u0646\u0645\u064a \u0645\u062f\u0628\u0644\u062c\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u0641\u0644\u0627\u0645 \u062a\u0631\u0643\u064a\u0629 \u0645\u062a\u0631\u062c\u0645\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u0641\u0644\u0627\u0645 \u062a\u0631\u0643\u064a\u0629 \u0645\u062f\u0628\u0644\u062c\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u0641\u0644\u0627\u0645 \u0627\u0633\u0644\u0627\u0645\u064a\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u0641\u0644\u0627\u0645 \u0648\u062b\u0627\u0626\u0642\u064a\u0629 \u0645\u062a\u0631\u062c\u0645\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u0641\u0644\u0627\u0645 \u0648\u062b\u0627\u0626\u0642\u064a\u0629 \u0645\u062f\u0628\u0644\u062c\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u0644\u062c\u0632\u064a\u0631\u0629 \u0627\u0644\u0648\u062b\u0627\u0626\u0642\u064a\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0631\u064a\u0627\u0636\u0647 \u0645\u062a\u0646\u0648\u0639\u0647"
+  },
+  {
+    "type": "vod",
+    "title": "FIFA+ MOVIES"
+  },
+  {
+    "type": "vod",
+    "title": "UFC ARABIA"
+  },
+  {
+    "type": "vod",
+    "title": "\u0627\u063a\u0627\u0646\u064a \u0639\u0631\u0628\u064a\u0629"
+  },
+  {
+    "type": "vod",
+    "title": "\u0623\u063a\u0627\u0646\u064a \u0637\u0631\u0628 \u0643\u0644\u0627\u0633\u064a\u0643"
+  },
+  {
+    "type": "series",
+    "title": "\u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c \u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0639\u0631\u0628\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0639\u0631\u0628\u064a\u0629 \u0641\u0627\u0626\u0642\u0629 \u0627\u0644\u0648\u0636\u0648\u062d"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0634\u0627\u0647\u062f \u0641\u0627\u0626\u0642\u0629 \u0627\u0644\u0648\u0636\u0648\u062d"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u062a\u0648\u062f \u0641\u0627\u0626\u0642\u0629 \u0627\u0644\u0648\u0636\u0648\u062d"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u062a\u0631\u0643\u064a\u0629 \u0641\u0627\u0626\u0642\u0629 \u0627\u0644\u0648\u0636\u0648\u062d"
+  },
+  {
+    "type": "series",
+    "title": "\u0628\u0631\u0627\u0645\u062c \u0639\u0631\u0628\u064a\u0629 \u0641\u0627\u0626\u0642\u0629 \u0627\u0644\u0648\u0636\u0648\u062d"
+  },
+  {
+    "type": "series",
+    "title": "\u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c \u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0639\u0631\u0628\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u064a\u0639\u0631\u0636 \u0627\u0644\u0622\u0646 \u0639\u0631\u0628\u064a"
+  },
+  {
+    "type": "series",
+    "title": "\u064a\u0639\u0631\u0636 \u0627\u0644\u0622\u0646 \u062a\u0631\u0643\u064a \u0645\u062a\u0631\u062c\u0645"
+  },
+  {
+    "type": "series",
+    "title": "\u064a\u0639\u0631\u0636 \u0627\u0644\u0622\u0646 \u062a\u0631\u0643\u064a \u0645\u062f\u0628\u0644\u062c"
+  },
+  {
+    "type": "series",
+    "title": "\u064a\u0639\u0631\u0636 \u0627\u0644\u0622\u0646 \u0623\u062c\u0646\u0628\u064a"
+  },
+  {
+    "type": "series",
+    "title": "\u064a\u0639\u0631\u0636 \u0627\u0644\u0622\u0646 \u0622\u0633\u064a\u0648\u064a"
+  },
+  {
+    "type": "series",
+    "title": "\u064a\u0639\u0631\u0636 \u0627\u0644\u0627\u0646 \u0647\u0646\u062f\u064a"
+  },
+  {
+    "type": "series",
+    "title": "\u064a\u0639\u0631\u0636 \u0627\u0644\u0622\u0646 \u0627\u0646\u0645\u064a"
+  },
+  {
+    "type": "series",
+    "title": "\u064a\u0639\u0631\u0636 \u0627\u0644\u0627\u0646 \u0628\u0631\u0627\u0645\u062c"
+  },
+  {
+    "type": "series",
+    "title": "2026 \u0631\u0645\u0636\u0627\u0646\u0643 \u0641\u0627\u0626\u0642 \u0627\u0644\u0648\u0636\u0648\u062d"
+  },
+  {
+    "type": "series",
+    "title": "\u0631\u0645\u0636\u0627\u0646\u0643 \u0633\u0648\u0631\u064a \u0644\u0628\u0646\u0627\u0646\u064a 2026"
+  },
+  {
+    "type": "series",
+    "title": "\u0631\u0645\u0636\u0627\u0646\u0643 \u0645\u0635\u0631\u064a 2026"
+  },
+  {
+    "type": "series",
+    "title": "\u0631\u0645\u0636\u0627\u0646\u0643 \u0639\u0631\u0627\u0642\u064a \u062e\u0644\u064a\u062c\u064a 2026"
+  },
+  {
+    "type": "series",
+    "title": "\u0631\u0645\u0636\u0627\u0646\u0643 \u0645\u063a\u0631\u0628\u064a 2026"
+  },
+  {
+    "type": "series",
+    "title": "\u0631\u0645\u0636\u0627\u0646\u0643 \u062a\u0648\u0646\u0633\u064a \u062c\u0632\u0627\u0626\u0631\u064a \u0644\u064a\u0628\u064a 2026"
+  },
+  {
+    "type": "series",
+    "title": "2026 \u0631\u0645\u0636\u0627\u0646\u0643 \u0623\u0631\u062f\u0646\u064a \u0641\u0644\u0633\u0637\u064a\u0646\u064a"
+  },
+  {
+    "type": "series",
+    "title": "\u0631\u0645\u0636\u0627\u0646\u0643 \u064a\u0645\u0646\u064a 2026"
+  },
+  {
+    "type": "series",
+    "title": "\u0631\u0645\u0636\u0627\u0646 \u0623\u0637\u0641\u0627\u0644 2026"
+  },
+  {
+    "type": "series",
+    "title": "\u0628\u0631\u0627\u0645\u062c \u0631\u0645\u0636\u0627\u0646 2026"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0645\u062f\u0628\u0644\u062c\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0639\u0631\u0628\u064a\u0629 \u0642\u0635\u064a\u0631\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0634\u0627\u0647\u062f \u0627\u0644\u0623\u0635\u0644\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0648\u0627\u062a\u0634 \u0627\u062a \u0627\u0644\u0623\u0635\u0644\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u062a\u0648\u062f \u0627\u0644\u0627\u0635\u0644\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0641\u064a\u0648 \u0627\u0644\u0623\u0635\u0644\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0627\u0644\u062d\u0627\u0631\u0629 \u0627\u0644\u0634\u0627\u0645\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0633\u0648\u0631\u064a\u0629 \u0644\u0628\u0646\u0627\u0646\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u062e\u0644\u064a\u062c\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0639\u0631\u0627\u0642\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0645\u0635\u0631\u064a\u0647"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0645\u063a\u0631\u0628\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u062a\u0648\u0646\u0633\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u062c\u0632\u0627\u0626\u0631\u064a \u0644\u064a\u0628\u064a"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u064a\u0645\u0646\u064a\u0647"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u0631\u062f\u0646\u064a \u0641\u0644\u0633\u0637\u064a\u0646\u064a"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0628\u062f\u0648\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0637\u0642\u0648\u0633 \u0645\u0633\u064a\u062d\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u062a\u0631\u0643\u064a\u0629 \u0645\u062a\u0631\u062c\u0645\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u062a\u0631\u0643\u064a\u0629 \u0645\u062f\u0628\u0644\u062c\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0631\u0648\u0633\u064a\u0647 \u0645\u062a\u0631\u062c\u0645\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0647\u0646\u062f\u064a\u0629 \u0645\u062f\u0628\u0644\u062c\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0647\u0646\u062f\u064a\u0629 \u0645\u062a\u0631\u062c\u0645\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u062c\u0646\u0628\u064a\u0647 \u0641\u0627\u0626\u0642\u0629 \u0627\u0644\u0648\u0636\u0648\u062d"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u062c\u0646\u0628\u064a\u0647 2026"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u062c\u0646\u0628\u064a\u0647 2025"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u062c\u0646\u0628\u064a\u0647 2024"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u062c\u0646\u0628\u064a\u0647 2023"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u062c\u0646\u0628\u064a\u0647 2022"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u062c\u0646\u0628\u064a\u0647 2021"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u062c\u0646\u0628\u064a\u0647 2020"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u062c\u0646\u0628\u064a\u0647 2019"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u062c\u0646\u0628\u064a\u0647 2018"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u062c\u0646\u0628\u064a\u0629 \u0642\u062f\u064a\u0645\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0627\u062c\u0646\u0628\u064a\u0629 \u0642\u0635\u064a\u0631\u0629 \u0645\u062f\u0628\u0644\u062c\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0627\u062c\u0646\u0628\u064a\u0629 \u0642\u0635\u064a\u0631\u0629 \u0645\u062a\u0631\u062c\u0645\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u0644\u0645\u0627\u0646\u064a\u0629 2026"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u0644\u0645\u0627\u0646\u064a\u0629 2025"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u0644\u0645\u0627\u0646\u064a\u0629 2024"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u0644\u0645\u0627\u0646\u064a\u0629 2023"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u0644\u0645\u0627\u0646\u064a\u0629 2022"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u0644\u0645\u0627\u0646\u064a\u0629 \u0642\u062f\u064a\u0645\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u0633\u064a\u0648\u064a\u0629 \u0645\u062a\u0631\u062c\u0645\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u0633\u064a\u0648\u064a\u0629 \u0645\u062f\u0628\u0644\u062c\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0627\u0633\u064a\u0648\u064a\u0629 \u0642\u0635\u064a\u0631\u0629 \u0645\u062a\u0631\u062c\u0645\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0627\u0633\u064a\u0648\u064a\u0629 \u0642\u0635\u064a\u0631\u0629 \u0645\u062f\u0628\u0644\u062c\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0634\u0627\u0647\u062f \u0643\u064a\u062f\u0632"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u0637\u0641\u0627\u0644 \u0645\u062a\u0631\u062c\u0645\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u0637\u0641\u0627\u0644 \u0645\u062f\u0628\u0644\u062c\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0627\u0637\u0641\u0627\u0644 \u0627\u0633\u0644\u0627\u0645\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0643\u0627\u0631\u062a\u0648\u0646 \u0632\u0645\u0627\u0646"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0623\u0637\u0641\u0627\u0644 \u0645\u063a\u0631\u0628\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0627\u0637\u0641\u0627\u0644 \u062a\u0648\u0646\u0633\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0643\u0631\u062a\u0648\u0646 \u0644\u0644\u0643\u0628\u0627\u0631 \u0645\u062a\u0631\u062c\u0645\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0643\u0631\u062a\u0648\u0646 \u0644\u0644\u0643\u0628\u0627\u0631\u0645\u062f\u0628\u0644\u062c\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0627\u0646\u0645\u064a \u0641\u0627\u0626\u0642\u0629 \u0627\u0644\u0648\u0636\u0648\u062d"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0627\u0646\u0645\u064a \u0645\u062a\u0631\u062c\u0645\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0627\u0646\u0645\u064a \u0645\u062f\u0628\u0644\u062c\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0627\u0646\u0645\u064a \u0635\u064a\u0646\u064a"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0627\u0646\u0645\u064a \u0642\u0635\u064a\u0631\u0629 \u0645\u062a\u0631\u062c\u0645\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u062f\u064a\u0633\u0643\u0641\u0631\u064a + \u0645\u062f\u0628\u0644\u062c"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0646\u0627\u0634\u064a\u0648\u0646\u0627\u0644 \u062c\u064a\u0648\u063a\u0631\u0627\u0641\u064a\u0643"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0648\u062b\u0627\u0626\u0642\u064a\u0629 \u0645\u062a\u0631\u062c\u0645\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0648\u062b\u0627\u0626\u0642\u064a\u0629 \u0645\u062f\u0628\u0644\u062c\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0648\u062b\u0627\u0626\u0642\u064a\u0647 \u0645\u063a\u0631\u0628\u064a\u0647"
+  },
+  {
+    "type": "series",
+    "title": "\u0641\u0648\u0627\u0632\u064a\u0631"
+  },
+  {
+    "type": "series",
+    "title": "\u0628\u0631\u0627\u0645\u062c \u0645\u0646\u0648\u0639\u0647"
+  },
+  {
+    "type": "series",
+    "title": "\u0628\u0631\u0627\u0645\u062c \u0627\u0644\u0645\u0634\u0647\u062f"
+  },
+  {
+    "type": "series",
+    "title": "\u0627\u0644\u062c\u0632\u064a\u0631\u0629 360"
+  },
+  {
+    "type": "series",
+    "title": "\u0628\u0648\u062f\u0643\u0627\u0633\u062a"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0631\u062d\u064a\u0627\u062a"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0633\u0644\u0633\u0644\u0627\u062a \u0627\u0633\u0644\u0627\u0645\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0646\u0648\u0639\u0627\u062a \u062f\u064a\u0646\u064a\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0645\u0635\u0627\u0631\u0639\u0629 \u062d\u0631\u0629"
+  },
+  {
+    "type": "series",
+    "title": "\u0623\u062d\u062f\u062b \u0627\u0644\u0645\u0628\u0627\u0631\u064a\u0627\u062a"
+  },
+  {
+    "type": "series",
+    "title": "FIFA+ SERIES"
+  },
+  {
+    "type": "series",
+    "title": "OSN+ SERIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "series",
+    "title": "CRUNCHYROLL SERIES (MULTI-SUBS)"
+  },
+  {
+    "type": "series",
+    "title": "ASIA SERIES (MULTI-SUBS)"
+  },
+  {
+    "type": "series",
+    "title": "DISCOVERY+ SERIES MENA"
+  },
+  {
+    "type": "series",
+    "title": "NETFLIX SERIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "series",
+    "title": "NETFLIX KIDS \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "series",
+    "title": "NETFLIX SERIES \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "series",
+    "title": "NETFLIX  SERIES"
+  },
+  {
+    "type": "series",
+    "title": "NETFLIX REALITY"
+  },
+  {
+    "type": "series",
+    "title": "NETFLIX STAND-UP COMEDY"
+  },
+  {
+    "type": "series",
+    "title": "NETFLIX ADULT-SWIM"
+  },
+  {
+    "type": "series",
+    "title": "NETFLIX PODCAST"
+  },
+  {
+    "type": "series",
+    "title": "NETFLIX DOCU-SERIES"
+  },
+  {
+    "type": "series",
+    "title": "NETFLIX ASIA"
+  },
+  {
+    "type": "series",
+    "title": "NETFLIX WWE"
+  },
+  {
+    "type": "series",
+    "title": "NETFLIX ANIME"
+  },
+  {
+    "type": "series",
+    "title": "NETFLIX KIDS"
+  },
+  {
+    "type": "series",
+    "title": "DISNEY+ SERIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "series",
+    "title": "DISNEY+ ASIA SERIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "series",
+    "title": "DISNEY+ DOCU-SERIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "series",
+    "title": "DISNEY+ KIDS SERIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "series",
+    "title": "DISNEY+ SERIES"
+  },
+  {
+    "type": "series",
+    "title": "DISNEY+ ASIA SERIES"
+  },
+  {
+    "type": "series",
+    "title": "DISNEY+ DOCU-SERIES"
+  },
+  {
+    "type": "series",
+    "title": "DISNEY+ REALITY"
+  },
+  {
+    "type": "series",
+    "title": "DISNEY+ PODCAST"
+  },
+  {
+    "type": "series",
+    "title": "DISNEY+ KIDS SERIES"
+  },
+  {
+    "type": "series",
+    "title": "APPLE+ SERIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "series",
+    "title": "APPLE+ KIDS \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "series",
+    "title": "APPLE+ DOCU-SERIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "series",
+    "title": "APPLE+ SERIES"
+  },
+  {
+    "type": "series",
+    "title": "APPLE+ KIDS"
+  },
+  {
+    "type": "series",
+    "title": "APPLE+ DOCU-SERIES"
+  },
+  {
+    "type": "series",
+    "title": "AMAZON SERIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "series",
+    "title": "AMAZON REALITY \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "series",
+    "title": "AMAZON KIDS \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "series",
+    "title": "AMAZON DOCU-SERIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "series",
+    "title": "AMAZON SERIES"
+  },
+  {
+    "type": "series",
+    "title": "AMAZON KIDS"
+  },
+  {
+    "type": "series",
+    "title": "AMAZON REALITY"
+  },
+  {
+    "type": "series",
+    "title": "HBO MAX SERIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "series",
+    "title": "HBO MAX SERIES"
+  },
+  {
+    "type": "series",
+    "title": "HBO MAX PODCAST"
+  },
+  {
+    "type": "series",
+    "title": "HBO MAX (ADULT SWIM)"
+  },
+  {
+    "type": "series",
+    "title": "HBO MAX DOCU-SERIES"
+  },
+  {
+    "type": "series",
+    "title": "AMAZON DOCU-SERIES"
+  },
+  {
+    "type": "series",
+    "title": "DISCOVERY+ SERIES"
+  },
+  {
+    "type": "series",
+    "title": "VIAPLAY SERIES"
+  },
+  {
+    "type": "series",
+    "title": "VIAPLAY KIDS"
+  },
+  {
+    "type": "series",
+    "title": "JOYN SERIES"
+  },
+  {
+    "type": "series",
+    "title": "JOYN REALITY SERIES"
+  },
+  {
+    "type": "series",
+    "title": "JOYN TV SHOW"
+  },
+  {
+    "type": "series",
+    "title": "JOYN DOKU-SERIES"
+  },
+  {
+    "type": "series",
+    "title": "SKY"
+  },
+  {
+    "type": "series",
+    "title": "SHOWTIME"
+  },
+  {
+    "type": "series",
+    "title": "PARAMOUNT+ \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "series",
+    "title": "PARAMOUNT+"
+  },
+  {
+    "type": "series",
+    "title": "PEACOCK"
+  },
+  {
+    "type": "series",
+    "title": "NICKELODEON"
+  },
+  {
+    "type": "series",
+    "title": "MARVEL SERIES 3840P (MULTI)"
+  },
+  {
+    "type": "series",
+    "title": "MARVEL SERIES (MULTI)"
+  },
+  {
+    "type": "series",
+    "title": "ENGLISH SERIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "series",
+    "title": "ENGLISH SERIES \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "series",
+    "title": "ENGLISH SERIES"
+  },
+  {
+    "type": "series",
+    "title": "ENGLISH SERIES (TR)"
+  },
+  {
+    "type": "series",
+    "title": "ENGLISH REALITY SERIES"
+  },
+  {
+    "type": "series",
+    "title": "ENGLISH KIDS"
+  },
+  {
+    "type": "series",
+    "title": "TURKSIH SERIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "series",
+    "title": "TURKISH TV SHOW"
+  },
+  {
+    "type": "series",
+    "title": "TURKISH ATV SERIES"
+  },
+  {
+    "type": "series",
+    "title": "TURKISH SHOWTV SERIES"
+  },
+  {
+    "type": "series",
+    "title": "TURKISH KANALD SERIES"
+  },
+  {
+    "type": "series",
+    "title": "TURKISH TV8 SERIES"
+  },
+  {
+    "type": "series",
+    "title": "TURKISH TABII SERIES"
+  },
+  {
+    "type": "series",
+    "title": "TURKISH EXXEN SERIES"
+  },
+  {
+    "type": "series",
+    "title": "TURKISH YERLI DIZILER"
+  },
+  {
+    "type": "series",
+    "title": "TURKISH BLUTV SERIES"
+  },
+  {
+    "type": "series",
+    "title": "TURKISH BLUTV \u00c7OCUKLAR"
+  },
+  {
+    "type": "series",
+    "title": "TURKISH NOW TV SERIES"
+  },
+  {
+    "type": "series",
+    "title": "TURKISH GAIN ORIJINAL"
+  },
+  {
+    "type": "series",
+    "title": "TURKISH YABANCI"
+  },
+  {
+    "type": "series",
+    "title": "TURKISH NETFLIX"
+  },
+  {
+    "type": "series",
+    "title": "TURKISH ANIME"
+  },
+  {
+    "type": "series",
+    "title": "MALTA DRAMA"
+  },
+  {
+    "type": "series",
+    "title": "GREECE INTERNATIONAL SERIES"
+  },
+  {
+    "type": "series",
+    "title": "GREECE TURKISH SERIES"
+  },
+  {
+    "type": "series",
+    "title": "GREECE ANIME"
+  },
+  {
+    "type": "series",
+    "title": "GREECE KIDS"
+  },
+  {
+    "type": "series",
+    "title": "GREEK SERIES TV"
+  },
+  {
+    "type": "series",
+    "title": "GREEK REALITY SHOWS"
+  },
+  {
+    "type": "series",
+    "title": "ITALY SERIE \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "series",
+    "title": "ITALY SERIE"
+  },
+  {
+    "type": "series",
+    "title": "ITALY ANIME"
+  },
+  {
+    "type": "series",
+    "title": "ITALY DISNEY+"
+  },
+  {
+    "type": "series",
+    "title": "ITALY BAMBINI"
+  },
+  {
+    "type": "series",
+    "title": "ITALY DOCUMENTARIO"
+  },
+  {
+    "type": "series",
+    "title": "AFRICA IROKO TV SERIES"
+  },
+  {
+    "type": "series",
+    "title": "AFRICA CINAF TV SERIES"
+  },
+  {
+    "type": "series",
+    "title": "FRANCE SERIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "series",
+    "title": "FRANCE ANIMATION SERIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "series",
+    "title": "FRANCE S\u00c9RIES"
+  },
+  {
+    "type": "series",
+    "title": "FRANCE DERNIER AJOUT"
+  },
+  {
+    "type": "series",
+    "title": "FRANCE REALITY SHOW"
+  },
+  {
+    "type": "series",
+    "title": "FRANCE VOSTFR"
+  },
+  {
+    "type": "series",
+    "title": "FRANCE NETFLIX 2025"
+  },
+  {
+    "type": "series",
+    "title": "FRANCE NETFLIX"
+  },
+  {
+    "type": "series",
+    "title": "FRANCE FOX+"
+  },
+  {
+    "type": "series",
+    "title": "FRANCE DRAMA"
+  },
+  {
+    "type": "series",
+    "title": "FRANCE ACTION"
+  },
+  {
+    "type": "series",
+    "title": "FRANCE COMEDIE"
+  },
+  {
+    "type": "series",
+    "title": "FRANCE ASIA SERIES"
+  },
+  {
+    "type": "series",
+    "title": "FRANCE DOCUMENTAIRE"
+  },
+  {
+    "type": "series",
+    "title": "FRANCE ENFANTS"
+  },
+  {
+    "type": "series",
+    "title": "FRANCE ANIME"
+  },
+  {
+    "type": "series",
+    "title": "QU\u00c9BEC SERIES"
+  },
+  {
+    "type": "series",
+    "title": "QU\u00c9BEC ANIMATION"
+  },
+  {
+    "type": "series",
+    "title": "QU\u00c9BEC DOCUMENTAIRE"
+  },
+  {
+    "type": "series",
+    "title": "ALBANIA SERIALE"
+  },
+  {
+    "type": "series",
+    "title": "INDIA WEB SERIE \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "series",
+    "title": "INDIA SERIES"
+  },
+  {
+    "type": "series",
+    "title": "INDIA EN DUBBED"
+  },
+  {
+    "type": "series",
+    "title": "INDIAN DAILY SOAP"
+  },
+  {
+    "type": "series",
+    "title": "INDIA ANIMATION SERIES WEB"
+  },
+  {
+    "type": "series",
+    "title": "HINDI DUBBED (KOREAN)"
+  },
+  {
+    "type": "series",
+    "title": "HINDI TV SHOWS"
+  },
+  {
+    "type": "series",
+    "title": "HINDI WEB SERIES"
+  },
+  {
+    "type": "series",
+    "title": "HINDI TAMIL"
+  },
+  {
+    "type": "series",
+    "title": "HINDI ULLU"
+  },
+  {
+    "type": "series",
+    "title": "HINDI TURKISH DUBBED URDU"
+  },
+  {
+    "type": "series",
+    "title": "SOMALIA ARABIC SERIES"
+  },
+  {
+    "type": "series",
+    "title": "SOMALIA ENGLISH SERIES"
+  },
+  {
+    "type": "series",
+    "title": "SOMALIA TURKISH SERIES"
+  },
+  {
+    "type": "series",
+    "title": "SOMALIA HINDI SERIES"
+  },
+  {
+    "type": "series",
+    "title": "PAKISTAN HUMTV"
+  },
+  {
+    "type": "series",
+    "title": "PAKISTAN GREEN TV"
+  },
+  {
+    "type": "series",
+    "title": "PAKISTAN DRAMA"
+  },
+  {
+    "type": "series",
+    "title": "NETHERLANDS SERIE"
+  },
+  {
+    "type": "series",
+    "title": "NETHERLANDS NPO+"
+  },
+  {
+    "type": "series",
+    "title": "NETHERLANDS SKY SHOWTIME"
+  },
+  {
+    "type": "series",
+    "title": "NETHERLANDS AMAZON PRIME"
+  },
+  {
+    "type": "series",
+    "title": "NETHERLANDS VIAPLAY"
+  },
+  {
+    "type": "series",
+    "title": "NETHERLANDS KINDEREN"
+  },
+  {
+    "type": "series",
+    "title": "VIDEOLAND SERIES (NL)"
+  },
+  {
+    "type": "series",
+    "title": "VIDEOLAND KID (NL)"
+  },
+  {
+    "type": "series",
+    "title": "BELGIUM SERIES (NL)"
+  },
+  {
+    "type": "series",
+    "title": "BELGIUM REALITY (NL)"
+  },
+  {
+    "type": "series",
+    "title": "BELGIUM KIDS (NL)"
+  },
+  {
+    "type": "series",
+    "title": "BELGIUM DOCU-SERIES (NL)"
+  },
+  {
+    "type": "series",
+    "title": "BELGIUM SERIES (FR)"
+  },
+  {
+    "type": "series",
+    "title": "BELGIUM KIDS (FR)"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY SERIE \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY DV \u2074\u1d37 \u1d34\u1d30\u1d3f"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY NETFLIX DV \u2074\u1d37 \u1d34\u1d30\u1d3f"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY PRIME \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY APPLE \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY PARAMOUNT+ \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY PARAMOUNT+ & MTV STUDIOS \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY SHOWTIME \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d52\u02e1\u1d47\u02b8 \u2c7d\u1da6\u02e2\u1da6\u1d52\u207f"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY SERIE"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY NETFLIX"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY KIDS NETFLIX"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY ANIME NETFLIX"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY APPLE+"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY PRIME"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY HBO MAX"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY PARAMOUNT+"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY SHOWTIME"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY ZDF MEDIATHEK"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY RTL+"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY MARVEL STUDIOS"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY REALITY TV SHOW"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY DOKUMENTATION"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY KINDER"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY ANIME"
+  },
+  {
+    "type": "series",
+    "title": "GERMANY ANIME SUBS"
+  },
+  {
+    "type": "series",
+    "title": "POLSKA SERIA"
+  },
+  {
+    "type": "series",
+    "title": "VIAPLAY POLSKA SERIA"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A SERIES \u2074\u1d37 \u1d34\u1d30\u1d3f \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u2c7d\u1d35\u02e2\u1d35\u00d3\u1d3a"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A SERIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A SERIES \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A SERIES"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A SERIES SUBTITLES"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A INFANTILES"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A ANIMACI\u00d3N"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A TELENOVELAS"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A NETFLIX"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A AMAZON PRIME"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A DISNEY+"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A APPLE TV+"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A PARAMOUNT+"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A SKYSHOWTIME"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A ATRESPLAYER - STARZ - RTVE"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A VIX PREMIUM"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A MOVISTAR"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A HULU"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A HBO MAX"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A SERIES NOVELA TURCAS"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A REALITY TV SHOWS"
+  },
+  {
+    "type": "series",
+    "title": "ESPA\u00d1A DOCUMENTAL"
+  },
+  {
+    "type": "series",
+    "title": "LATINO SERIE"
+  },
+  {
+    "type": "series",
+    "title": "LATINO NI\u00d1AS"
+  },
+  {
+    "type": "series",
+    "title": "PT/BR SERIE \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "series",
+    "title": "PT/BR SERIE"
+  },
+  {
+    "type": "series",
+    "title": "PT/BR NETFLIX"
+  },
+  {
+    "type": "series",
+    "title": "PT/BR DISNEY+"
+  },
+  {
+    "type": "series",
+    "title": "PT/BR APPLE TV+"
+  },
+  {
+    "type": "series",
+    "title": "PT/BR AMAZON PRIME"
+  },
+  {
+    "type": "series",
+    "title": "PT/BR PARAMOUNT+"
+  },
+  {
+    "type": "series",
+    "title": "PT/BR - SHOWTIME"
+  },
+  {
+    "type": "series",
+    "title": "PT/BR HBO MAX"
+  },
+  {
+    "type": "series",
+    "title": "PT/BR STAR WARS"
+  },
+  {
+    "type": "series",
+    "title": "PT/BR MARVEL STUDIOS"
+  },
+  {
+    "type": "series",
+    "title": "PT/BR GLOBOPLAY"
+  },
+  {
+    "type": "series",
+    "title": "PT/BR ANIMA\u00c7\u00c3O"
+  },
+  {
+    "type": "series",
+    "title": "PT/BR DOCUMENTARIO"
+  },
+  {
+    "type": "series",
+    "title": "PERSIAN SERIES"
+  },
+  {
+    "type": "series",
+    "title": "PERSIAN \u0627\u0646\u06af\u0644\u06cc\u0633\u06cc"
+  },
+  {
+    "type": "series",
+    "title": "PERSIAN \u062a\u0631\u06a9\u06cc"
+  },
+  {
+    "type": "series",
+    "title": "PERSIAN \u062a\u0631\u06a9\u06cc \u062f\u0648\u0628\u0644\u0647"
+  },
+  {
+    "type": "series",
+    "title": "PERSIAN \u06a9\u0631\u0647 \u0627\u06cc"
+  },
+  {
+    "type": "series",
+    "title": "PERSIAN \u0646\u0648\u0633\u062a\u0627\u0644\u0698\u06cc"
+  },
+  {
+    "type": "series",
+    "title": "PERSIAN \u0627\u0646\u06cc\u0645\u0647"
+  },
+  {
+    "type": "series",
+    "title": "KURDISH BADINI"
+  },
+  {
+    "type": "series",
+    "title": "KURDISH CARTOON BADINI"
+  },
+  {
+    "type": "series",
+    "title": "KURDISH SORANI"
+  },
+  {
+    "type": "series",
+    "title": "KURDISH CARTOON SORANI"
+  },
+  {
+    "type": "series",
+    "title": "HEBREW EN SERIES"
+  },
+  {
+    "type": "series",
+    "title": "HEBREW EN \u05ea\u05d5\u05db\u05e0\u05d9\u05ea \u05e8\u05d9\u05d0\u05dc\u05d9\u05d8\u05d9 \u05d5\u05d3\u05d5\u05e7\u05d5\u05de\u05e0\u05d8\u05e8\u05d9"
+  },
+  {
+    "type": "series",
+    "title": "HEBREW EN KIDS SERIES"
+  },
+  {
+    "type": "series",
+    "title": "HEBREW TR \u05e1\u05d3\u05e8\u05d5\u05ea \u05d8\u05d5\u05e8\u05e7\u05d9\u05d5\u05ea"
+  },
+  {
+    "type": "series",
+    "title": "HEBREW \u05d3\u05d9\u05e1\u05e0\u05d9+ \u05e1\u05d3\u05e8\u05d5\u05ea"
+  },
+  {
+    "type": "series",
+    "title": "HEBREW \u05d4\u05de\u05d4\u05d3\u05d5\u05e8\u05d5\u05ea \u05d4\u05d0\u05d7\u05e8\u05d5\u05e0\u05d5\u05ea"
+  },
+  {
+    "type": "series",
+    "title": "HEBREW MAKO +"
+  },
+  {
+    "type": "series",
+    "title": "HEBREW KAN BOX 11"
+  },
+  {
+    "type": "series",
+    "title": "HEBREW \u05d9\u05e9\u05df"
+  },
+  {
+    "type": "series",
+    "title": "HEBREW \u05d0\u05e0\u05d9\u05de\u05e6\u05d9\u05d4"
+  },
+  {
+    "type": "series",
+    "title": "HEBREW \u05e0\u05d8\u05e4\u05dc\u05d9\u05e7\u05e1 \u05d1\u05e2\u05d1\u05e8\u05d9\u05ea"
+  },
+  {
+    "type": "series",
+    "title": "HEBREW KOR \u05d3\u05e8\u05de\u05d5\u05ea \u05d0\u05e1\u05d9\u05d9\u05ea\u05d9\u05d5\u05ea"
+  },
+  {
+    "type": "series",
+    "title": "ROMANIAN SERIES"
+  },
+  {
+    "type": "series",
+    "title": "ROMANIAN VOYO SERIES"
+  },
+  {
+    "type": "series",
+    "title": "BULGARIYA SERIAL"
+  },
+  {
+    "type": "series",
+    "title": "HUNGARY TV-SOROZAT"
+  },
+  {
+    "type": "series",
+    "title": "RUSSAIN SERIES"
+  },
+  {
+    "type": "series",
+    "title": "AFRICA SERIES"
+  },
+  {
+    "type": "series",
+    "title": "SOUTH AFRICA SERIES"
+  },
+  {
+    "type": "series",
+    "title": "CHINA ANIMATION"
+  },
+  {
+    "type": "series",
+    "title": "PHILIPPINES SERIES"
+  },
+  {
+    "type": "series",
+    "title": "PHILIPPINES TAGALOG DUB SERIES"
+  },
+  {
+    "type": "series",
+    "title": "PHILIPPINES TAGALOG SUB SERIES"
+  },
+  {
+    "type": "series",
+    "title": "PHILIPPINES ANIME TAGALOG DUBBED"
+  },
+  {
+    "type": "series",
+    "title": "PHILIPPINES MICRO SERIES"
+  },
+  {
+    "type": "series",
+    "title": "NORDIC SERIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "series",
+    "title": "NORDIC KIDS \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "series",
+    "title": "NORDIC SERIE \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "series",
+    "title": "NORDIC SERIES"
+  },
+  {
+    "type": "series",
+    "title": "NORDIC SKY SHOWTIME"
+  },
+  {
+    "type": "series",
+    "title": "NORDIC PRIME VIDEO"
+  },
+  {
+    "type": "series",
+    "title": "NORDIC APPLE TV+"
+  },
+  {
+    "type": "series",
+    "title": "NORDIC DISNEY+"
+  },
+  {
+    "type": "series",
+    "title": "NORDIC HBO MAX"
+  },
+  {
+    "type": "series",
+    "title": "NORDIC NETFLIX"
+  },
+  {
+    "type": "series",
+    "title": "NORDIC VIAPLAY"
+  },
+  {
+    "type": "series",
+    "title": "NORDIC ANIME"
+  },
+  {
+    "type": "series",
+    "title": "NORDIC KIDS"
+  },
+  {
+    "type": "series",
+    "title": "SVENSK SERIE"
+  },
+  {
+    "type": "series",
+    "title": "SVENSK SVT PLAY"
+  },
+  {
+    "type": "series",
+    "title": "SVENSK TV4 PLAY"
+  },
+  {
+    "type": "series",
+    "title": "SVENSKA BARN"
+  },
+  {
+    "type": "series",
+    "title": "DANSK SERIES \u2074\u1d37 \u00b3\u2078\u2074\u2070\u1d3e \u1d30\u1d3c\u1d38\u1d2e\u02b8 \u1d2c\u1d41\u1d30\u1d35\u1d3c"
+  },
+  {
+    "type": "series",
+    "title": "DANSK SERIE"
+  },
+  {
+    "type": "series",
+    "title": "DANSK TV2 PLAY"
+  },
+  {
+    "type": "series",
+    "title": "DANSKE B\u00d8RN"
+  },
+  {
+    "type": "series",
+    "title": "NORSK SERIE"
+  },
+  {
+    "type": "series",
+    "title": "NORSK NRK"
+  },
+  {
+    "type": "series",
+    "title": "NORSK TV2 PLAY"
+  },
+  {
+    "type": "series",
+    "title": "NORSK VGTV"
+  },
+  {
+    "type": "series",
+    "title": "NORSK BARN"
+  },
+  {
+    "type": "series",
+    "title": "SUOMI SARJA"
+  },
+  {
+    "type": "series",
+    "title": "SUOMI MTV KATSOMO"
+  },
+  {
+    "type": "series",
+    "title": "SUOMI YLE AREENA"
+  },
+  {
+    "type": "series",
+    "title": "SUOMI RUUTU"
+  },
+  {
+    "type": "series",
+    "title": "SUOMEN LAPSET"
+  },
+  {
+    "type": "series",
+    "title": "\u00cdSLANDS SERIES"
+  },
+  {
+    "type": "series",
+    "title": "\u00cdSLANDS VIAPLAY R\u00d6\u00d0"
+  }
+]

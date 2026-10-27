@@ -1,0 +1,16 @@
+{
+  "database": "https://osv.dev",
+  "checkedAt": "2026-10-26T21:20:38.654074+00:00",
+  "queryCount": 225,
+  "resultCount": 225,
+  "findings": [],
+  "scope": "Known package/version advisories only; excludes SDK and locally patched code assessment.",
+  "additionalCommitQueries": [
+    {
+      "project": "FFmpeg",
+      "commit": "37c90f55d8b6c3948c79449b04755527b4ae1351",
+      "matchingAdvisories": 0
+    }
+  ],
+  "limitations": "No returned matches is not proof of security. Database coverage, vendored modifications, native build options and vulnerability reachability require separate assessment."
+}

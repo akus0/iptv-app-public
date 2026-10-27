@@ -1,0 +1,24 @@
+[Unit]
+Description=iptv-app pairing and transfer relay
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/pair-relay/relay.py
+Environment=PAIR_HOST=127.0.0.1 PAIR_PORT=8930 PAIR_PAGE=/opt/pair-relay/pair.html PAIR_VAULT_DIR=/var/lib/pair-relay
+# Require the compatible app protocol marker; it is not authentication.
+Environment=PAIR_REQUIRE_APP=1
+Restart=always
+RestartSec=2
+# Runs as a throwaway user. Pairing is memory only; the only writable place
+# is the vault's state dir (encrypted internet-transfer blobs, auto-expired).
+DynamicUser=yes
+StateDirectory=pair-relay
+StateDirectoryMode=0700
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+NoNewPrivileges=yes
+MemoryMax=128M
+
+[Install]
+WantedBy=multi-user.target
