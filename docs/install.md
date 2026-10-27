@@ -1,6 +1,6 @@
 # Install iptv-app
 
-**APK availability:** no public APK has been published yet. Check [Releases](https://github.com/akus0/iptv-app-public/releases) for availability. The instructions and stable download address below apply once a verified APK is released.
+**[Download iptv-app.apk](https://github.com/akus0/iptv-app-public/releases/latest/download/iptv-app.apk)**
 
 The same APK supports 32-bit and 64-bit ARM phones, Android TV and Google TV on Android 7.0 or newer. It does not support Samsung Tizen, LG webOS, iOS or x86 Android devices. The app includes no channels or subscriptions.
 

@@ -2,9 +2,9 @@
 
 An IPTV player for Android phones and TVs. Bring your own M3U or Xtream Codes playlist and XMLTV guide.
 
-**[Releases](https://github.com/akus0/iptv-app-public/releases)** · [Phone and TV installation](docs/install.md)
+**[Download the Android APK](https://github.com/akus0/iptv-app-public/releases/latest/download/iptv-app.apk)** · [Releases and source packages](https://github.com/akus0/iptv-app-public/releases) · [Phone and TV installation](docs/install.md)
 
-Source is available now. A verified public APK has not been published yet. Android releases will use one APK for ARM phones, Android TV and Google TV running Android 7.0 or newer, hosted here on GitHub.
+One APK for ARM Android phones, Android TV and Google TV running Android 7.0 or newer. No account is needed to download it.
 
 ![Live TV guide on TV](docs/screenshots/live-tv.png)
 

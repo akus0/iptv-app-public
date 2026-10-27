@@ -1,8 +1,8 @@
 # Changelog
 
-## 0.1.0 — source release, 27 October 2026
+## 0.1.0 — 27 October 2026
 
-- First public source snapshot; prepared GitHub-hosted Android releases and phone/TV installation instructions.
+- First public Android release: one APK for ARM phones and TVs, hosted on GitHub with source packages, checksums and installation instructions.
 - Added APK privacy and runtime-completeness checks before packaging downloads; aligned native libraries with the selected build targets.
 - Corrected binary URL boundaries and removed costly hostname backtracking in privacy scans. Debug-symbol files are excluded from source exports.
 - Extended displayed playback-error redaction to mixed-case HTTP and RTSP/RTMP addresses, preserving error details and recovery behaviour.

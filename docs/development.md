@@ -44,6 +44,8 @@ Gradle reads the four Android signing settings; environment variables take prece
 
 Optional public build settings are `PAIR_RELAY_BASE`, `TRAKT_CLIENT_ID`, `SIMKL_CLIENT_ID` and `TRAKT_REDIRECT_URI`. Register your own services before using them. These values are visible in distributed binaries; playlist credentials belong in runtime settings. LAN phone pairing needs no relay.
 
+Sports scores, schedules and channel matching do not require private build credentials. The sports services use public endpoints and the user's playlist/guide. `PRIVATE_*` entries in `.env.example` are file paths for optional offline tests, not API keys; the normal app does not read them. Public feeds may still be unavailable or rate-limited. Optional TMDB enrichment uses a key entered by the user in Settings.
+
 Keep device serials, addresses and private fixture paths in `.env`. Keep logs and device captures outside source. Reviewed screenshots using sample data belong in [docs/screenshots](screenshots/README.md).
 
 [Release preparation](release.md) · [Dependency inventory](dependencies/README.md) · [Development tools](../tools/README.md)
