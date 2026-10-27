@@ -1,67 +1,46 @@
 # iptv-app
 
-An IPTV player for Android phones and TVs. Bring your own M3U or Xtream Codes playlist and XMLTV guide.
+A free IPTV player for Android phones and TVs. Live TV, sports, replays, highlights, movies, series and multiview. Bring your own M3U or Xtream playlist—no channels or subscriptions are included.
 
-**[Download the Android APK](https://github.com/akus0/iptv-app-public/releases/latest/download/iptv-app.apk)** · [Releases and source packages](https://github.com/akus0/iptv-app-public/releases) · [Phone and TV installation](docs/install.md)
+## Download
 
-One APK for ARM Android phones, Android TV and Google TV running Android 7.0 or newer. No account is needed to download it.
+- **TV:** Install [Downloader by AFTVnews](https://play.google.com/store/apps/details?id=com.esaba.downloader) and enter **3461840**.
+- **Phone:** [Download the APK](https://github.com/akus0/iptv-app-public/releases/latest/download/iptv-app.apk) and open it to install.
 
-![Live TV guide on TV](docs/screenshots/live-tv.png)
-
-## Features
-
-- **Live TV:** programme guide, category folders, favourites, history, and search across channels and current programmes.
-- **Sports:** live and upcoming events, scores, ranked channel suggestions, plus replays and highlights found in your guide.
-- **Movies & Series:** Xtream libraries with category browsing, search, favourites and continue watching. Categories load on demand.
-- **Multiview:** two or four channels, selectable audio, and horizontal or vertical two-screen layouts.
-- **Playback:** preview and fullscreen controls, picture-in-picture and background audio on supported Android devices.
-- **Appearance:** remote-friendly TV navigation, compact phone layouts, and dark grey, OLED black or light themes.
+One APK for ARM devices on Android 7.0+. [Installation help](docs/install.md) · [Releases](https://github.com/akus0/iptv-app-public/releases)
 
 ## Get started
 
-1. Open **Settings → Playlists & guide → Add Playlist** and enter your playlist details.
-2. Choose **Organise with iptv-app** for grouped categories, or **Keep provider categories** for the original layout.
-3. For an Xtream playlist, enable the content you want under **Content from this playlist**. Guide updates and supplementary sources are under **Playlists & guide → TV guide**.
-
-The app includes no channels, subscriptions or media. Sports coverage depends on the available schedules and your guide; suggested channels may need manual selection. Multiview needs enough device capacity and connections allowed by your provider.
+1. Open **Settings → Playlists & guide → Add Playlist** and enter your details.
+2. Choose **Organise with iptv-app** or **Keep provider categories**. For Xtream playlists, enable Movies and Series under **Content from this playlist** if wanted.
 
 ## Screenshots
 
+![Live TV guide on TV](docs/screenshots/live-tv.png)
+
 | Live TV on phone | Sports on phone |
 | --- | --- |
-| <img src="docs/screenshots/live-tv-phone.png" width="300" alt="Phone Live TV guide with channel list and preview"> | <img src="docs/screenshots/sports-phone.png" width="300" alt="Tennis event with tournament, score and suggested channel"> |
+| <img src="docs/screenshots/live-tv-phone.png" width="300" alt="Phone Live TV guide"> | <img src="docs/screenshots/sports-phone.png" width="300" alt="Phone sports events"> |
+
+<details>
+<summary>More screenshots</summary>
 
 | Replays | Highlights |
 | --- | --- |
-| <img src="docs/screenshots/replays-phone.png" width="300" alt="Replay listings with league initials, dates and programme details"> | <img src="docs/screenshots/highlights-phone.png" width="300" alt="Highlights grouped by sport with programme summaries"> |
+| <img src="docs/screenshots/replays-phone.png" width="300" alt="Replay listings"> | <img src="docs/screenshots/highlights-phone.png" width="300" alt="Sports highlights"> |
 
-**Sports on TV**
+![Sports on TV](docs/screenshots/sports-tv.png)
 
-![Sports on TV with preview beside the events](docs/screenshots/sports-tv.png)
+![Sports in phone landscape](docs/screenshots/sports-landscape.png)
 
-**Sports in phone landscape**
+![Movies on TV](docs/screenshots/movies-tv.png)
 
-![Landscape sports layout](docs/screenshots/sports-landscape.png)
+</details>
 
-**Movies on TV**
+Screenshots use [sample data](docs/screenshots/README.md).
 
-![Movies browser on TV](docs/screenshots/movies-tv.png)
+## Development & licence
 
-Current app layouts rendered with sample data; video and poster placeholders are intentional. [Screenshot details](docs/screenshots/README.md).
+[Build instructions](docs/development.md) · [Release preparation](docs/release.md) · [Changelog](CHANGELOG.md)
 
-## Build
-
-Use Flutter 3.47.7, JDK 21 and the Android SDK:
-
-```sh
-flutter pub get
-flutter run
-```
-
-See [development](docs/development.md) for checks and local settings, and [release preparation](docs/release.md) for signed APKs.
-
-## Licence
-
-GPL-3.0. Based on [VesperTV](https://github.com/NoXqc/VesperTV) by NoXqc and contributors; this fork is independently maintained.
-
-[Licence](LICENSE) · [Attribution](NOTICE.md) · [Trademark terms](TRADEMARKS.md) · [Changelog](CHANGELOG.md)
+[GPL-3.0](LICENSE). Based on [VesperTV](https://github.com/NoXqc/VesperTV) by NoXqc and contributors; independently maintained. [Attribution](NOTICE.md) · [Trademark terms](TRADEMARKS.md)

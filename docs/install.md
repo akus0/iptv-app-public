@@ -1,6 +1,6 @@
 # Install iptv-app
 
-**[Download iptv-app.apk](https://github.com/akus0/iptv-app-public/releases/latest/download/iptv-app.apk)**
+**Downloader code: 3461840** · **[Download iptv-app.apk](https://github.com/akus0/iptv-app-public/releases/latest/download/iptv-app.apk)**
 
 The same APK supports 32-bit and 64-bit ARM phones, Android TV and Google TV on Android 7.0 or newer. It does not support Samsung Tizen, LG webOS, iOS or x86 Android devices. The app includes no channels or subscriptions.
 
@@ -14,20 +14,13 @@ The same APK supports 32-bit and 64-bit ARM phones, Android TV and Google TV on 
 ## Android TV or Google TV
 
 1. Install [Downloader by AFTVnews](https://play.google.com/store/apps/details?id=com.esaba.downloader) from the TV's Play Store.
-2. In Downloader, open this direct APK address:
-
-   ```text
-   https://github.com/akus0/iptv-app-public/releases/latest/download/iptv-app.apk
-   ```
-
+2. Enter **3461840** in Downloader and select **Go**.
 3. Allow Downloader to **install unknown apps** when prompted, then install the APK. On some TVs this permission is under **Settings → Apps → Special app access** or **Security & restrictions**.
 4. Open iptv-app from the TV's apps list and add your playlist.
 
 Alternatively, download the APK on your phone and transfer it to the TV, then open it with the TV's file manager. Developer mode and wireless debugging are not needed for these installation methods.
 
-### Downloader numeric codes
-
-A Downloader code is a shortcut to a web address. You can create one at the [AFTVnews URL Shortener](https://go.aftvnews.com/) by pasting the direct APK link above and completing its CAPTCHA. Enter the returned number in Downloader on the TV. Because the link points to the latest release, the same code can continue to work after updates. Codes and submitted URLs are public; never submit a playlist or login link.
+If the code is unavailable, use the [direct APK link](https://github.com/akus0/iptv-app-public/releases/latest/download/iptv-app.apk) at the top of this page.
 
 ## Updates and troubleshooting
 
