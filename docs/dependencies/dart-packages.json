@@ -1,0 +1,2023 @@
+{
+  "schema": 1,
+  "packages": [
+    {
+      "name": "archive",
+      "version": "4.2.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/archive-4.2.0.tar.gz",
+      "archiveSha256": "ace891da0862b0e4cabbb064ee3fd87b2728b898949fdb366d83fe98342c9f19",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "32f97d332eae7453ec4079858e6f1d74be85beeb6d3881068b47d02a379cccea"
+        },
+        {
+          "file": "LICENSE-other.md",
+          "sha256": "ebe5a199af245d7e3e761673fbf3db341427060407e50713861ab24bb2cb1552"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "args",
+      "version": "2.7.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/args-2.7.0.tar.gz",
+      "archiveSha256": "d0481093c50b1da8910eb0bb301626d4d8eb7284aa739614d2b394ee09e3ea04",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "dfb09c74e29386cd3e2719f32d4995d59526179753931d31840757c77fbf2791"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "async",
+      "version": "2.13.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/async-2.13.1.tar.gz",
+      "archiveSha256": "e2eb0491ba5ddb6177742d2da23904574082139b07c1e33b8503b9f46f3e1a37",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "ff15faa32a2e638107b7789592b14426162a75ba620044ee2340a20ec6ce5e73"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "boolean_selector",
+      "version": "2.1.2",
+      "scope": "development",
+      "source": "https://pub.dev/api/archives/boolean_selector-2.1.2.tar.gz",
+      "archiveSha256": "8aab1771e1243a5063b8b0ff68042d67334e3feab9e95b9490f9a6ebf73b42ea",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "b71519245009a3b8f126196a5408ec031e216e8e0d985085958c6543f82a8a2a"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "cached_network_image",
+      "version": "3.4.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/cached_network_image-3.4.1.tar.gz",
+      "archiveSha256": "7c1183e361e5c8b0a0f21a28401eecdbde252441106a9816400dd4c2b2424916",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "31b6d676e72277911cfee3688ca9411387eb5ce7a2f722cef30bbea0bcbee60e"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "cached_network_image_platform_interface",
+      "version": "4.1.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/cached_network_image_platform_interface-4.1.1.tar.gz",
+      "archiveSha256": "35814b016e37fbdc91f7ae18c8caf49ba5c88501813f73ce8a07027a395e2829",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "31b6d676e72277911cfee3688ca9411387eb5ce7a2f722cef30bbea0bcbee60e"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "cached_network_image_web",
+      "version": "1.3.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/cached_network_image_web-1.3.1.tar.gz",
+      "archiveSha256": "980842f4e8e2535b8dbd3d5ca0b1f0ba66bf61d14cc3a17a9b4788a3685ba062",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "31b6d676e72277911cfee3688ca9411387eb5ce7a2f722cef30bbea0bcbee60e"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "characters",
+      "version": "1.4.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/characters-1.4.1.tar.gz",
+      "archiveSha256": "faf38497bda5ead2a8c7615f4f7939df04333478bf32e4173fcb06d428b5716b",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "0371d1da6a57fb791db29d29b95333429205f51f3cb2eb3a0c12d91838a38744"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "checked_yaml",
+      "version": "2.0.4",
+      "scope": "development",
+      "source": "https://pub.dev/api/archives/checked_yaml-2.0.4.tar.gz",
+      "archiveSha256": "959525d3162f249993882720d52b7e0c833978df229be20702b33d48d91de70f",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "4771d808721f4d5f02318ab857c92f5a5dce87b14ae1c3770fe21ca7fd4a9280"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "cli_util",
+      "version": "0.4.2",
+      "scope": "development",
+      "source": "https://pub.dev/api/archives/cli_util-0.4.2.tar.gz",
+      "archiveSha256": "ff6785f7e9e3c38ac98b2fb035701789de90154024a75b6cb926445e83197d1c",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "ff15faa32a2e638107b7789592b14426162a75ba620044ee2340a20ec6ce5e73"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "clock",
+      "version": "1.1.3",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/clock-1.1.3.tar.gz",
+      "archiveSha256": "e51d50bca3217c9a9fa2b41a30e4a38971133f5f9ec7a3d57bae095007f1d28e",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+        }
+      ],
+      "licencePattern": "Apache-2.0"
+    },
+    {
+      "name": "code_assets",
+      "version": "1.2.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/code_assets-1.2.1.tar.gz",
+      "archiveSha256": "bf394f466ba9205f1812a0433b392d6af280f155f56651eda7c18cc32ed493b8",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "21ae23b0b9ff67a2dc75ab085d1e8db8ac548c5faf370af17f28dd2ef3b52b7b"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "collection",
+      "version": "1.19.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/collection-1.19.1.tar.gz",
+      "archiveSha256": "2f5709ae4d3d59dd8f7cd309b4e023046b57d8a6c82130785d2b0e5868084e76",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "ff15faa32a2e638107b7789592b14426162a75ba620044ee2340a20ec6ce5e73"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "crypto",
+      "version": "3.0.7",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/crypto-3.0.7.tar.gz",
+      "archiveSha256": "c8ea0233063ba03258fbcf2ca4d6dadfefe14f02fab57702265467a19f27fadf",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "ad6a71997da90924b2cfb1fb47ec46537f70faf469efe016168794ae45ed6888"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "cryptography",
+      "version": "2.9.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/cryptography-2.9.0.tar.gz",
+      "archiveSha256": "3eda3029d34ec9095a27a198ac9785630fe525c0eb6a49f3d575272f8e792ef0",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "59899c6091b540582ed617e8eeaac4919dc985ccfc35459ee9752b699be5205b"
+        }
+      ],
+      "licencePattern": "Apache-2.0"
+    },
+    {
+      "name": "csslib",
+      "version": "1.0.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/csslib-1.0.2.tar.gz",
+      "archiveSha256": "09bad715f418841f976c77db72d5398dc1253c21fb9c0c7f0b0b985860b2d58e",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "dfb09c74e29386cd3e2719f32d4995d59526179753931d31840757c77fbf2791"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "cupertino_icons",
+      "version": "1.0.9",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/cupertino_icons-1.0.9.tar.gz",
+      "archiveSha256": "41e005c33bd814be4d3096aff55b1908d419fde52ca656c8c47719ec745873cd",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "310d6ab6483280280c9db122bded0a63c09558bc5743720f61dbcbb494db370a"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "dbus",
+      "version": "0.7.15",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/dbus-0.7.15.tar.gz",
+      "archiveSha256": "a48d5da28e89bd02196e80d81ed8d7954923d00a0f4a68cc20b575038f023383",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+        }
+      ],
+      "licencePattern": "MPL-2.0"
+    },
+    {
+      "name": "fake_async",
+      "version": "1.3.3",
+      "scope": "development",
+      "source": "https://pub.dev/api/archives/fake_async-1.3.3.tar.gz",
+      "archiveSha256": "5368f224a74523e8d2e7399ea1638b37aecfca824a3cc4dfdf77bf1fa905ac44",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+        }
+      ],
+      "licencePattern": "Apache-2.0"
+    },
+    {
+      "name": "ffi",
+      "version": "2.2.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/ffi-2.2.0.tar.gz",
+      "archiveSha256": "6d7fd89431262d8f3125e81b50d3847a091d846eafcd4fdb88dd06f36d705a45",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "0371d1da6a57fb791db29d29b95333429205f51f3cb2eb3a0c12d91838a38744"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "ffi_leak_tracker",
+      "version": "0.1.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/ffi_leak_tracker-0.1.2.tar.gz",
+      "archiveSha256": "4093d4ef9ca06ffe2786e73bfb25e22aa92112b9bb4ec941f11e3e6b61489a97",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "332f290333e64ed007b4f59aeeebd8fd3ceaadfbfa226a6cf2a3ab1583281624"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "file",
+      "version": "7.0.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/file-7.0.1.tar.gz",
+      "archiveSha256": "a3b4f84adafef897088c160faf7dfffb7696046cb13ae90b508c2cbc95d3b8d4",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f6df86b1412172537273e8e80ee2fb8a66aa7307ce0b39ea5ddab47ca41b8c49"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "fixnum",
+      "version": "1.1.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/fixnum-1.1.1.tar.gz",
+      "archiveSha256": "b6dc7065e46c974bc7c5f143080a6764ec7a4be6da1285ececdc37be96de53be",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "ff0b91d4f3c32b25cb6ec84985e8da89b0ba2a2b2f7eef353cda5e5423a20390"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "flutter",
+      "version": "0.0.0",
+      "scope": "runtime dependency closure",
+      "source": "Flutter SDK; see native-sources.json for pinned revision",
+      "archiveSha256": null,
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "a598db94b6290ffbe10b5ecf911057b6a943351c727fdda9e5f2891d68700a20"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "flutter_cache_manager",
+      "version": "3.4.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/flutter_cache_manager-3.4.2.tar.gz",
+      "archiveSha256": "1de7849213b4c73c85aca7e0ac687a9a5d82ccdb594366b9dcc26cb6a2189cd2",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "c18c2b23af83fdb3dc1c857b1df7561f7807fc3667a01d9475878733258d840e"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "flutter_launcher_icons",
+      "version": "0.14.4",
+      "scope": "development",
+      "source": "https://pub.dev/api/archives/flutter_launcher_icons-0.14.4.tar.gz",
+      "archiveSha256": "10f13781741a2e3972126fae08393d3c4e01fa4cd7473326b94b72cf594195e7",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "02c454256448927423b4c0e517a083cadf78a8d9467a9d31ad3b4f4ff48ff7ca"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "flutter_lints",
+      "version": "4.0.0",
+      "scope": "development",
+      "source": "https://pub.dev/api/archives/flutter_lints-4.0.0.tar.gz",
+      "archiveSha256": "3f41d009ba7172d5ff9be5f6e6e6abb4300e263aab8866d2a0842ed2a70f8f0c",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "flutter_localizations",
+      "version": "0.0.0",
+      "scope": "runtime dependency closure",
+      "source": "Flutter SDK; see native-sources.json for pinned revision",
+      "archiveSha256": null,
+      "licenceOrigin": "Flutter SDK",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "a598db94b6290ffbe10b5ecf911057b6a943351c727fdda9e5f2891d68700a20"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "flutter_test",
+      "version": "0.0.0",
+      "scope": "development",
+      "source": "Flutter SDK; see native-sources.json for pinned revision",
+      "archiveSha256": null,
+      "licenceOrigin": "Flutter SDK",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "a598db94b6290ffbe10b5ecf911057b6a943351c727fdda9e5f2891d68700a20"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "flutter_web_plugins",
+      "version": "0.0.0",
+      "scope": "runtime dependency closure",
+      "source": "Flutter SDK; see native-sources.json for pinned revision",
+      "archiveSha256": null,
+      "licenceOrigin": "Flutter SDK",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "a598db94b6290ffbe10b5ecf911057b6a943351c727fdda9e5f2891d68700a20"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "glob",
+      "version": "2.2.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/glob-2.2.0.tar.gz",
+      "archiveSha256": "218aeb56050c714f62a3182775320dfa04602b55074873e24e31bbd39bda96fb",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "hooks",
+      "version": "2.0.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/hooks-2.0.2.tar.gz",
+      "archiveSha256": "9a62a50b50b769a737bc0a8ff381f333529df3ab746b2f6b02e83760231455ba",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "21ae23b0b9ff67a2dc75ab085d1e8db8ac548c5faf370af17f28dd2ef3b52b7b"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "html",
+      "version": "0.15.7",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/html-0.15.7.tar.gz",
+      "archiveSha256": "43b67b8f43321ab066817dfac5619596c98bb1b61624e77203bb4351785f9699",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "6ed8a26ed0f30589422f86356eed53bb6dacffc3e2fd4feddc944c4331945151"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "http",
+      "version": "1.6.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/http-1.6.0.tar.gz",
+      "archiveSha256": "87721a4a50b19c7f1d49001e51409bddc46303966ce89a65af4f4e6004896412",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "http_parser",
+      "version": "4.1.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/http_parser-4.1.2.tar.gz",
+      "archiveSha256": "178d74305e7866013777bab2c3d8726205dc5a4dd935297175b19a23a2e66571",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "image",
+      "version": "4.9.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/image-4.9.2.tar.gz",
+      "archiveSha256": "1976370a4df3091bb0f72409c187ad1f9132a818bc6b95ca59c0bae1c75c688e",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "f3c17da84e0780e1c334325c73098257c32221d62498ed55ef3c1361904925aa"
+        },
+        {
+          "file": "LICENSE-other.md",
+          "sha256": "dea0e9e446e57c0987d241d5471e47e7b66796fb286706ec993c3fa6696cb08e"
+        }
+      ],
+      "licencePattern": "Apache-2.0"
+    },
+    {
+      "name": "intl",
+      "version": "0.20.3",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/intl-0.20.3.tar.gz",
+      "archiveSha256": "1ca20c894b1717686a2319b8548763d812bc0aabdac580420a44c5178c57a867",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "7e124af6a556f045cb3a20cafbdaa31602ac2c82cbcb3c3b15faaaf514b06028"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "jni",
+      "version": "1.0.3",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/jni-1.0.3.tar.gz",
+      "archiveSha256": "f038e58b4dc2c9037f50e233175086337e0b305e356d28211bf55f21c504cbd3",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "08a004aa8956c3cf3b24f7f69c966247233953e18e6afaa61191ea47b7eb70f6"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "jni_flutter",
+      "version": "1.0.3",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/jni_flutter-1.0.3.tar.gz",
+      "archiveSha256": "b2310cdd4c18c65c081ab141a41efa94aa26c65431803703ece51996f174f351",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "b1fcb475d67817411f335ac92872507011e574c4cb29cfdaaf7707b75641932c"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "jni_util",
+      "version": "1.0.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/jni_util-1.0.0.tar.gz",
+      "archiveSha256": "1ba86da04a5f2bf18fde2edb235587e70c5b0fc5bd4ba955f46b00942c3fc35f",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "b1fcb475d67817411f335ac92872507011e574c4cb29cfdaaf7707b75641932c"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "json_annotation",
+      "version": "4.12.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/json_annotation-4.12.0.tar.gz",
+      "archiveSha256": "2a743920d81b7910627f68ee2c9ac1fc0bfee32b9fc3403587d7c6791ca12f80",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "143839f62c9b7f88143ea9f688361c27050888acde7696b34e04414bd254fafc"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "leak_tracker",
+      "version": "11.0.2",
+      "scope": "development",
+      "source": "https://pub.dev/api/archives/leak_tracker-11.0.2.tar.gz",
+      "archiveSha256": "33e2e26bdd85a0112ec15400c8cbffea70d0f9c3407491f672a2fad47915e2de",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "08a004aa8956c3cf3b24f7f69c966247233953e18e6afaa61191ea47b7eb70f6"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "leak_tracker_flutter_testing",
+      "version": "3.0.10",
+      "scope": "development",
+      "source": "https://pub.dev/api/archives/leak_tracker_flutter_testing-3.0.10.tar.gz",
+      "archiveSha256": "1dbc140bb5a23c75ea9c4811222756104fbcd1a27173f0c34ca01e16bea473c1",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "08a004aa8956c3cf3b24f7f69c966247233953e18e6afaa61191ea47b7eb70f6"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "leak_tracker_testing",
+      "version": "3.0.2",
+      "scope": "development",
+      "source": "https://pub.dev/api/archives/leak_tracker_testing-3.0.2.tar.gz",
+      "archiveSha256": "8d5a2d49f4a66b49744b23b018848400d23e54caf9463f4eb20df3eb8acb2eb1",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "08a004aa8956c3cf3b24f7f69c966247233953e18e6afaa61191ea47b7eb70f6"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "lints",
+      "version": "4.0.0",
+      "scope": "development",
+      "source": "https://pub.dev/api/archives/lints-4.0.0.tar.gz",
+      "archiveSha256": "976c774dd944a42e83e2467f4cc670daef7eed6295b10b36ae8c85bcbf828235",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "421fe78c3b5df297f8b4ab2c74f2450a274ee6d245a113091f6b9f90570af193"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "logging",
+      "version": "1.3.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/logging-1.3.0.tar.gz",
+      "archiveSha256": "c8245ada5f1717ed44271ed1c26b8ce85ca3228fd2ffdb75468ab01979309d61",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "dfb09c74e29386cd3e2719f32d4995d59526179753931d31840757c77fbf2791"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "matcher",
+      "version": "0.12.20",
+      "scope": "development",
+      "source": "https://pub.dev/api/archives/matcher-0.12.20.tar.gz",
+      "archiveSha256": "31bd099b47c10cd1aeb55146a2d46ce0277630ecef3f7dae54ad7873f36696cd",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "material_color_utilities",
+      "version": "0.13.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/material_color_utilities-0.13.0.tar.gz",
+      "archiveSha256": "9c337007e82b1889149c82ed242ed1cb24a66044e30979c44912381e9be4c48b",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "d103f246ef4c18dab8af0c1dcf6a8af884e5cff554da7261a48ac43c17d98f2e"
+        }
+      ],
+      "licencePattern": "Apache-2.0"
+    },
+    {
+      "name": "media_kit",
+      "version": "1.2.6",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/media_kit-1.2.6.tar.gz",
+      "archiveSha256": "ae9e79597500c7ad6083a3c7b7b7544ddabfceacce7ae5c9709b0ec16a5d6643",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "2e3000f38718f050869d57540c288c661a446f64df1ba4ea4764df552b04a331"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "media_kit_libs_windows_video",
+      "version": "1.0.11",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/media_kit_libs_windows_video-1.0.11.tar.gz",
+      "archiveSha256": "dff76da2778729ab650229e6b4ec6ec111eb5151431002cbd7ea304ff1f112ab",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "2e3000f38718f050869d57540c288c661a446f64df1ba4ea4764df552b04a331"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "media_kit_video",
+      "version": "1.3.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/media_kit_video-1.3.1.tar.gz",
+      "archiveSha256": "813858c3fe84eb46679eb698695f60665e2bfbef757766fac4d2e683f926e15a",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "2e3000f38718f050869d57540c288c661a446f64df1ba4ea4764df552b04a331"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "meta",
+      "version": "1.18.3",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/meta-1.18.3.tar.gz",
+      "archiveSha256": "c82594181e3312f3d0695fc95aaaf7758d75b8d4ae2bbecf223b9fd5109a059d",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "b71519245009a3b8f126196a5408ec031e216e8e0d985085958c6543f82a8a2a"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "native_toolchain_c",
+      "version": "0.19.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/native_toolchain_c-0.19.2.tar.gz",
+      "archiveSha256": "f9c168717100ae6d9fee9ffb0be379bf1f8b26b0f6bcbd4fdddcd931993a6a72",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "aa81abb1ac43e40d2f5a606385edd37e974a5858d4109f7f439dd43d964487a7"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "nested",
+      "version": "1.0.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/nested-1.0.0.tar.gz",
+      "archiveSha256": "03bac4c528c64c95c722ec99280375a6f2fc708eec17c7b3f07253b626cd2a20",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "fccaeae95a39c93176de9321c734c90d8e36f465c48fcf278840844d8eab1af4"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "objective_c",
+      "version": "9.5.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/objective_c-9.5.0.tar.gz",
+      "archiveSha256": "b7fb95a6d9a4f009edd63dc5ac69f07420b23a16161c6dd8660290b59c602e8e",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "1cda25a8de6880c5338de0b4a06ee89e8537c213eb1379c16a4c035bfd198b5c"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "octo_image",
+      "version": "2.1.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/octo_image-2.1.0.tar.gz",
+      "archiveSha256": "34faa6639a78c7e3cbe79be6f9f96535867e879748ade7d17c9b1ae7536293bd",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "9a64f4b486cd12af348a9716640d121dfca9b5ac2d8c3a24a9444b65e8560f9b"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "package_config",
+      "version": "3.0.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/package_config-3.0.0.tar.gz",
+      "archiveSha256": "ffcf4cf3d6c0b74ac43708d9f56625506e8a68aa935abe9d267a7330f320eb5d",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "0371d1da6a57fb791db29d29b95333429205f51f3cb2eb3a0c12d91838a38744"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "package_info_plus",
+      "version": "10.2.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/package_info_plus-10.2.1.tar.gz",
+      "archiveSha256": "127e1751e37ffb2ff4658beeaca77bad0c27bf5f932bd3a501c2296926d4b481",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "3b38d48befd0af70b892e13d10c9e34679416c24a9277f962629951c64d71f4c"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "package_info_plus_platform_interface",
+      "version": "4.1.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/package_info_plus_platform_interface-4.1.0.tar.gz",
+      "archiveSha256": "db762cb2f4f25ee60fb6359773861b0f199e00b90d237bd85a76a1e806b46ef4",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "3b38d48befd0af70b892e13d10c9e34679416c24a9277f962629951c64d71f4c"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "path",
+      "version": "1.9.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/path-1.9.1.tar.gz",
+      "archiveSha256": "75cca69d1490965be98c73ceaea117e8a04dd21217b37b292c9ddbec0d955bc5",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "path_provider",
+      "version": "2.1.6",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/path_provider-2.1.6.tar.gz",
+      "archiveSha256": "a7f4874f987173da295a61c181b8ee71dab59b332a486b391babf26a1b884825",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "path_provider_android",
+      "version": "2.3.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/path_provider_android-2.3.1.tar.gz",
+      "archiveSha256": "69cbd515a62b94d32a7944f086b2f82b4ac40a1d45bebfc00813a430ab2dabcd",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "path_provider_foundation",
+      "version": "2.6.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/path_provider_foundation-2.6.0.tar.gz",
+      "archiveSha256": "2a376b7d6392d80cd3705782d2caa734ca4727776db0b6ec36ef3f1855197699",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "path_provider_linux",
+      "version": "2.2.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/path_provider_linux-2.2.2.tar.gz",
+      "archiveSha256": "58c2005f147315b11e9b4a7bc889cd5203e250cba8e3f012dae259b4972b5c16",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "path_provider_platform_interface",
+      "version": "2.1.3",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/path_provider_platform_interface-2.1.3.tar.gz",
+      "archiveSha256": "484838772624c3a4b94f1e44a3e19897fee738f2d5c4ce448443b0417f7c9dda",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "path_provider_windows",
+      "version": "2.3.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/path_provider_windows-2.3.0.tar.gz",
+      "archiveSha256": "bd6f00dbd873bfb70d0761682da2b3a2c2fccc2b9e84c495821639601d81afe7",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "petitparser",
+      "version": "7.0.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/petitparser-7.0.2.tar.gz",
+      "archiveSha256": "91bd59303e9f769f108f8df05e371341b15d59e995e6806aefab827b58336675",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "d2e8ffdbe89acbc10d5d1f2b03e7dbddf0a9f1742e809176682b62ef3d573b3e"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "platform",
+      "version": "3.2.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/platform-3.2.0.tar.gz",
+      "archiveSha256": "a36d119c13416516a7b5913fbe8af8531e11633d784c550b2125f76c758524ec",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "143839f62c9b7f88143ea9f688361c27050888acde7696b34e04414bd254fafc"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "plugin_platform_interface",
+      "version": "2.1.8",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/plugin_platform_interface-2.1.8.tar.gz",
+      "archiveSha256": "4820fbfdb9478b1ebae27888254d445073732dae3d6ea81f0b7e06d5dedc3f02",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "posix",
+      "version": "6.5.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/posix-6.5.2.tar.gz",
+      "archiveSha256": "bc1bad54ad2b735816e31f8d4600cfde6c7839975085ddfbca48b6c9f7c4044e",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "aaf6271abd048deb3125828613f1797b7556472de6c7acd7103bd43e9cb6a84b"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "provider",
+      "version": "6.1.5+1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/provider-6.1.5+1.tar.gz",
+      "archiveSha256": "4e82183fa20e5ca25703ead7e05de9e4cceed1fbd1eadc1ac3cb6f565a09f272",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "fccaeae95a39c93176de9321c734c90d8e36f465c48fcf278840844d8eab1af4"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "pub_semver",
+      "version": "2.2.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/pub_semver-2.2.1.tar.gz",
+      "archiveSha256": "261236774e8b1d69cfc6b9eabbc96c40f25e7a2d6b171f3385d4f65d5734fb24",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "qr",
+      "version": "3.0.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/qr-3.0.2.tar.gz",
+      "archiveSha256": "5a1d2586170e172b8a8c8470bbbffd5eb0cd38a66c0d77155ea138d3af3a4445",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "1d6c0bc8208cd835577eeb9195dc646f092728b62803abd60c404d984524abf7"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "qr_flutter",
+      "version": "4.1.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/qr_flutter-4.1.0.tar.gz",
+      "archiveSha256": "5095f0fc6e3f71d08adef8feccc8cea4f12eec18a2e31c2e8d82cb6019f4b097",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "1bc86cb2619634e54a97f88dd9c11fd99afcacd52c25bdf6f84c2700b4174203"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "record_use",
+      "version": "0.6.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/record_use-0.6.0.tar.gz",
+      "archiveSha256": "2551bd8eecfe95d14ae75f6021ad0248be5c27f138c2ec12fcb52b500b3ba1ed",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "1cda25a8de6880c5338de0b4a06ee89e8537c213eb1379c16a4c035bfd198b5c"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "rxdart",
+      "version": "0.28.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/rxdart-0.28.0.tar.gz",
+      "archiveSha256": "5c3004a4a8dbb94bd4bf5412a4def4acdaa12e12f269737a5751369e12d1a962",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "licencePattern": "Apache-2.0"
+    },
+    {
+      "name": "safe_local_storage",
+      "version": "2.0.6",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/safe_local_storage-2.0.6.tar.gz",
+      "archiveSha256": "494b982d5edb71030650ea463d939670e91b232b588323dc75229d2c5f23e7b7",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "d4cfdb498601b2872c7a09d06c62f92f5c751261bdb6fc4ce436940c7ccac78a"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "screen_brightness_android",
+      "version": "2.1.6",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/screen_brightness_android-2.1.6.tar.gz",
+      "archiveSha256": "2008ad8e9527cc968f7a4de1ec58b476d495b3c612a149dbd6550c4f046da147",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "2b03ffa9338fec15e3ca229054e4cd102ca70cdec351a5ecca3e7e82860af429"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "screen_brightness_platform_interface",
+      "version": "2.1.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/screen_brightness_platform_interface-2.1.2.tar.gz",
+      "archiveSha256": "2de60c0ba569b898950029cc1f7e9dd72bda44a22beb5054aac331cb6fce2ff2",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "4aa9abd5a6cfd255fe2b3b6127685ef2c9d62674c1c45ac36a5a5c1908243fe5"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "screen_retriever",
+      "version": "0.2.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/screen_retriever-0.2.2.tar.gz",
+      "archiveSha256": "ace919117a7520c13a50a6259e60c4a0d4cbe98809468792a91b5c5adada2aa6",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "4c275c4e1ab3ffb97508c3c66a87db1c6e4f5d0233205fff8ca57ac35d20199f"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "screen_retriever_linux",
+      "version": "0.2.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/screen_retriever_linux-0.2.2.tar.gz",
+      "archiveSha256": "7b52006a5ceae1f3d5af7f77188c3290d6e7d8ded16d99809bea84967c65c257",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "4c275c4e1ab3ffb97508c3c66a87db1c6e4f5d0233205fff8ca57ac35d20199f"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "screen_retriever_macos",
+      "version": "0.2.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/screen_retriever_macos-0.2.2.tar.gz",
+      "archiveSha256": "a1489b99cce597c45a54b9aae1cd94c8d4705353b7e0bb2457a6e4de44e0ad8a",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "4c275c4e1ab3ffb97508c3c66a87db1c6e4f5d0233205fff8ca57ac35d20199f"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "screen_retriever_platform_interface",
+      "version": "0.2.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/screen_retriever_platform_interface-0.2.2.tar.gz",
+      "archiveSha256": "94a5535277510a63184ca178ce12a1449bc0b38618879aa1c18bf57369c5064a",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "4c275c4e1ab3ffb97508c3c66a87db1c6e4f5d0233205fff8ca57ac35d20199f"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "screen_retriever_windows",
+      "version": "0.2.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/screen_retriever_windows-0.2.2.tar.gz",
+      "archiveSha256": "dafc6922b0bfbf1d48cf3ccbf519b4fff47bdcb820da1728ea6db675fecc9324",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "4c275c4e1ab3ffb97508c3c66a87db1c6e4f5d0233205fff8ca57ac35d20199f"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "shared_preferences",
+      "version": "2.5.5",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/shared_preferences-2.5.5.tar.gz",
+      "archiveSha256": "c3025c5534b01739267eb7d76959bbc25a6d10f6988e1c2a3036940133dd10bf",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "shared_preferences_android",
+      "version": "2.4.28",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/shared_preferences_android-2.4.28.tar.gz",
+      "archiveSha256": "1e12aafe408aa50da80edfd679a2a6bf63ba7ab37c7fa98286da459a757b3399",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "shared_preferences_foundation",
+      "version": "2.5.7",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/shared_preferences_foundation-2.5.7.tar.gz",
+      "archiveSha256": "2ec3934efa51e46117f23031cc141b8fc878e8525b94ec1ea4f7f586cf1b47ea",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "shared_preferences_linux",
+      "version": "2.4.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/shared_preferences_linux-2.4.1.tar.gz",
+      "archiveSha256": "580abfd40f415611503cae30adf626e6656dfb2f0cee8f465ece7b6defb40f2f",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "shared_preferences_platform_interface",
+      "version": "2.4.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/shared_preferences_platform_interface-2.4.2.tar.gz",
+      "archiveSha256": "649dc798a33931919ea356c4305c2d1f81619ea6e92244070b520187b5140ef9",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "shared_preferences_web",
+      "version": "2.4.3",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/shared_preferences_web-2.4.3.tar.gz",
+      "archiveSha256": "c49bd060261c9a3f0ff445892695d6212ff603ef3115edbb448509d407600019",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "shared_preferences_windows",
+      "version": "2.4.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/shared_preferences_windows-2.4.1.tar.gz",
+      "archiveSha256": "94ef0f72b2d71bc3e700e025db3710911bd51a71cefb65cc609dd0d9a982e3c1",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "sky_engine",
+      "version": "0.0.0",
+      "scope": "runtime dependency closure",
+      "source": "Flutter SDK; see native-sources.json for pinned revision",
+      "archiveSha256": null,
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "3c0040023a5789bf56d6bf41fd44f08b21758523d41f128fb7dd6beb398d1191"
+        }
+      ],
+      "licencePattern": "Apache-2.0"
+    },
+    {
+      "name": "source_span",
+      "version": "1.10.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/source_span-1.10.2.tar.gz",
+      "archiveSha256": "56a02f1f4cd1a2d96303c0144c93bd6d909eea6bee6bf5a0e0b685edbd4c47ab",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "sqflite",
+      "version": "2.4.4",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/sqflite-2.4.4.tar.gz",
+      "archiveSha256": "54ad23e2a79c846b596b6c56cdd9c867ea58c288258402316b602f78df0cbfe0",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "c81f9454cf3107c116bc3c1fd22b7d751523a2b11e17cf90c0db3327d3c9e0da"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "sqflite_android",
+      "version": "2.4.4",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/sqflite_android-2.4.4.tar.gz",
+      "archiveSha256": "805b27c6fa10d8883253795e644818fbd5c87ce665459db84fbe71326cbb5421",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "c81f9454cf3107c116bc3c1fd22b7d751523a2b11e17cf90c0db3327d3c9e0da"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "sqflite_common",
+      "version": "2.5.12",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/sqflite_common-2.5.12.tar.gz",
+      "archiveSha256": "b3ebf7b30c8ae279615f146dfc29ea6ba097299294193107c85a7531ec2346d9",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "c81f9454cf3107c116bc3c1fd22b7d751523a2b11e17cf90c0db3327d3c9e0da"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "sqflite_common_ffi",
+      "version": "2.4.3",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/sqflite_common_ffi-2.4.3.tar.gz",
+      "archiveSha256": "4ec920a01788641fa1c9922e757c108427e7f8634cce3ce8a1073d573060f4a3",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "c81f9454cf3107c116bc3c1fd22b7d751523a2b11e17cf90c0db3327d3c9e0da"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "sqflite_darwin",
+      "version": "2.4.4",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/sqflite_darwin-2.4.4.tar.gz",
+      "archiveSha256": "dbdda396f975f74d611ffd3e6fb280ee3ee4cd2319b89278533f427e0140cf0b",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "c81f9454cf3107c116bc3c1fd22b7d751523a2b11e17cf90c0db3327d3c9e0da"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "sqflite_platform_interface",
+      "version": "2.4.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/sqflite_platform_interface-2.4.2.tar.gz",
+      "archiveSha256": "c9177b2f3150ed0647b90a94307c28452fe0a5401863044216aed83addd6c7c5",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "c81f9454cf3107c116bc3c1fd22b7d751523a2b11e17cf90c0db3327d3c9e0da"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "sqlite3",
+      "version": "3.5.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/sqlite3-3.5.2.tar.gz",
+      "archiveSha256": "4c7fe79840389aaeaf05fd093f795b631b5a98e2bd28d54e555c100f4a9c7a1c",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "67e5d73a3a0c6e41f33d688a672b1161bf7f16e04da9ae48a7a14f1ba7436a4d"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "stack_trace",
+      "version": "1.12.2",
+      "scope": "development",
+      "source": "https://pub.dev/api/archives/stack_trace-1.12.2.tar.gz",
+      "archiveSha256": "277654b3034d17ac6f9f1cb5595db011b1d5d41e8806866db28e0abaa101c490",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "ff0b91d4f3c32b25cb6ec84985e8da89b0ba2a2b2f7eef353cda5e5423a20390"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "stream_channel",
+      "version": "2.1.4",
+      "scope": "development",
+      "source": "https://pub.dev/api/archives/stream_channel-2.1.4.tar.gz",
+      "archiveSha256": "969e04c80b8bcdf826f8f16579c7b14d780458bd97f56d107d3950fdbeef059d",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "ff15faa32a2e638107b7789592b14426162a75ba620044ee2340a20ec6ce5e73"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "string_scanner",
+      "version": "1.4.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/string_scanner-1.4.1.tar.gz",
+      "archiveSha256": "921cd31725b72fe181906c6a94d987c78e3b98c2e205b397ea399d4054872b43",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "synchronized",
+      "version": "3.4.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/synchronized-3.4.2.tar.gz",
+      "archiveSha256": "397b146f97613b83d84bdccb439bc8d0f3aebb6c1d14a9641e6f24201c490b2d",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "6d07c6bb60afb906049d507e19fcc4c6b59e35c0dd0f8a7302e87b3fb0576900"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "term_glyph",
+      "version": "1.2.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/term_glyph-1.2.2.tar.gz",
+      "archiveSha256": "7f554798625ea768a7518313e58f83891c7f5024f88e46e7182a4558850a4b8e",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "ea97a7558a7bd7cee4e2355f7529e3cbebb0dcbb546ddb9a90f10c9eb6b08da5"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "test_api",
+      "version": "0.7.12",
+      "scope": "development",
+      "source": "https://pub.dev/api/archives/test_api-0.7.12.tar.gz",
+      "archiveSha256": "2a122cbe059f8b610d3a5415f42e255b6c17b1f21eee1d960f31080237fb4f11",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "ff1b9f0df9036c04be424b1e3ce12789bea880ad5ffc3a48e069ae2d40a087a4"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "typed_data",
+      "version": "1.4.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/typed_data-1.4.0.tar.gz",
+      "archiveSha256": "f9049c039ebfeb4cf7a7104a675823cd72dba8297f264b6637062516699fa006",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "ff15faa32a2e638107b7789592b14426162a75ba620044ee2340a20ec6ce5e73"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "universal_platform",
+      "version": "1.1.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/universal_platform-1.1.0.tar.gz",
+      "archiveSha256": "64e16458a0ea9b99260ceb5467a214c1f298d647c659af1bff6d3bf82536b1ec",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "8a135e09d6288f03171b04f07f00eb5ee04e54f2f5e9c9b952f6adbd1de48c3f"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "uri_parser",
+      "version": "3.0.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/uri_parser-3.0.2.tar.gz",
+      "archiveSha256": "051c62e5f693de98ca9f130ee707f8916e2266945565926be3ff20659f7853ce",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "2e3000f38718f050869d57540c288c661a446f64df1ba4ea4764df552b04a331"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "url_launcher",
+      "version": "6.3.3",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/url_launcher-6.3.3.tar.gz",
+      "archiveSha256": "e8cc955c97e06df9879140a1fe301f3d493f01b7c62dec7f46834be31d7e9fda",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "url_launcher_android",
+      "version": "6.3.33",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/url_launcher_android-6.3.33.tar.gz",
+      "archiveSha256": "611e87fb320b70d1dd721dc46af89c98aceccea9b31fde49e084591414e0c610",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "url_launcher_ios",
+      "version": "6.4.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/url_launcher_ios-6.4.2.tar.gz",
+      "archiveSha256": "8faa1aab294f1ab4040b43660c887b0418d5fa4f0cffef76a484e6aa1092eb4a",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "url_launcher_linux",
+      "version": "3.2.3",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/url_launcher_linux-3.2.3.tar.gz",
+      "archiveSha256": "10f86fef4c2c43563fa6c211ff9cf757adf4d3ab762c56bd430664a947d70cd0",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "url_launcher_macos",
+      "version": "3.2.6",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/url_launcher_macos-3.2.6.tar.gz",
+      "archiveSha256": "5e835a3b869c2d70325349c81c5a45c28e20791265b67b2669da6b08c5cd5201",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "url_launcher_platform_interface",
+      "version": "2.3.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/url_launcher_platform_interface-2.3.2.tar.gz",
+      "archiveSha256": "552f8a1e663569be95a8190206a38187b531910283c3e982193e4f2733f01029",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "url_launcher_web",
+      "version": "2.4.3",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/url_launcher_web-2.4.3.tar.gz",
+      "archiveSha256": "85c81589622fbc87c1c683aaea164d3604a7777495a79d91e39ffcdec39ddb34",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "url_launcher_windows",
+      "version": "3.1.6",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/url_launcher_windows-3.1.6.tar.gz",
+      "archiveSha256": "6c5ad3f22cd4c38e089b81963b3cd7bb83b111b2df5dce008bb066162f42e429",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "uuid",
+      "version": "4.6.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/uuid-4.6.0.tar.gz",
+      "archiveSha256": "9b129329f58692f6e6578329498a8fe9fbe98f090beb764ffbb8ee2eadd01dcd",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "ad3e5523e51004e94ba9ce728805b1b4242dbccdb65e62b523800e35a8a7cfdc"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "vector_math",
+      "version": "2.4.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/vector_math-2.4.0.tar.gz",
+      "archiveSha256": "1d774bbdf6b72a0b12122fc1560c9c2d2a67db5a4a4cc2bd8a5c990ab20e3188",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "video_player_android",
+      "version": "2.12.2",
+      "scope": "runtime dependency closure",
+      "source": "third_party/video_player_android",
+      "archiveSha256": null,
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "video_player_avfoundation",
+      "version": "2.12.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/video_player_avfoundation-2.12.0.tar.gz",
+      "archiveSha256": "2fc56e537324a19eb649fca991aa308ac961b5406292876fa657b062de461fd8",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "video_player_hdr",
+      "version": "1.2.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/video_player_hdr-1.2.0.tar.gz",
+      "archiveSha256": "6ed98352bbb2486f10eb89f94d1f932158d13e690c60f912edd94685d0ccee73",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "video_player_platform_interface",
+      "version": "6.9.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/video_player_platform_interface-6.9.0.tar.gz",
+      "archiveSha256": "92c0fbabe20c788e71fd10d26cea998d0d253282e65d145aed0818731cf593ce",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "video_player_web",
+      "version": "2.4.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/video_player_web-2.4.0.tar.gz",
+      "archiveSha256": "9f3c00be2ef9b76a95d94ac5119fb843dca6f2c69e6c9968f6f2b6c9e7afbdeb",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "vm_service",
+      "version": "15.3.0",
+      "scope": "development",
+      "source": "https://pub.dev/api/archives/vm_service-15.3.0.tar.gz",
+      "archiveSha256": "5f37239c4851efcef929cea7824e76df7f2f0970aef85d66bbc430afa40e72f0",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "ad6a71997da90924b2cfb1fb47ec46537f70faf469efe016168794ae45ed6888"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "volume_controller",
+      "version": "3.7.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/volume_controller-3.7.1.tar.gz",
+      "archiveSha256": "a77534cf64fab42c47b7fc7a9fdc85fb8566c9477790bd1de53e3ed7991f0c94",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "4ef00f5dccec70704deaa9bdde0773fa342bad42fecb53ca6e551507138ace3d"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "wakelock_plus",
+      "version": "1.8.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/wakelock_plus-1.8.0.tar.gz",
+      "archiveSha256": "22b3e7e937721de70e63c85e7139f4ac781dc22863b9262431a53ac030eb074b",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "ebff92b2e4105e903605f70bac0030c20b7a1d9d43fd73f8b8aed08ab070fcb9"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "wakelock_plus_platform_interface",
+      "version": "1.7.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/wakelock_plus_platform_interface-1.7.0.tar.gz",
+      "archiveSha256": "764c25504562abc8ac3406f5d175f126b276e6ba916c7c2675690b73368ca384",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "1a95201dd1f509289fbbf929f72be2a25fd73c799697e30f5e7782a9cabf5102"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "web",
+      "version": "1.1.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/web-1.1.1.tar.gz",
+      "archiveSha256": "868d88a33d8a87b18ffc05f9f030ba328ffefba92d6c127917a2ba740f9cfe4a",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "aa913ff50d7542eb8cc35b9f48a80928ac6819ba9057f85d424655e3e8dc271c"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "win32",
+      "version": "6.4.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/win32-6.4.0.tar.gz",
+      "archiveSha256": "a0b93865d5644f11cf6a8c3f6db909f1ec168958b5805f6cc684adea957cd63d",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "87ef8bccdd619f2345ba5b9026cf1d6cccb305e36ab83849a8a3af9293abde7e"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "window_manager",
+      "version": "0.5.2",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/window_manager-0.5.2.tar.gz",
+      "archiveSha256": "05c231fd7b23d2380f14c5cc10b7b93d60d4fa4a2fb4e0f032de27e44b5560e9",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "516e1f470fd0e4c5c6cf02b6876153a9145283660a5de03fe9812b207dc34db5"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "xdg_directories",
+      "version": "1.1.0",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/xdg_directories-1.1.0.tar.gz",
+      "archiveSha256": "7a3f37b05d989967cdddcbb571f1ea834867ae2faa29725fd085180e0883aa15",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9"
+        }
+      ],
+      "licencePattern": "BSD (see full text)"
+    },
+    {
+      "name": "xml",
+      "version": "6.6.1",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/xml-6.6.1.tar.gz",
+      "archiveSha256": "971043b3a0d3da28727e40ed3e0b5d18b742fa5a68665cca88e74b7876d5e025",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "1f18a2e5a5c57381d93efa92df86477eb1205689b345417c90fcfdc09fa4fa1f"
+        }
+      ],
+      "licencePattern": "MIT"
+    },
+    {
+      "name": "yaml",
+      "version": "3.1.4",
+      "scope": "runtime dependency closure",
+      "source": "https://pub.dev/api/archives/yaml-3.1.4.tar.gz",
+      "archiveSha256": "f67cdd8e07d3c6329146aaef1ba043542b3134c12489f553ca9a7435d1068aea",
+      "licenceOrigin": "package",
+      "licenceFiles": [
+        {
+          "file": "LICENSE",
+          "sha256": "d47b93335401b052d79a2f5a3710e4cf7b5aed782faedf84d40fbdd6eb934ec7"
+        }
+      ],
+      "licencePattern": "MIT"
+    }
+  ]
+}
