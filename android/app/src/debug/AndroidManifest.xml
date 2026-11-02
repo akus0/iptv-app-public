@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Merged over src/main/AndroidManifest.xml for debug builds only —
+         overrides just the label so it's visually distinguishable from
+         the real app on the launcher/home screen (see build.gradle.kts'
+         matching applicationIdSuffix for why they can coexist at all). -->
+    <application android:label="DebugPlayer" tools:replace="android:label" />
+</manifest>

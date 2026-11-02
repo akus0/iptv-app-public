@@ -1,0 +1,61 @@
+// Inventory external modules resolved for an Android release, without changing them.
+// From android/: ./gradlew -I ../tools/android_dependency_inventory.gradle writeReleaseDependencyInventory
+import groovy.json.JsonOutput
+import groovy.xml.XmlSlurper
+import java.security.MessageDigest
+import org.gradle.api.artifacts.component.ModuleComponentIdentifier
+
+gradle.projectsEvaluated {
+    def app = gradle.rootProject.findProject(':app')
+    if (app == null) return
+    app.tasks.register('writeReleaseDependencyInventory') {
+        doLast {
+            def configuration = app.configurations.getByName('releaseRuntimeClasspath')
+            def external = configuration.incoming.artifactView { view ->
+                view.componentFilter { it instanceof ModuleComponentIdentifier }
+            }.artifacts.artifacts
+            def rows = external.collect { artifact ->
+                def id = artifact.id.componentIdentifier
+                def digest = MessageDigest.getInstance('SHA-256')
+                artifact.file.withInputStream { stream ->
+                    byte[] buffer = new byte[65536]
+                    int count
+                    while ((count = stream.read(buffer)) != -1) digest.update(buffer, 0, count)
+                }
+                def readPom = { String coordinate ->
+                    def metadata = app.configurations.detachedConfiguration(
+                        app.dependencies.create("${coordinate}@pom"))
+                    metadata.transitive = false
+                    new XmlSlurper(false, false).parse(metadata.singleFile)
+                }
+                def pom = readPom("${id.group}:${id.module}:${id.version}")
+                def licensePom = pom
+                def licenseSource = "${id.group}:${id.module}:${id.version}"
+                for (int depth = 0; depth < 5 && licensePom.licenses.license.isEmpty(); depth++) {
+                    def parent = licensePom.parent
+                    if (!parent.groupId.text() || !parent.artifactId.text() || !parent.version.text()) break
+                    licenseSource = "${parent.groupId.text()}:${parent.artifactId.text()}:${parent.version.text()}"
+                    licensePom = readPom(licenseSource)
+                }
+                [coordinate: "${id.group}:${id.module}:${id.version}",
+                 artifact: artifact.file.name,
+                 sha256: digest.digest().encodeHex().toString(),
+                 projectUrl: pom.url.text(),
+                 sourceUrl: pom.scm.url.text(),
+                 licenceMetadataSource: licenseSource,
+                 licenses: licensePom.licenses.license.collect {
+                     [name: it.name.text(), url: it.url.text()]
+                 }]
+            }.sort { it.coordinate }
+            def output = new File(gradle.rootProject.projectDir,
+                '../docs/dependencies/android-runtime.json')
+            output.parentFile.mkdirs()
+            output.text = JsonOutput.prettyPrint(JsonOutput.toJson([
+                schema: 1,
+                configuration: 'releaseRuntimeClasspath',
+                scope: 'External Maven modules; Flutter/plugin sources and engine are inventoried separately.',
+                modules: rows])) + '\n'
+            println("Inventoried ${rows.size()} external Android modules.")
+        }
+    }
+}

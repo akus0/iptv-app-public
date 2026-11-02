@@ -1,0 +1,194 @@
+[
+  {
+    "id": "185582",
+    "players": [
+      "Mary Stoiana",
+      "Oleksandra Oliynykova"
+    ],
+    "tournament": "Kinoshita Group Japan Open",
+    "aliases": [
+      "Osaka"
+    ],
+    "start": "2026-10-20T04:45:00+00:00",
+    "channelName": "Ugo Carabelli, Camilo vs Auger-Aliassime, Felix @ Oct 10 06:00 AM - ATP Shanghai :Tennis  01",
+    "programmeTitle": "Oliynykova, Oleksandra vs Stoiana, Mary @ Oct 20 06:40 AM - WTA Osaka :Tennis  01",
+    "programmeStart": "2026-10-20T04:00:00+00:00",
+    "programmeStop": "2026-10-20T06:00:00+00:00"
+  },
+  {
+    "id": "185578",
+    "players": [
+      "Antonia Ruzic",
+      "Paula Badosa"
+    ],
+    "tournament": "Kinoshita Group Japan Open",
+    "aliases": [
+      "Osaka"
+    ],
+    "start": "2026-10-20T04:50:00+00:00",
+    "channelName": "Tirante, Thiago Agustin vs Jodar, Rafael @ Oct 10 06:00 AM - ATP Shanghai :Tennis  02",
+    "programmeTitle": "Badosa, Paula vs Ruzic, Antonia @ Oct 20 06:45 AM - WTA Osaka :Tennis  02",
+    "programmeStart": "2026-10-20T04:00:00+00:00",
+    "programmeStop": "2026-10-20T06:00:00+00:00"
+  },
+  {
+    "id": "185573",
+    "players": [
+      "Ena Shibahara",
+      "Moyuka Uchijima"
+    ],
+    "tournament": "Kinoshita Group Japan Open",
+    "aliases": [
+      "Osaka"
+    ],
+    "start": "2026-10-20T05:20:00+00:00",
+    "channelName": "Nouza P, Venus M vs Nys H, Roger-Vasselin E @ Oct 10 06:00 AM - ATP Shanghai :Tennis  05",
+    "programmeTitle": "Uchijima, Moyuka vs Shibahara, Ena @ Oct 20 07:20 AM - WTA Osaka :Tennis  05",
+    "programmeStart": "2026-10-20T04:00:00+00:00",
+    "programmeStop": "2026-10-20T06:00:00+00:00"
+  },
+  {
+    "id": "185581",
+    "players": [
+      "Zeynep Sonmez",
+      "Maya Joint"
+    ],
+    "tournament": "Kinoshita Group Japan Open",
+    "aliases": [
+      "Osaka"
+    ],
+    "start": "2026-10-20T06:20:00+00:00",
+    "channelName": "Paul, Tommy vs Vallejo, Adolfo Daniel @ Oct 10 09:30 AM - ATP Shanghai :Tennis  20",
+    "programmeTitle": "Joint, Maya vs Sonmez, Zeynep - WTA Osaka :Tennis  20",
+    "programmeStart": "2026-10-20T06:00:00+00:00",
+    "programmeStop": "2026-10-20T08:00:00+00:00"
+  },
+  {
+    "id": "185580",
+    "players": [
+      "Sofia Kenin",
+      "Kayla Day"
+    ],
+    "tournament": "Kinoshita Group Japan Open",
+    "aliases": [
+      "Osaka"
+    ],
+    "start": "2026-10-20T07:25:00+00:00",
+    "channelName": "Tabilo, Alejandro vs Carreno-Busta, Pablo @ Oct 10 07:10 AM - ATP Shanghai :Tennis  11",
+    "programmeTitle": "Day, Kayla vs Kenin, Sofia - WTA Osaka :Tennis  11",
+    "programmeStart": "2026-10-20T06:00:00+00:00",
+    "programmeStop": "2026-10-20T08:00:00+00:00"
+  },
+  {
+    "id": "185543",
+    "players": [
+      "Alycia Parks",
+      "Sara Bejlek"
+    ],
+    "tournament": "BNB Ningbo Open",
+    "aliases": [
+      "Ningbo"
+    ],
+    "start": "2026-10-20T05:05:00+00:00",
+    "channelName": "Lehecka, Jiri vs Borges, Nuno @ Oct 10 06:00 AM - ATP Shanghai :Tennis  04",
+    "programmeTitle": "Bejlek, Sara vs Parks, Alycia @ Oct 20 07:00 AM - WTA Ningbo :Tennis  04",
+    "programmeStart": "2026-10-20T04:00:00+00:00",
+    "programmeStop": "2026-10-20T06:00:00+00:00"
+  },
+  {
+    "id": "185525",
+    "players": [
+      "Diana Shnaider",
+      "Yulia Putintseva"
+    ],
+    "tournament": "BNB Ningbo Open",
+    "aliases": [
+      "Ningbo"
+    ],
+    "start": "2026-10-20T05:05:00+00:00",
+    "channelName": "Medvedev, Daniil vs Struff, Jan-Lennard @ Oct 10 06:00 AM - ATP Shanghai :Tennis  03",
+    "programmeTitle": "Putintseva, Yulia vs Shnaider, Diana @ Oct 20 07:00 AM - WTA Ningbo :Tennis  03",
+    "programmeStart": "2026-10-20T04:00:00+00:00",
+    "programmeStop": "2026-10-20T06:00:00+00:00"
+  },
+  {
+    "id": "185523",
+    "players": [
+      "Polina Kudermetova",
+      "Cristina Bucsa"
+    ],
+    "tournament": "BNB Ningbo Open",
+    "aliases": [
+      "Ningbo"
+    ],
+    "start": "2026-10-20T07:45:00+00:00",
+    "channelName": "Arnaldi, Matteo vs Fritz, Taylor @ Oct 10 07:10 AM - ATP Shanghai :Tennis  10",
+    "programmeTitle": "Bucsa, Cristina vs Kudermetova, Polina - WTA Ningbo :Tennis  10",
+    "programmeStart": "2026-10-20T06:00:00+00:00",
+    "programmeStop": "2026-10-20T08:00:00+00:00"
+  },
+  {
+    "id": "185532",
+    "players": [
+      "Anhelina Kalinina",
+      "Jasmine Paolini"
+    ],
+    "tournament": "BNB Ningbo Open",
+    "aliases": [
+      "Ningbo"
+    ],
+    "start": "2026-10-20T07:50:00+00:00",
+    "channelName": "Baez, Sebastian vs Vacherot, Valentin @ Oct 10 13:10 PM - ATP Shanghai :Tennis  26",
+    "programmeTitle": "Paolini, Jasmine vs Kalinina, Anhelina - WTA Ningbo :Tennis  26",
+    "programmeStart": "2026-10-20T06:00:00+00:00",
+    "programmeStop": "2026-10-20T08:00:00+00:00"
+  },
+  {
+    "id": "185530",
+    "players": [
+      "Belinda Bencic",
+      "Jelena Ostapenko"
+    ],
+    "tournament": "BNB Ningbo Open",
+    "aliases": [
+      "Ningbo"
+    ],
+    "start": "2026-10-20T09:50:00+00:00",
+    "channelName": "Zheng, Qinwen vs Mertens, Elise @ Oct 10 13:00 PM - WTA Beijing :Tennis  25",
+    "programmeTitle": "Ostapenko, Jelena vs Bencic, Belinda - WTA Ningbo :Tennis  25",
+    "programmeStart": "2026-10-20T08:00:00+00:00",
+    "programmeStop": "2026-10-20T10:00:00+00:00"
+  },
+  {
+    "id": "185524",
+    "players": [
+      "Daria Snigur",
+      "Katarzyna Kawa"
+    ],
+    "tournament": "BNB Ningbo Open",
+    "aliases": [
+      "Ningbo"
+    ],
+    "start": "2026-10-20T10:50:00+00:00",
+    "channelName": "Darderi, Luciano vs Tsitsipas, Stefanos @ Oct 10 09:30 AM - ATP Shanghai :Tennis  21",
+    "programmeTitle": "Kawa, Katarzyna vs Snigur, Daria - WTA Ningbo :Tennis  21",
+    "programmeStart": "2026-10-20T10:00:00+00:00",
+    "programmeStop": "2026-10-20T12:00:00+00:00"
+  },
+  {
+    "id": "185528",
+    "players": [
+      "Ekaterina Alexandrova",
+      "Guo Hanyu"
+    ],
+    "tournament": "BNB Ningbo Open",
+    "aliases": [
+      "Ningbo"
+    ],
+    "start": "2026-10-20T11:25:00+00:00",
+    "channelName": "Liutarevich I, Medvedev D vs Bublik A, Shelton B @ Oct 10 08:20 AM - ATP Shanghai :Tennis  16",
+    "programmeTitle": "Guo, Hanyu vs Alexandrova, Ekaterina - WTA Ningbo :Tennis  16",
+    "programmeStart": "2026-10-20T10:00:00+00:00",
+    "programmeStop": "2026-10-20T12:00:00+00:00"
+  }
+]
