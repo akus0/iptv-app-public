@@ -1,0 +1,15 @@
+analyzer:
+  exclude:
+    - build/**
+    - android/**
+    - ios/**
+    - web/**
+    - windows/**
+    - macos/**
+    - linux/**
+    # Vendored, patched copy of video_player_android (see pubspec.yaml's
+    # dependency_overrides) — its own test suite's generated mocks aren't
+    # kept in sync with this app's resolved package versions and aren't
+    # relevant to this app's own analysis anyway.
+    - third_party/**
+include: package:flutter_lints/flutter.yaml

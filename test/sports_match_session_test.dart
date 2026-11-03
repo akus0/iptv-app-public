@@ -1,0 +1,522 @@
+import 'dart:async';
+import 'package:flutter/foundation.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:nox_iptv/models/channel.dart';
+import 'package:nox_iptv/models/epg_program.dart';
+import 'package:nox_iptv/models/sports.dart';
+import 'package:nox_iptv/services/sports_channel_matcher.dart';
+import 'package:nox_iptv/services/sports_match_inputs.dart';
+import 'package:nox_iptv/services/sports_match_session.dart';
+import 'package:nox_iptv/utils/sports_scroll_anchor.dart';
+
+class _Picks implements SportsMatchPicks {
+  String? picked;
+  @override
+  String? channelIdFor(SportsGame g) => picked;
+}
+
+class _Decisions extends _Picks implements SportsMatchRejections {
+  @override
+  int decisionsRevision = 0;
+  final rejected = <String>{};
+  @override
+  Set<String> rejectedKeysFor(SportsGame game) => rejected;
+}
+
+void main() {
+  final now = DateTime.utc(2026, 10, 24, 10);
+  final channel = Channel(
+      id: 'one',
+      rawId: 'one',
+      playlistId: 'p',
+      name: 'Event feed',
+      group: 'Sport',
+      url: 'https://example.invalid');
+  SportsGame game(
+          {String id = 'one',
+          String away = 'Leeds',
+          String score = '0',
+          List<SportsBroadcast> online = const []}) =>
+      SportsGame(
+          id: id,
+          league: sportsLeagueById('eng.1')!,
+          start: now,
+          state: GameState.live,
+          statusText: 'Live',
+          onlineBroadcasts: online,
+          home: SportsTeam(
+              id: 'home',
+              name: 'Everton',
+              shortName: 'Everton',
+              abbreviation: 'EVE',
+              score: score),
+          away: SportsTeam(
+              id: 'away', name: away, shortName: away, abbreviation: 'LEE'));
+  final strong = ChannelMatch(channel, MatchReason.guide, 500,
+      programme: EpgProgram(
+          channelId: 'one',
+          title: 'Everton vs Leeds',
+          start: now,
+          stop: now.add(const Duration(hours: 2))));
+  final weak = ChannelMatch(channel, MatchReason.sport, 80);
+  late SportsMatchSession session;
+  setUp(() {
+    session = SportsMatchSession();
+    session.updateInputs([game()], _Picks(), 1, now);
+  });
+  Map<String, List<ChannelMatch>> batch(List<ChannelMatch> matches) =>
+      {'eng.1:one': matches};
+  void complete(List<ChannelMatch> matches) =>
+      session.apply(batch(matches), session.identities, 1, now, complete: true);
+
+  test('a corrected live marker replaces the programme shown in suggestions',
+      () {
+    complete([strong]);
+    final p = strong.programme!;
+    final corrected = ChannelMatch(channel, strong.reason, strong.score,
+        programme: EpgProgram(
+            channelId: p.channelId,
+            title: p.title,
+            start: p.start,
+            stop: p.stop,
+            isLive: true));
+    expect(
+        session.apply(batch([corrected]), session.identities, 1, now,
+            complete: true),
+        isTrue);
+    expect(session.matches.values.single.single.programme!.isLive, isTrue);
+  });
+
+  test('partial refresh cannot downgrade a completed match; final evidence can',
+      () {
+    complete([strong]);
+    final original = session.matches;
+    session.apply(batch([weak]), session.identities, 1, now, complete: false);
+    expect(session.matches, same(original));
+    session.apply(batch([]), session.identities, 1, now, complete: false);
+    expect(session.matches, same(original));
+    complete([weak]);
+    expect(session.matches.values.single.single.isConfident, false);
+  });
+  test('score updates preserve identity and result list objects', () {
+    complete([strong]);
+    final original = session.matches, identities = session.identities;
+    session.updateInputs([game(score: '1')], _Picks(), 1, now);
+    expect(session.identities, same(identities));
+    expect(session.matches, same(original));
+    expect(session.checked, {'eng.1:one'});
+    expect(session.apply(batch([strong]), identities, 1, now, complete: true),
+        false);
+  });
+  test('filtering an event out and back keeps its completed evidence', () {
+    complete([strong]);
+    final original = session.matches['eng.1:one'];
+    session.updateInputs([], _Picks(), 1, now);
+    expect(session.matches, isEmpty);
+    expect(session.checked, isEmpty);
+    session.updateInputs([game()], _Picks(), 1, now);
+    expect(session.matches['eng.1:one'], same(original));
+    expect(session.checked, {'eng.1:one'});
+  });
+  test('hidden empty checks and partial matches preserve completion status',
+      () {
+    for (final completed in [true, false]) {
+      session = SportsMatchSession()..updateInputs([game()], _Picks(), 1, now);
+      session.apply(batch(completed ? [] : [weak]), session.identities, 1, now,
+          complete: completed);
+      session.updateInputs([], _Picks(), 1, now);
+      session.updateInputs([game()], _Picks(), 1, now);
+      expect(session.matches['eng.1:one'], completed ? isEmpty : [weak]);
+      expect(session.checked, completed ? {'eng.1:one'} : isEmpty);
+    }
+  });
+  test('hidden evidence never crosses catalogue, guide, fixture or age changes',
+      () {
+    for (final change in ['catalogue', 'guide', 'fixture', 'age', 'rollback']) {
+      session = SportsMatchSession()
+        ..updateInputs([game()], _Picks(), 1, now, evidenceVersion: 1);
+      complete([strong]);
+      session.updateInputs([], _Picks(), 1, now, evidenceVersion: 1);
+      session.updateInputs(
+          [game(away: change == 'fixture' ? 'Fulham' : 'Leeds')],
+          _Picks(),
+          change == 'catalogue' ? 2 : 1,
+          change == 'age'
+              ? now.add(const Duration(minutes: 5))
+              : change == 'rollback'
+                  ? now.subtract(const Duration(seconds: 1))
+                  : now,
+          evidenceVersion: change == 'guide' ? 2 : 1);
+      expect(session.matches, isEmpty, reason: change);
+      expect(session.checked, isEmpty, reason: change);
+    }
+  });
+  test('an unchecked guide revision cannot be archived as new evidence', () {
+    session.updateInputs([game()], _Picks(), 1, now, evidenceVersion: 1);
+    complete([strong]);
+    session.updateInputs([game()], _Picks(), 1, now, evidenceVersion: 2);
+    session.updateInputs([], _Picks(), 1, now, evidenceVersion: 2);
+    session.updateInputs([game()], _Picks(), 1, now, evidenceVersion: 2);
+    expect(session.matches, isEmpty);
+    expect(session.checked, isEmpty);
+  });
+  test('hidden picks and rejected programmes are revalidated before display',
+      () {
+    final fixture = game(), decisions = _Decisions()..picked = channel.id;
+    session.updateInputs([fixture], decisions, 1, now);
+    complete([ChannelMatch(channel, MatchReason.pick, 1000), strong]);
+    session.updateInputs([], decisions, 1, now);
+    decisions.picked = null;
+    decisions.rejected.add(sportsRejectionKey(channel.id, strong.programme));
+    decisions.decisionsRevision++;
+    // A poll while hidden must not make the restored identity look current.
+    session.updateInputs([], decisions, 1, now);
+    session.updateInputs([fixture], decisions, 1, now);
+    expect(session.matches['eng.1:one'], isEmpty);
+    expect(session.checked, isEmpty);
+  });
+  test('hidden programme and online listing expiry are respected', () {
+    for (final online in [false, true]) {
+      final fixture = game(
+          online: online
+              ? [
+                  SportsBroadcast('Sky',
+                      source: 'test',
+                      expiresAt: now.add(const Duration(seconds: 10)))
+                ]
+              : []);
+      session.updateInputs([fixture], _Picks(), 1, now);
+      complete([
+        ChannelMatch(channel, MatchReason.guide, 500,
+            programme: EpgProgram(
+                channelId: 'one',
+                title: 'Everton vs Leeds',
+                start: now,
+                stop: now.add(Duration(seconds: online ? 300 : 10))))
+      ]);
+      session.updateInputs([], _Picks(), 1, now);
+      session.updateInputs(
+          [fixture], _Picks(), 1, now.add(const Duration(seconds: 10)));
+      expect(session.matches.values.expand((m) => m), isEmpty);
+      expect(session.checked, isEmpty);
+    }
+  });
+  test('retention is bounded and session copies own their hidden results', () {
+    session = SportsMatchSession(maxRetainedEvents: 2);
+    for (var i = 0; i < 4; i++) {
+      final fixture = game(id: '$i');
+      session.updateInputs([fixture], _Picks(), 1, now);
+      session.apply({
+        'eng.1:$i': [strong]
+      }, session.identities, 1, now, complete: true);
+      session.updateInputs([], _Picks(), 1, now);
+      expect(session.retainedEventCount, lessThanOrEqualTo(2));
+    }
+    final copy = session.copy();
+    copy.updateInputs([game(id: '0')], _Picks(), 1, now);
+    expect(copy.matches, isEmpty);
+    session.updateInputs([game(id: '3')], _Picks(), 1, now);
+    expect(session.matches['eng.1:3'], [strong]);
+    final restored = session.copy();
+    restored.expireEvents({'eng.1:2'});
+    restored.updateInputs([game(id: '2')], _Picks(), 1, now);
+    expect(restored.matches, isEmpty);
+    session.updateInputs([game(id: '2')], _Picks(), 1, now);
+    expect(session.matches['eng.1:2'], [strong]);
+  });
+  test('enrichment keeps guide evidence while old-input replies are rejected',
+      () {
+    complete([strong]);
+    final old = session.identities;
+    session.updateInputs([
+      game(online: [const SportsBroadcast('Sky Sports', source: 'test')])
+    ], _Picks(), 1, now);
+    expect(session.matches.values.single.single, same(strong));
+    expect(session.checked, isEmpty);
+    expect(session.apply(batch([]), old, 1, now, complete: true), false);
+    expect(session.matches.values.single.single, same(strong));
+  });
+  test('fixture and catalogue changes invalidate old evidence', () {
+    complete([strong]);
+    final old = session.identities;
+    session.updateInputs([game(away: 'Fulham')], _Picks(), 1, now);
+    expect(session.matches, isEmpty);
+    expect(session.apply(batch([strong]), old, 1, now, complete: true), false);
+    complete([strong]);
+    session.updateInputs([game(away: 'Fulham')], _Picks(), 2, now);
+    expect(session.matches, isEmpty);
+    expect(
+        session.apply(batch([strong]), session.identities, 1, now,
+            complete: true),
+        false);
+  });
+  test('completed replies exclude ended programmes without recheck churn', () {
+    final ended = ChannelMatch(channel, MatchReason.guide, 500,
+        programme: EpgProgram(
+            channelId: 'one',
+            title: 'Everton vs Leeds',
+            start: now.subtract(const Duration(hours: 2)),
+            stop: now));
+    // A worker can return a historical listing or finish after its slot ends.
+    // Repeating that reply must not briefly restore stale evidence, then lose
+    // completion again when the next fixture batch updates session inputs.
+    for (var round = 0; round < 3; round++) {
+      complete([ended, weak]);
+      expect(session.matches.values.single, [weak]);
+      session.updateInputs([game()], _Picks(), 1, now);
+      expect(session.matches.values.single, [weak]);
+      expect(session.checked, {'eng.1:one'});
+    }
+    complete([ended]);
+    session.updateInputs([game()], _Picks(), 1, now);
+    expect(session.matches.values.single, isEmpty);
+    expect(session.checked, {'eng.1:one'});
+  });
+
+  test('partial ended replies never publish expired programme evidence', () {
+    final ended = ChannelMatch(channel, MatchReason.guide, 500,
+        programme: EpgProgram(
+            channelId: 'one',
+            title: 'Everton vs Leeds',
+            start: now.subtract(const Duration(hours: 2)),
+            stop: now.subtract(const Duration(microseconds: 1))));
+    session.apply(batch([ended, strong]), session.identities, 1, now,
+        complete: false);
+    expect(session.matches.values.single, [strong]);
+    expect(session.checked, isEmpty);
+  });
+
+  test('ended programme filtering preserves manual picks and finished games',
+      () {
+    final ended = EpgProgram(
+        channelId: 'one',
+        title: 'Everton vs Leeds',
+        start: now.subtract(const Duration(hours: 2)),
+        stop: now);
+    final picks = _Picks()..picked = channel.id;
+    session.updateInputs([game()], picks, 1, now);
+    final manual =
+        ChannelMatch(channel, MatchReason.pick, 1000, programme: ended);
+    complete([manual]);
+    session.updateInputs([game()], picks, 1, now);
+    expect(session.matches.values.single, [manual]);
+    final current = game();
+    final finished = SportsGame(
+        id: current.id,
+        league: current.league,
+        start: current.start,
+        state: GameState.post,
+        statusText: 'Final',
+        home: current.home,
+        away: current.away);
+    session.updateInputs([finished], _Picks(), 1, now);
+    final recorded =
+        ChannelMatch(channel, MatchReason.guide, 500, programme: ended);
+    complete([recorded]);
+    session.updateInputs([finished], _Picks(), 1, now);
+    expect(session.matches.values.single, [recorded]);
+    expect(session.checked, {'eng.1:one'});
+  });
+
+  test('retention is bounded by programme end and stale age', () {
+    final short = ChannelMatch(channel, MatchReason.guide, 500,
+        programme: EpgProgram(
+            channelId: 'one',
+            title: 'Everton vs Leeds',
+            start: now,
+            stop: now.add(const Duration(seconds: 30))));
+    complete([short]);
+    session.updateInputs(
+        [game()], _Picks(), 1, now.add(const Duration(seconds: 31)));
+    expect(session.matches.values.single, isEmpty);
+    expect(session.checked, isEmpty);
+    complete([strong]);
+    session.updateInputs(
+        [game()], _Picks(), 1, now.add(const Duration(minutes: 6)));
+    expect(session.matches.values.single, [strong]);
+    expect(session.checked, isEmpty);
+    session.updateInputs(
+        [game()], _Picks(), 1, now.add(const Duration(minutes: 7)));
+    expect(session.matches.values.single, isEmpty);
+  });
+  test('reused model inputs still detect pick changes and evidence expiry', () {
+    final fixture = game(), picks = _Picks();
+    session.updateInputs([fixture], picks, 1, now);
+    complete([strong]);
+    final original = session.identities;
+    session.updateInputs([fixture], picks, 1, now);
+    expect(session.identities, same(original));
+    picks.picked = 'another-channel';
+    session.updateInputs([fixture], picks, 1, now);
+    expect(session.identities, isNot(original));
+    expect(session.matches.values.single, [strong]);
+    expect(session.checked, isEmpty);
+    picks.picked = null;
+    session.updateInputs([fixture], picks, 1, now);
+    complete([strong]);
+    session
+        .updateInputs([fixture], picks, 1, now.add(const Duration(minutes: 6)));
+    expect(session.matches.values.single, [strong]);
+    expect(session.checked, isEmpty);
+    session
+        .updateInputs([fixture], picks, 1, now.add(const Duration(minutes: 7)));
+    expect(session.matches.values.single, isEmpty);
+    expect(session.checked, isEmpty);
+  });
+  test(
+      'trying and replacing a pick retains alternatives and rejects stale work',
+      () {
+    final picks = _Picks();
+    final other = Channel(
+        id: 'two',
+        rawId: 'two',
+        playlistId: 'p',
+        name: 'Other feed',
+        group: 'Sport',
+        url: 'https://example.invalid');
+    final alternative = ChannelMatch(other, MatchReason.tournament, 300);
+    complete([strong, alternative]);
+    final old = session.identities;
+    picks.picked = 'two';
+    session.updateInputs([game()], picks, 1, now);
+    expect(
+        session.matches.values.single.map((m) => m.channel.id), ['two', 'one']);
+    expect(session.matches.values.single.first.reason, MatchReason.pick);
+    expect(session.checked, isEmpty);
+    expect(session.apply(batch([]), old, 1, now, complete: true), false);
+    session.apply(batch([]), session.identities, 1, now, complete: false);
+    expect(session.matches.values.single.length, 2);
+    complete([ChannelMatch(other, MatchReason.pick, 1000), strong]);
+    picks.picked = 'one';
+    session.updateInputs([game()], picks, 1, now);
+    expect(session.matches.values.single.first.channel.id, 'one');
+    expect(
+        session.matches.values.single.every(
+            (m) => m.reason != MatchReason.pick || m.channel.id == 'one'),
+        true);
+    session.apply(batch([]), session.identities, 1, now, complete: false);
+    expect(session.matches.values.single.first.channel.id, 'one');
+    complete([ChannelMatch(channel, MatchReason.pick, 1000), alternative]);
+    picks.picked = null;
+    session.updateInputs([game()], picks, 1, now);
+    expect(session.matches.values.single, [alternative]);
+    complete([strong, alternative]);
+    expect(session.matches.values.single, [strong, alternative]);
+  });
+  test('resume grace rejects partial downgrades and accepts completed recheck',
+      () {
+    complete([strong]);
+    final resumed = now.add(const Duration(minutes: 6));
+    session.updateInputs([game()], _Picks(), 1, resumed);
+    expect(session.recheckingCount, 1);
+    session.apply(batch([weak]), session.identities, 1, resumed,
+        complete: false);
+    expect(session.matches.values.single, [strong]);
+    session.apply(batch([strong]), session.identities, 1, resumed,
+        complete: true);
+    expect(session.checked, {'eng.1:one'});
+    expect(session.recheckingCount, 0);
+    session.updateInputs(
+        [game()], _Picks(), 1, resumed.add(const Duration(seconds: 40)));
+    expect(session.matches.values.single, [strong]);
+    session.apply(batch([]), session.identities, 1, resumed, complete: true);
+    expect(session.matches.values.single, isEmpty);
+  });
+  test('resume grace is not renewed by polls and never extends programme end',
+      () {
+    final ending = ChannelMatch(channel, MatchReason.guide, 500,
+        programme: EpgProgram(
+            channelId: 'one',
+            title: 'Everton vs Leeds',
+            start: now,
+            stop: now.add(const Duration(minutes: 6, seconds: 20))));
+    complete([ending]);
+    session.updateInputs(
+        [game()], _Picks(), 1, now.add(const Duration(minutes: 6)));
+    expect(session.matches.values.single, [ending]);
+    session.updateInputs([game()], _Picks(), 1,
+        now.add(const Duration(minutes: 6, seconds: 21)));
+    expect(session.matches.values.single, isEmpty);
+    complete([strong]);
+    for (final seconds in [360, 380, 400, 420, 440]) {
+      session.updateInputs(
+          [game()], _Picks(), 1, now.add(Duration(seconds: seconds)));
+    }
+    expect(session.matches.values.single, isEmpty);
+  });
+  test('bursts coalesce to one running job and only the latest follow-up',
+      () async {
+    final work = SportsMatchWork(), gate = Completer<void>();
+    final calls = <int>[];
+    final first = work.request(() async {
+      calls.add(0);
+      await gate.future;
+    });
+    await Future<void>.delayed(Duration.zero);
+    final futures = [first];
+    for (var i = 1; i <= 1000; i++) {
+      final value = i;
+      futures.add(work.request(() async => calls.add(value)));
+    }
+    gate.complete();
+    await Future.wait(futures);
+    expect(calls, [0, 1000]);
+    await work.request(() async => calls.add(1001));
+    expect(calls.last, 1001);
+  });
+  test('a failed job does not poison later retries', () async {
+    final work = SportsMatchWork();
+    await expectLater(
+        work.request(() async => throw StateError('failed')), throwsStateError);
+    var completed = false;
+    await work.request(() async {
+      completed = true;
+    });
+    expect(completed, true);
+  });
+  test('repeated input checks keep a large completed session stable', () {
+    final games = [
+      for (var i = 0; i < 300; i++)
+        SportsGame(
+            id: 'fixture-$i',
+            league: sportsLeagueById('eng.1')!,
+            start: now,
+            state: GameState.live,
+            statusText: 'Live',
+            home: game().home,
+            away: game().away)
+    ];
+    final picks = _Picks();
+    session.updateInputs(games, picks, 1, now);
+    final results = {
+      for (final g in games) SportsChannelPicks.eventKey(g): [strong]
+    };
+    session.apply(results, session.identities, 1, now, complete: true);
+    final original = session.matches;
+    final clock = Stopwatch()..start();
+    for (var i = 0; i < 100; i++) {
+      session.updateInputs(games, picks, 1, now);
+      session.apply(results, session.identities, 1, now, complete: false);
+    }
+    clock.stop();
+    expect(session.matches, same(original));
+    expect(session.checked, hasLength(300));
+    debugPrint('300 events / 100 unchanged input + progress updates: '
+        '${clock.elapsedMicroseconds}us');
+  });
+  test('anchors compensate removals above and leave appends alone', () {
+    expect(
+        sportsAnchorDelta(
+            {'a': 0, 'b': 100, 'c': 200}, {'b': 0, 'c': 100}, 125, 100),
+        -100);
+    expect(
+        sportsAnchorDelta(
+            {'a': 0, 'b': 100}, {'a': 0, 'b': 100, 'c': 200}, 125, 100),
+        0);
+    expect(
+        sportsAnchorDelta(
+            {'a': 0, 'b': 100, 'c': 200}, {'a': 0, 'c': 100}, 125, 100),
+        -100);
+    expect(sportsAnchorDelta({'a': 0, 'b': 100}, {}, 125, 100), 0);
+  });
+}

@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>iptv-app · Add playlist</title>
+<!--
+  The phone side of Add Playlist > "From my phone". One file, two homes:
+  - served by the TV itself over home Wi-Fi (http://<tv-ip>:<port>/p/<token>):
+    the form posts JSON straight back to the TV;
+  - served by the relay (https://<relay>/p#<id>.<key>): the form encrypts with
+    AES-GCM in the browser (WebCrypto) using the key from the URL fragment —
+    which browsers never send to a server — and uploads only ciphertext.
+  A trailing ".link" in the fragment (Wi-Fi: "#link") swaps the playlist form
+  for one long-link box (Settings > Archive sources: paste a manifest URL);
+  it sends {"mode":"link","link":…} the same two ways.
+  Keep it dependency-free: no CDN, no fonts, nothing that phones home.
+-->
+<style>
+  :root { --bg:#171d25; --card:#252e39; --line:#465260; --text:#e8edf2; --muted:#a9b4c0; --accent:#90caf9; --err:#ff7f84; --ok:#6fd08c; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:480px; margin:0 auto; padding:24px 16px 48px; }
+  h1 { font-size:22px; margin:8px 0 4px; }
+  h1 span { color:var(--accent); }
+  p.lead { color:var(--muted); margin:0 0 20px; }
+  .tabs { display:flex; gap:8px; margin-bottom:16px; }
+  .tabs button { flex:1; padding:12px; border-radius:4px; border:1px solid var(--line); background:var(--card); color:var(--text); font:inherit; font-weight:600; }
+  .tabs button[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#101820; }
+  label { display:block; font-size:14px; color:var(--muted); margin:14px 0 6px; }
+  textarea { width:100%; min-height:120px; padding:13px 12px; border-radius:10px; border:1px solid var(--line); background:var(--card); color:var(--text); font:inherit; word-break:break-all; resize:vertical; }
+  textarea:focus { outline:2px solid var(--accent); border-color:transparent; }
+  input { width:100%; padding:13px 12px; border-radius:10px; border:1px solid var(--line); background:var(--card); color:var(--text); font:inherit; }
+  input:focus { outline:2px solid var(--accent); border-color:transparent; }
+  .hint { font-size:13px; color:var(--muted); margin-top:6px; }
+  button.send { width:100%; margin-top:24px; padding:15px; border:0; border-radius:4px; background:var(--accent); color:#101820; font:inherit; font-weight:700; font-size:17px; }
+  button.send:disabled { opacity:.6; }
+  .msg { margin-top:16px; padding:14px; border-radius:4px; background:var(--card); border-left:4px solid var(--accent); display:none; }
+  .msg.err { border-color:var(--err); }
+  .msg.ok { border-color:var(--ok); }
+  .done { text-align:center; padding:48px 8px; display:none; }
+  .done .big { font-size:48px; }
+  [hidden] { display:none !important; }
+</style>
+</head>
+<body>
+<main>
+  <section id="form-view">
+    <h1>Add a playlist to <span>iptv-app</span></h1>
+    <p class="lead">Type your details here and they'll appear on your TV.</p>
+
+    <div class="tabs" role="group" aria-label="Playlist type">
+      <button type="button" id="tab-xtream" aria-pressed="true">Xtream Codes</button>
+      <button type="button" id="tab-m3u" aria-pressed="false">M3U URL</button>
+    </div>
+
+    <form id="form" autocomplete="off" novalidate>
+      <label for="name">Playlist name</label>
+      <input id="name" name="name" maxlength="80" placeholder="e.g. My Provider">
+
+      <div id="xtream-fields">
+        <label for="server">Server URL</label>
+        <input id="server" name="server" inputmode="url" autocapitalize="off" spellcheck="false" maxlength="500" placeholder="http://host:port">
+        <label for="username">Username</label>
+        <input id="username" name="username" autocapitalize="off" spellcheck="false" maxlength="200">
+        <label for="password">Password</label>
+        <input id="password" name="password" autocapitalize="off" spellcheck="false" maxlength="200">
+      </div>
+
+      <div id="m3u-fields" hidden>
+        <label for="m3u">M3U playlist URL</label>
+        <input id="m3u" name="m3u" inputmode="url" autocapitalize="off" spellcheck="false" maxlength="2000" placeholder="http://…/get.php?…">
+      </div>
+
+      <label for="epg">EPG (XMLTV) URL <span style="opacity:.7">— optional</span></label>
+      <input id="epg" name="epg" inputmode="url" autocapitalize="off" spellcheck="false" maxlength="2000">
+      <div class="hint">Leave blank unless your provider gave you a separate guide link.</div>
+
+      <button class="send" id="send" type="submit">Send to TV</button>
+      <div class="msg" id="msg"></div>
+    </form>
+  </section>
+
+  <section id="link-view" hidden>
+    <h1>Send a link to <span>iptv-app</span></h1>
+    <p class="lead">Paste the long link here and it will appear on your TV.</p>
+    <form id="link-form" autocomplete="off" novalidate>
+      <label for="link">Link</label>
+      <textarea id="link" name="link" inputmode="url" autocapitalize="off" spellcheck="false" maxlength="4000" placeholder="https://…/manifest.json"></textarea>
+      <button class="send" id="link-send" type="submit">Send to TV</button>
+      <div class="msg" id="link-msg"></div>
+    </form>
+  </section>
+
+  <section class="done" id="done-view">
+    <div class="big">✓</div>
+    <h1>Sent to your TV</h1>
+    <p class="lead" id="done-hint">Check the details there, then press <b>Add Playlist</b>. You can close this page.</p>
+  </section>
+</main>
+<script>
+(function () {
+  "use strict";
+  var mode = "xtream";
+  var $ = function (id) { return document.getElementById(id); };
+
+  // Relay mode when the URL carries "#<sessionId>.<key>"; otherwise the TV
+  // served this page itself and expects a plain POST back to the same path.
+  var frag = (location.hash || "").replace(/^#/, "");
+  var parts = frag.split(".");
+  // "link" kind: "#<id>.<key>.link" (relay) or "#link" (Wi-Fi).
+  var linkKind = parts[parts.length - 1] === "link";
+  if (linkKind) parts.pop();
+  var relay = parts.length === 2 && parts[0].length >= 16 && parts[1].length >= 40;
+  if (linkKind) {
+    $("form-view").hidden = true;
+    $("link-view").hidden = false;
+    document.title = "iptv-app · Send a link";
+  }
+
+  function setMode(m) {
+    mode = m;
+    $("tab-xtream").setAttribute("aria-pressed", String(m === "xtream"));
+    $("tab-m3u").setAttribute("aria-pressed", String(m === "m3u"));
+    $("xtream-fields").hidden = m !== "xtream";
+    $("m3u-fields").hidden = m !== "m3u";
+  }
+  $("tab-xtream").onclick = function () { setMode("xtream"); };
+  $("tab-m3u").onclick = function () { setMode("m3u"); };
+
+  function show(text, kind) {
+    var el = $(linkKind ? "link-msg" : "msg");
+    el.textContent = text;
+    el.className = "msg " + (kind || "");
+    el.style.display = "block";
+  }
+
+  function b64urlToBytes(s) {
+    s = s.replace(/-/g, "+").replace(/_/g, "/");
+    while (s.length % 4) s += "=";
+    var bin = atob(s), out = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+    return out;
+  }
+  function bytesToB64(bytes) {
+    var bin = "";
+    for (var i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+    return btoa(bin);
+  }
+
+  function collect() {
+    var v = function (id) { return $(id).value.trim(); };
+    var data = { v: 1, mode: mode, name: v("name"), epg: v("epg") };
+    if (mode === "xtream") {
+      data.server = v("server"); data.username = v("username"); data.password = v("password");
+      if (!data.server || !data.username || !data.password) return "Fill in the server, username and password.";
+    } else {
+      data.m3u = v("m3u");
+      if (!data.m3u) return "Fill in the M3U URL.";
+    }
+    return data;
+  }
+
+  async function sendRelay(json) {
+    if (!window.crypto || !crypto.subtle) throw new Error("This browser can't encrypt. Try Chrome or Safari.");
+    var key = await crypto.subtle.importKey("raw", b64urlToBytes(parts[1]), "AES-GCM", false, ["encrypt"]);
+    var iv = crypto.getRandomValues(new Uint8Array(12));
+    var ct = new Uint8Array(await crypto.subtle.encrypt({ name: "AES-GCM", iv: iv }, key, new TextEncoder().encode(json)));
+    var res = await fetch("/api/s/" + encodeURIComponent(parts[0]), {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ iv: bytesToB64(iv), ct: bytesToB64(ct) }),
+      referrerPolicy: "no-referrer",
+    });
+    if (res.status === 409) throw new Error("Already sent. Look at your TV.");
+    if (!res.ok) throw new Error("Couldn't reach the server (" + res.status + "). Try again.");
+  }
+
+  async function sendLocal(json) {
+    var res = await fetch(location.pathname, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: json,
+    });
+    if (res.status === 410) throw new Error("This code expired. Open \"From my phone\" again on the TV.");
+    if (!res.ok) throw new Error("The TV didn't accept it (" + res.status + "). Try again.");
+  }
+
+  function collectLink() {
+    var link = $("link").value.replace(/\s+/g, "");
+    if (!link) return "Paste the link first.";
+    return { v: 1, mode: "link", link: link };
+  }
+
+  async function submit(e) {
+    e.preventDefault();
+    var data = linkKind ? collectLink() : collect();
+    if (typeof data === "string") { show(data, "err"); return; }
+    var btn = $(linkKind ? "link-send" : "send");
+    btn.disabled = true; btn.textContent = "Sending…";
+    try {
+      var json = JSON.stringify(data);
+      if (relay) await sendRelay(json); else await sendLocal(json);
+      $("form-view").hidden = true;
+      $("link-view").hidden = true;
+      if (linkKind) $("done-hint").textContent = "Check it there, then press Add. You can close this page.";
+      $("done-view").style.display = "block";
+    } catch (err) {
+      show(err && err.message ? err.message : "Something went wrong. Try again.", "err");
+      btn.disabled = false; btn.textContent = "Send to TV";
+    }
+  }
+  $("form").addEventListener("submit", submit);
+  $("link-form").addEventListener("submit", submit);
+})();
+</script>
+</body>
+</html>
