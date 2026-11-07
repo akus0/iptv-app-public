@@ -1,0 +1,42 @@
+{
+  "database": "https://osv.dev",
+  "checkedAt": "2026-11-02T02:14:00.473970+00:00",
+  "queryCount": 204,
+  "resultCount": 204,
+  "findings": [
+    {
+      "query": {
+        "package": {
+          "name": "com.google.guava:guava",
+          "ecosystem": "Maven"
+        },
+        "version": "33.3.1-android"
+      },
+      "advisories": [
+        {
+          "id": "GHSA-xxph-c9ww-hj94",
+          "modified": "2026-10-27T14:45:04.803511Z"
+        }
+      ],
+      "assessment": {
+        "status": "Affected dependency version; deserialization paths removed by the reviewed Android release shrinker.",
+        "upstreamAdvisory": "https://github.com/advisories/GHSA-xxph-c9ww-hj94",
+        "upstreamFixedVersion": "33.7.2",
+        "evidence": [
+          "R8 usage report removes CompactHashMap.readObject(ObjectInputStream), CompactHashSet, CompactLinkedHashMap, CompactLinkedHashSet and MapMakerInternalMap including its serialization proxies.",
+          "Application and bundled Android plugin sources do not use ObjectInputStream or readObject."
+        ],
+        "limitations": "Recheck reachability when dependencies, serialization behavior, shrinker settings or build type change. The dependency version itself remains affected."
+      }
+    }
+  ],
+  "scope": "Known package/version advisories only; excludes SDK and locally patched code assessment.",
+  "additionalCommitQueries": [
+    {
+      "project": "FFmpeg",
+      "commit": "37c90f55d8b6c3948c79449b04755527b4ae1351",
+      "matchingAdvisories": 0
+    }
+  ],
+  "limitations": "No returned matches is not proof of security. Database coverage, vendored modifications, native build options and vulnerability reachability require separate assessment."
+}

@@ -1,0 +1,101 @@
+# Changelog
+
+## 0.1.7 — 7 November 2026
+
+- Redesign Settings with compact, consistent controls and clearer organisation. Keep the playing preview beside settings on TV and landscape screens, with full-width forms on portrait phones.
+- Improve remote and keyboard navigation through playlist forms, settings pages and long lists. Keep Search, Save and Done accessible, including while the phone keyboard is open.
+- Add a playlist selector to category management, improve list density and preserve separate Live TV, Movies and Series visibility settings for each playlist.
+- Show actionable playlist-save errors with Retry, Edit details and credential-free diagnostic copying. Allow another playlist to be added while an existing provider restores.
+- Improve M3U import performance and progress reporting; detect stalled transfers without interrupting healthy long downloads. Retain cached library content during repeated provider failures.
+- Show update status and imported listing counts for individual guide sources. Fill custom XMLTV gaps through unique exact channel names while preserving manual assignments and regional distinctions.
+- Improve sports matching for verified team names, nicknames, abbreviations and regional spellings across football, college sports, Japanese and Korean baseball, and Japanese basketball.
+- Recognise more explicitly identified live sports in existing guide data, including hockey, cricket, basketball, tennis, golf, motorsport and combat events. Retain opponent, competition, timing and replay checks.
+- Combine more duplicate guide-coverage cards while keeping alternative channels available and distinct fixtures, rounds, sessions and support races separate.
+- Keep event fixtures ahead of guide coverage and improve readability of long coverage titles without moving the focused item during updates.
+- Refine sports loading status with separate event and channel progress, live details and a clear Refresh both action. Keep portrait progress beside the preview title.
+- Reduce Events rendering overhead and improve Schedule entry by retaining partial results while refreshes run in the background.
+- Preserve the guide timeline while navigating past channels with off-screen listings, and retain category organisation when adding playlists.
+- Refresh the README and screenshot gallery with populated sample data across TV, phone portrait and landscape layouts.
+
+## 0.1.6 — 5 November 2026
+
+- Add Stalker / MAC entry to phone pairing, including optional provider details and review before saving.
+- Discover redirected Stalker portal paths when the usual endpoints are unavailable, without forwarding account details during browser discovery.
+- Show progress during paged Stalker live-channel loading and retry a transient page failure once without restarting the catalogue.
+- Avoid restarting Stalker catalogue paging when a later page fails after a partial bulk response.
+
+## 0.1.5 — 4 November 2026
+
+- Preserve the native video view across Live TV, Sports and fullscreen transitions to avoid video freezes while audio continues.
+- Keep suspended and interrupted matches visible in Events, including medical timeouts, without treating them as finished results.
+- Show sports channel matches and guide events progressively, including with the Possible channels filter, and retain fresh matches when changing filters or reopening Sports.
+- Reduce rendering and background work during Live TV and Sports navigation, with more consistent remote focus while results load.
+- Populate cached guide and category information sooner on startup, preserve custom grouping, and refine the Live TV guide's spacing, typography and column shading.
+- Clarify All, Favourites, Favourite leagues and Favourite teams & athletes filters. Keep Events selections independent while sharing browsing selections between Standings and Schedule.
+- Improve favourite-league management with search, sport filters, bulk selection, compact controls and consistent sport and league icons.
+- Refine team and game details with clearer records, sport-specific statistics, period scores, rosters and fixture rows. Keep long lists lazy and details on demand.
+- Improve calendar remote navigation and add an optional, cancellable Load month action using cached monthly feeds and compact day summaries.
+- Add custom XMLTV guide sources with editing, enable/disable controls and background updates.
+- Add optional per-playlist user-agent presets and custom values for playlist setup, provider requests, guide downloads and playback.
+- Improve Xtream setup and imports, including copied endpoint URLs, panel paths, URL-encoded credentials, authentication responses and connection errors.
+- Fix mobile favourites-search keyboard focus, improve theme consistency and preserve category and guide navigation when returning from Sports.
+
+## 0.1.4 — 3 November 2026
+
+- Show existing Events channel suggestions in Schedule, with direct playback and quick access to game details, without additional matching requests.
+- Hide completed fixtures by default, add a visibility toggle and show a current-time marker in chronological schedules.
+- Keep schedule dates, scroll position and remote focus consistent while browsing and applying fixture updates.
+- Improve remote navigation through Sports tabs, schedule controls, standings, league selectors and long lists.
+- Add sport and enabled-state filters, scoped bulk changes and paging to league management.
+- Refine Sports favourites with search, restored team names, team details and filters across Events, Schedule and Standings.
+- Keep landscape Sports panels beside the preview and portrait panels centred, with more compact controls and clearer team statistics.
+- Show supplied player leaders, possession and last-play information while respecting hidden scores.
+- Reduce off-screen rendering, reuse unchanged results and cancel replay/highlight scans when leaving their tabs.
+- Separate the selected Sports tab from remote/keyboard focus and remove retained focus borders during touch navigation.
+- Improve playlist refresh, partial-failure recovery, setup error messages and remote access to save and retry controls.
+- Improve Stalker portal compatibility, field correction and optional-field navigation.
+
+## 0.1.3 — 2 November 2026
+
+- Add Stalker / MAC playlists alongside M3U and Xtream, with on-demand catalogue loading and native portal guide support.
+- Add a Schedule tab that opens on today's enabled leagues, with local search, time ordering, optional sport grouping and week/month calendars.
+- Keep schedule summaries and additional dates on demand, with cached results and cancellation when leaving a view.
+- Browse standings, match details and team information beside the Sports preview, with compact controls, team badges and sport-specific tables.
+- Expand regional scores, fixtures and standings, including Japanese and Korean baseball, New Zealand NPC, K League, NCAA competitions and more motorsport series where sources provide coverage.
+- Add searchable sports favourites and clearer league selection, retaining sport and league choices between tabs.
+- Improve Watch on channel selection with consistent suggestions, remembered sorting and filters for channels, regions, playlists and match evidence.
+- Make Sports controls, fixtures and tables more compact on phones, while keeping remote navigation and enlarged text supported.
+- Prevent portrait tennis cards from overflowing after choosing a channel.
+- Show cached Live TV guide rows earlier during startup and reduce channel-name processing during sports matching.
+- Add separate Live TV, Movies and Series visibility controls, with search and a persistent Done action.
+- Keep playlist submission buttons accessible on small screens and improve local phone pairing when VPN interfaces are present.
+- Load replays, highlights and optional sports details only when opened.
+- Remove unused media-server, desktop, account-tracking, profile and online subtitle features and their dependencies.
+- Remove the unused APK installer and its install-packages permission. Updates remain available through the published APK download.
+
+## 0.1.2 — 1 November 2026
+
+- Faster opening of Settings, Movies, Series and other pages, with less background layout work.
+- Smoother TV category navigation after visiting Favourites or History.
+- Faster multiview channel selection for large playlists, with the selected category kept visible when returning from the guide.
+- Immediate TV transitions for nested settings and detail pages, while retaining phone navigation behaviour.
+- Improved sports team-name matching and fewer unsupported channel suggestions for events with limited broadcast information.
+
+## 0.1.1 — 1 November 2026
+
+- Faster sports channel matching on cold starts, with improved cache reuse and guide processing.
+- Improved matching for Japanese, Korean and other Asian leagues, plus NCAA events.
+- Smoother browsing while sports results load, with more consistent focus and scroll position.
+- Faster page navigation and Live TV menu, category and guide transitions.
+- Search across all enabled Movies or Series categories and playlists, with missing categories loaded in the background.
+- Search playlist categories in Group Management and enable or disable just the matching groups.
+- Keep Add Playlist and Save buttons accessible on phones, including when the keyboard is open.
+- Hide Android system bars during mobile multiview, with temporary swipe-to-reveal controls.
+- Improved playback recovery, replay discovery and remote navigation reliability.
+
+## 0.1.0 — 27 October 2026
+
+- First public Android release for phones, Android TV and Google TV.
+- Live TV guide, sports events, replays, highlights, Movies, Series and multiview.
+- M3U and Xtream playlist support, category organisation, favourites and picture-in-picture.
+- APK downloads with installation instructions, checksums and corresponding source packages.
