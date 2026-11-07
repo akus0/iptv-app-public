@@ -1,0 +1,854 @@
+# Development
+
+Use Flutter 3.47.7, JDK 21 and the Android SDK. The locked dependencies require Dart 3.12+ and Flutter 3.44+.
+
+The package retains its Dart 3.3 language mode; the lockfile determines the higher SDK requirement. Treat language-mode changes as a separate migration.
+
+```sh
+flutter pub get
+flutter run
+```
+
+Keep `pubspec.lock`; dependency upgrades are separate changes. To verify the pinned resolution, use `flutter pub get --enforce-lockfile`. The patched Android player lives in [third_party/video_player_android](../third_party/video_player_android/DOWNSTREAM.md).
+
+## Checks
+
+```sh
+flutter analyze
+flutter test --concurrency=1
+python3 tools/audit_repository.py
+python3 -m unittest discover -s tools/tests
+```
+
+Use focused tests while editing. Optional fixture/device tests skip when their inputs are unavailable. Routine tests must use synthetic data, not subscription streams.
+
+For GitHub Actions, copy [the privacy-check workflow](../tools/source-audit.workflow.yml) to `.github/workflows/source-audit.yml` using a login with workflow permissions. The checks above also run locally.
+
+## Code map
+
+| Area | Location |
+| --- | --- |
+| Screens, shared controls and remote navigation | `lib/screens/`, `lib/widgets/` |
+| Playback and multiview | `lib/services/playback_service.dart`, `multiview_session.dart` |
+| Playlists and on-demand libraries | `lib/services/playlist_manager.dart`, `playlist_session.dart` |
+| Programme guide and storage | `lib/services/epg_service.dart`, `xmltv_parser.dart`, `epg_database.dart` |
+| Sports loading, matching and discovery | `lib/services/sports_*` |
+| Category grouping and presentation | `lib/utils/` |
+| Tests and local profiling | `test/`, `tools/` |
+
+Stalker / MAC portal setup, loading boundaries and compatibility notes are in
+[the portal guide](stalker.md). The shared `CatalogApi` contract reuses existing
+catalogue storage; portal authentication and stream resolution stay in
+`stalker_portal_service.dart`.
+
+Playlist user-agent overrides are optional and stored once in `PlaylistProfile`.
+Empty means the existing transport default, including Stalker's MAG headers.
+Resolve playback headers at controller creation so cached channels, favourites,
+history, catch-up, retry URLs and multiview read current preferences without
+rewriting channel rows. Changing only this setting must not advance the live
+catalogue revision or restart a playing stream. Xtream request headers update in
+place; Stalker authenticates a replacement session lazily because tokens may be
+bound to the client identity. Preserve portal credential origin restrictions.
+
+Use `playlistHttpClient` for overridden Dart requests: native redirects may drop
+a request-level User-Agent, so the override also belongs on the per-request
+client's default. Do not change global HTTP settings. Each XMLTV source carries
+its own headers; unrelated playlists, supplemental guides and sports APIs retain
+their defaults. The picker validates bounded single-line values, and invalid
+imported values fall back to the default. Test actual redirected HTTP requests,
+initial setup, editing/clearing, remote and keyboard access, and native playback
+with local fixtures requiring the header on manifests, keys and segments.
+
+TV text-field gates track editing independently of keyboard insets because overlay
+keyboards may report zero. Navigation shortcuts and explicit field escape handlers
+must yield to `TvTextFieldGate.isEditing`; arrows alone never imply dismissal.
+Back, observed keyboard disappearance, focus loss or backgrounding end editing.
+Inactive lifecycle state alone may belong to the keyboard and must preserve it.
+Parent PopScope callbacks yield while `editingFocusedField` is true; the gate
+claims that callback dispatch so one Back cannot also save or leave a page.
+Editing ends immediately, restoring navigation on the next frame.
+
+M3U imports remain in their worker isolate. Attribute scanning preserves the old
+quoted ASCII-key grammar, including duplicate-key order and malformed input.
+Downloads measure inactivity on incoming bytes before UTF-8/line decoding;
+progress crosses isolates at most once per second plus completion. Failed imports
+must not install a partial catalogue or replace the previous channel cache.
+
+Library catalogue requests share a per-session failure gate for typed transport,
+access, rate-limit and selected server errors. Two consecutive failures pause new
+requests for two minutes; no timer or retry worker is started. Cache reads and
+playback bypass it. Explicit refresh resets it, and completions from an older
+connection/generation cannot poison a replacement. Category-specific parse/404
+errors retain their separate retry budget; failed or paused full syncs must not
+update the successful-sync timestamp.
+
+## UI responsiveness checks
+
+Event cards avoid inert animation wrappers. Static sports logos use the same
+cached image provider and decode width as animated logos, including the dark-logo,
+original-logo and initials fallback chain, without fade-controller subtrees.
+Keep phone animation preferences and image cache keys unchanged.
+
+Schedule entry restores its existing fixture/index snapshot before starting a
+cancellable event-queue refresh. Do not assemble all-league feeds inside widget
+initialization. Partial snapshots retain their window and list identity, but no
+successful-load timestamp; returning must resume missing work. Old panel replies
+cannot replace the current window, and completed snapshots keep the existing TTL.
+Equivalent completion lists retain the displayed list identity so the prepared
+search index and ordering remain reusable; different fixture objects invalidate it.
+Test first-frame partial rows, cancellation, different dates and late responses
+alongside remote navigation and the existing channel-match reuse checks.
+
+Sports detail tables build cell widgets only for mounted rows using `CompactChoice.contentBuilder`. Preserve the provider's column order and full row detail values. Comparison bars accept only matching plain nonnegative numeric units; do not infer winners from statistic magnitudes or parse compound scores. Calendar day navigation uses explicit date offsets and reveals unmounted rows before focusing. Month summaries are opt-in, processed one league at a time through the existing schedule cache, retain only bounded day counts, yield between leagues and cancel on scope/date/view changes. A partial month must not replace a fresh complete day with partial counts.
+
+Sports uses `RouteAwareRegion`, like Live, to isolate inherited route-state changes from the main screen. Read its retained route in callbacks; opening a popup must not rebuild unchanged Events, Standings or Schedule content. Real data/filter changes still rebuild normally, and full-page coverage retains existing pause/resume and playback ownership rules.
+
+Visible guide rows may queue exact channel lookups while the initial EPG directory is still unknown. Database readiness releases that queue; the directory uses a bounded cursor so its transfers can interleave with viewport reads. Missing IDs use the existing bounded cache. Keep initial rows across snapshot completion and invalidate in-flight data when clearing the guide; startup availability does not create programme evidence for sports matching.
+
+M3U restores may publish a bounded category-only preview while the full channel cache decodes on its worker. The preview is tied to the source URL by a digest, reapplies current viewer visibility/order, and never contains playable channel data. Missing or invalid previews fall back to the authoritative catalogue; unchanged category names are not rewritten on every launch. Resolve automatic category layout against all cached metadata, including hidden groups, before building the visible rail.
+
+Playlist organisation settings use `PlaylistManager.setCategoryLayout`: explicitly choosing organised layout re-enables Live folders without reimporting the catalogue. Retained category rails reread a changed folder-mode preference on update; provider-layout playlists remain independent. Device navigation diagnostics must restore category-view preferences as well as Sports preferences after exercising toolbar controls.
+
+Playlist setup failures use `PlaylistFailure` with stable `PL-<STEP>-<REASON>` references. Sessions retain only the stage, reason and optional HTTP status for reporting; copied diagnostics never include exception text, response bodies, playlist names, URLs or account identifiers. The dialog is opened only by an explicit failed save on the current setup route. Retry is user initiated, reuses the save guard and completes any failed rollback before adding another profile. Version metadata is requested only when copying; background refreshes do not open dialogs.
+
+Returning from Sports via Back or Live TV resets wide-layout column depth and focuses the Live menu entry. Use the column notifier to restore both rails without rebuilding catalogue children; compact portrait keeps its existing page navigation.
+
+Events owns its sport, league and result filter, persisted separately in the viewer-scoped `sports_events_selection`. With no Events selection it opens unfiltered. Standings and Schedule share browsing context but never overwrite Events or invalidate its feed scope. Only an explicit Events choice may carry outward to browsing tabs. League picker logos reuse the bounded existing SportsLogo cache and are built only for mounted rows.
+
+Lazy category traversal compares scroll-content reveal offsets inside a shared viewport. Retained offscreen slivers can have clamped paint coordinates resembling a nearby row; using those coordinates for vertical focus skips categories. Keep a distant selected row mounted for guide return and test that Down/Up retrace identical rows.
+
+Live/Sports preview ownership is a local notifier; do not rebuild unchanged Live columns just to hand off the video surface. Move the controller-keyed native video view to its new destination in the same Flutter frame; do not unmount it for a disposal frame. Retain route-completion guards for duplicate navigation and focus cleanup. Fullscreen presentation is reserved before push and released on pop, with session ownership retained until disposal. The main Live category rail uses the shared sliver folders, retaining the selected row for remote return while mounting only nearby categories. Category reselection still clears search/details and restores focus without rebuilding an unchanged catalogue.
+
+Standings initializes its scroll controller with the saved offset so the table mounts nearby rows directly instead of laying out its top rows and jumping afterward. Keep cache delivery asynchronous to allow immediate tab feedback before table layout; preserve refresh, expiry and stale-generation guards.
+
+Sports tabs distinguish selection from focus: the underline identifies the open page, while a border identifies remote/keyboard focus. Touch input suppresses that border even when Flutter retains logical focus. Explicitly resolve the tab button's `side`, since the theme can override a border supplied through `shape`. Input-mode changes rebuild only the tab strip through a local notifier; activating a tab moves its focus anchor without starting extra data work.
+
+Schedule channel labels read the current Events match session by the same league/event identity and use its displayed-channel selection, confidence and saved-pick rules. Only mounted fixture rows resolve labels; activation reads the current result again and uses the existing preview/playback queue. Do not call matching, catalogue preparation or guide searches from Schedule. Unmatched rows open details, and matched rows retain details through hold-to-open and their touch info button. Keep row heights stable as matches arrive so focus and date tracking do not jump.
+
+Replay/highlight foreground scans use the same cooperative cancellation points as idle preparation. Leaving a panel invalidates its request generation, including a quick leave-and-return before the next yield. Cancelled scans must not publish a completed cache entry or overwrite the current panel; prepared facts and valid partial results remain reusable. Exercise queued cancellation, worker cleanup, returning to the panel and unchanged final classifications when profiling a large catalogue.
+
+Flutter handles input and synchronous Dart preparation on the UI isolate. A frame runs animation callbacks, widget build, layout, paint/compositing and scene submission, followed by finalization and post-frame callbacks; raster work is measured separately. A short screen `build()` does not imply a fast first frame: descendant layout, catalogue preparation, native resource waits and extra frame barriers can dominate. See [WidgetsBinding.drawFrame](https://api.flutter.dev/flutter/widgets/WidgetsBinding/drawFrame.html), [performance practices](https://docs.flutter.dev/perf/best-practices) and [device profiling](https://docs.flutter.dev/perf/ui-performance).
+
+Top-level tab routes and Settings already use zero-duration transitions. Library and Settings results can forward to their next destination without waiting for overlay disposal and briefly rendering Live TV between tabs. Sports still waits for disposal when transferring an existing video preview; filtered/replay exits must first make their PopScope permit leaving. Delayed Live focus restoration must check that Live is still the current route.
+
+On physical TVs, the root theme also gives ordinary Material routes zero forward and reverse transition durations. This includes nested settings and detail pages; touch devices retain their platform transitions. Cache both theme variants so local screen themes do not invalidate the root theme cache. Custom player routes retain their existing ownership and disposal rules.
+
+Settings uses a persistent `SettingsWorkspace` with one live preview outside its nested Navigator. Live yields its native surface in the same frame as Settings/Sports entry; inner settings routes must never restart playback or create another controller. Landscape uses the Sports pane proportions. The right pane supplies its own MediaQuery dimensions and cleared safe padding; the outer scaffold does not resize for the keyboard, so nested forms apply the keyboard inset only once. Keep the Flex, Navigator and player element stable during rotation. The playing channel is labelled in the compact preview header; settings entry does not query programme details or create a second scrollable for the preview.
+
+`SettingsTheme` surrounds routes and dialogs as well as scaffolds. This includes dialogs opened from a State's context above its scaffold. Cached theme variants use compact controls on TV and retain mobile touch targets; do not replace the settings theme with the general TV theme inside a page. `SettingsScope` is an InheritedTheme so captured dialog themes retain the compact row treatment. Settings dialogs use the nested Navigator and zero animation; they cover only the right pane. Switch indicators have a single accessible row action and no second remote focus stop.
+
+Nested Back and toolbar Back use `maybePop` so editors and unfinished saves can consume them. Only the root Settings page exposes app destinations; successful playlist saves and language changes use `SettingsNavigation.returnToApp`. Dispatch destination actions before waiting for the old workspace's overlay disposal to avoid an intermediate Live frame. Tests cover keyboard dismissal, save-in-progress guards, portrait keyboard space, rotation, dialog placement and shared player retention.
+
+Playlist forms use the pane's actual layout for focus traversal. Stacked source buttons keep spatial arrow navigation, while Up/Down follows fields, optional content controls, provider options and Save. The wide three-column form retains its side-to-side shortcuts. A shared event guard prevents the raw text-field handler and the ancestor Focus handler from advancing twice. Held arrows follow the same path; editing arrows remain with the keyboard. Focus reveal scrolls only when needed. `settings_navigation_review_test.dart` checks D-pad destinations as well as layout at TV and both mobile orientations; optional captures use synthetic playlists.
+
+Category management keeps Search and Done outside the lazy list. Left from a category returns to Search; Right, Menu or End reaches Done. Playlist switching is disabled during a pending visibility save. Library metadata readiness/loading/failure is tracked by playlist ID so a delayed response cannot replace the selected provider's state; switching does not load programme titles. Search terms and row identities are scoped to the active playlist and content type. Test multiple providers, late metadata, large lists, text scaling and direct remote action access.
+
+`RouteAwareRegion` owns Live's route dependency and observer subscription. Navigation must not make the entire retained Live screen rebuild just because `ModalRoute.isCurrent` changes. Its callbacks read the current route object directly. Provider updates received while another page covers Live defer rebuilding its content until `didPopNext`; current data is then read normally. Dialogs still allow visible Live content to update. Test repeated pushes/pops, dialogs, deferred provider updates, restored focus and viewer changes.
+
+`PlaybackService.parkLiveChannel` starts releasing a live decoder while Library opens. Subsequent playback still waits on the existing release queue; only the same request generation may restore the resume hint. Do not replace decoder ownership barriers with arbitrary timers. `playback_recovery_test.dart` covers delayed release and intervening play/stop; `live_layout_navigation_test.dart` covers navigation while release is pending and same-frame Library/Settings forwarding.
+
+Live TV column depth is a local `ValueNotifier`: rail widths, dividers and shortcut bindings listen to it while retaining the menu, categories and guide as stable children. TV focus changes must not call screen-wide `setState`; touch layouts still need it for collapsed icons and their Back button. Real catalogue, preference and playback notifications continue rebuilding their dependent content. Keep hidden TV columns mounted at their expanded internal width so Back restores their focus and scroll position.
+
+TV Live categories use `VerticalRailTraversalPolicy` for Up/Down. Read each eligible row's current rectangle once and select the nearest row vertically; repeated geometric sorting across a large expanded category tree can block input before a frame starts. Fresh geometry preserves category reordering and folder changes. Left/Right and Tab retain their existing traversal, while row movement handlers still take precedence. TV row reveal is immediate and only scrolls clipped rows; touch retains its existing behavior. Regression tests cover large rails, disabled/removed/reordered rows and browsing categories after Favourites or History without scrolling animations or catalogue reloads.
+
+Multiview's category picker uses the sliver form of `LiveCategoryFolders`, mounting rows near the viewport instead of laying out every category. The selected row occupies its own box sliver so returning from the guide can still focus and reveal a distant category. Recheck reveal after layout resolves estimated list extents. Preserve original ordering, folder preferences, collection/source identities and variable row heights. Large-list tests cover bounded mounted controls, a distant initial selection, repeated arrow navigation and returning after changing categories. Other category hosts retain their existing rendering.
+
+A retained guide still changes viewport width when the rails hide. Its horizontal `ScrollMetricsNotification` refreshes programme culling after layout, independently of guide builds and scroll-offset listeners. Programme focus reveals only the horizontal axis; vertical positioning belongs to the guide's minimal row reveal. Calling `Scrollable.ensureVisible` across all ancestors can unexpectedly top-align the selected channel. `live_layout_navigation_test.dart` covers fast repeated column drills, unchanged guide widgets, remembered focus and both scroll offsets, newly exposed programme cells, off-screen horizontal focus restoration and subsequent catalogue updates in preview and full-video layouts.
+
+Search builds result cards near the horizontal viewport. Row keys, focus nodes and scroll controllers belong to the screen and use stable content-type identities, so catalogue notifications or late rows do not replace the focused row. Child identity lookup indexes only as far as reconciliation requests; eagerly constructing a full key index can erase the gain from lazy widgets on a large result set. Live filtering reuses the playlist's visible snapshot and keys its result by playlist identity, live revision and query. Visibility changes must invalidate it. `search_navigation_test.dart` covers large catalogues, focus/scroll retention, removed results, late rows and returning to a recycled first card.
+
+Library caches only pure category-title classification, bounded to 4,096 entries and 262,144 retained text characters, bypassing unusually long entries. Each tree still uses current group objects, visibility, provider layout and ordering. Never cache viewer decisions or full category trees by title alone. Compare complete tree identities, labels and paths when changing classification.
+
+For each performance pass, compare release/profile builds on the same physical device with the same catalogue and navigation sequence. Record action-to-first-frame separately from network completion and synchronous build time. Test repeated visits, real remote input, background loading and pending player teardown. Use synthetic large catalogues for repeatable Search checks; keep subscriber data and private profiling entry points out of distributed builds. Maintain normal playback, image decoding limits, lazy guide/library lists and existing targeted focus rebuilds.
+
+For deeper navigation diagnostics, keep the profiler in a private entry point. Time the navigation callback, synchronous route setup, widget build, root pipeline layout/compositing/paint, tree finalization and the engine's frame timestamps separately. Layout includes lazy descendant construction. A post-frame observer can resume after other microtasks; its latency is not a physical display-presentation measurement. Frame submission and rasterization can overlap later UI-isolate work, so do not blindly add every duration. Observe routes without registering new inherited-widget dependencies, buffer detailed records outside the measured callback, and pair delayed `FrameTiming` reports by monotonic timestamps rather than the currently selected page. Compare both settled and rapid navigation, then confirm with native remote key events. Keep first page appearance separate from the first frame containing database results.
+
+Keep full widget-tree inspection out of timed navigation loops. Repeated ancestor/route checks can themselves block a small TV's UI thread for seconds; inspect control availability separately, and use a lightweight readiness endpoint during timing. Collect CPU samples after the measured interaction window, since VM-service serialization also pauses the app. Use profile builds to identify work and release builds to compare latency. Do not add per-isolate heap readings when the isolates share a heap group, or interpret a short stable-memory sample as proof against leaks.
+
+Sports cached-day filtering compares event instants with precomputed local midnight boundaries. Use calendar arithmetic for previous/next day, preserving 23/25-hour days, carry-over live games, duplicate removal and tournament rules; do not substitute an elapsed 24-hour window. Score responses younger than the shortest freshness window (50 seconds) need no per-game freshness scan. Clock rewinds, refresh requests, failures and exact expiry boundaries still follow their existing rules. `sports_calendar_test.dart` runs under `TZ=Australia/Melbourne`, `TZ=America/New_York` and `TZ=UTC`; `sports_loading_test.dart` covers the different exact-50-second rugby and ordinary-score boundaries.
+
+Mobile multiview owns an `ImmersiveSystemUi` lease while mounted. Android's native `WindowInsetsControllerCompat` hides the system bars with transient swipe reveal; Flutter's legacy immersive `SystemUiMode` is ignored when targeting Android 16. The activity restores the prior bar visibility/behaviour on release and reapplies hiding when window focus returns. Dart leases prevent an outgoing route from showing bars over its replacement. Video surfaces retain their bounds when transient bars appear; only overlay controls consume safe-area padding. See [Android immersive mode](https://developer.android.com/develop/ui/views/layout/immersive) and `multiview_ui_test.dart` / `immersive_system_ui_test.dart`.
+
+The Add Playlist form keeps its Add/Save action outside the scrolling fields, inside the keyboard-resized body and system safe area. Short landscape phones use the stacked form; the three-column layout remains for wide TV/tablet views. `add_playlist_layout_test.dart` covers source switching, add/edit submission, keyboard reachability, system insets and disabled duplicate submission at small portrait, landscape and TV sizes. The wide options pane scrolls independently so Xtream content toggles cannot push the save action off screen. Phone pairing prefers physical LAN interfaces and excludes known VPN tunnels; VPN software must permit local network access.
+
+`playlist_save_failure_test.dart` covers rejected M3U, Xtream and Stalker additions, repeated activation, storage failures, retry and leaving while validation is pending. Roll back failed new profiles even after the form is disposed; retain the error locally while mounted and keep feedback above the fixed save action. Restore Save focus after a submitted request only if the user has not navigated elsewhere; local field validation retains its corrective focus. Existing profiles and cached content remain available after a failed refresh.
+
+An explicit full catalogue update refreshes library metadata before downloading visible categories. Ordinary live loading remains lazy. Share overlapping full updates and one provider request allowance across movies and series. Do not advance the full-sync timestamp after metadata, category or storage failure. Reject malformed Xtream list responses rather than replacing saved titles with an empty list. `playlist_refresh_reliability_test.dart` exercises the real HTTP parsing path against a loopback fixture, including failed authentication, partial updates, malformed responses, disabled content, hidden groups, library-only playlists and retries. Sports overlays own a local scaffold messenger so Undo stays above the modal barrier; their scaffold must not apply keyboard insets a second time. Favourite rows explicitly move Right to their remove button and Left back to the row, since nested controls inside the row rectangle are unreliable targets for geometric directional traversal.
+
+Group Management searches all live category names in the selected playlist, including hidden groups. Search is case-insensitive and matches every whitespace-separated term. Keep typing local to the lazy list; provider notifications must refresh visibility without losing the query. With an active filter, Show/Hide matches affects only matching titles; clearing search never changes selections. Preserve deferred loading during playlist setup. The search field uses TV keyboard gating and owns digit/caret keys while focused; short keyboard layouts prioritize search and results. `group_management_search_test.dart` covers large lists, loading policy, provider isolation, filtering, bulk actions, scroll reset, tab retention and phone/remote input.
+
+Movies and Series title search spans every visible category and enabled playlist for the selected content type. Clearing it returns to the selected category; favourites and continue-watching retain their own filters. SQL applies the allowed `(playlist_id, category_name)` scope before count/sort/paging, using a transaction-local replacement of a temporary scope table to avoid SQLite parameter limits. Return only the current 60-title page; never use the older 200-result search cap or in-memory category previews. Literal `%`, `_` and backslashes are escaped.
+
+An explicit library search uses `LibrarySearchLoader` to fill missing categories sequentially through the existing category request queue. Saved titles appear first; successful empty categories are remembered for this screen session and failures remain retryable. Clearing search, changing shelves/content type or disposing the screen stops subsequent requests; an already-running fetch may finish safely into the cache. Downloads do not start during ordinary browsing. Query generations reject stale replies. Late titles offer Update results while a poster is focused, preserving its position; otherwise completion refreshes the active query. `library_search_test.dart` covers SQL scope/pagination, over 1,200 categories, concurrent content scopes, cancellation/retries, phone/TV search, and late results without focus movement.
+
+## Sports performance checks
+
+Scoped guide-title queries deduplicate channel IDs in yielding slices. Indexed results use SQLite ordering directly; only chunked fallback queries sort their IDs, using a worker for scopes over 1,024 channels. Both paths preserve the existing complete result order.
+
+Guide discovery publishes cumulative immutable snapshots with exact programme bindings: first coverage immediately, then changed snapshots at most every 100ms and a final completion. This lets With channel show a ready guide card before the fixture pass completes. Source scope, catalogue and guide-version guards, saved selections and rejections still apply. Chronological scan order stabilises coalesced event IDs; ambiguous motorsport sessions wait for complete coalescing.
+
+For catalogues of at least 4,096 channels, preparation may overlap a lightweight guide-only worker with the fuzzy index. It includes only channels with cached current/next guide rows, capped at 24,000 metadata entries. It has no stream URLs, fuzzy index, SQL calls or disk cache, and skips the scoring snapshot hash. Selection is revalidated against source revisions. Memory pressure disables this optional worker; small/oversized catalogues and failures use the existing matching worker. Both workers release their isolates on idle and disposal. The fallback scanner offers bounded early coverage before joining the first fixture preview, then overlaps its SQL wait. Snapshot ownership lasts until both tasks finish. Discovery reads immutable maps without contaminating scorer evidence tracking; final matching still validates the complete live cohort. Query failures must preserve exact guide-only coverage.
+
+Scoped programme-title verification shares `SportsGuideSearchIndex`'s title-filter worker and bounded language cache. Transfer only unknown title strings in batches of at most 512; retain SQL cursors, row ordering, descriptions and flags with the database owner. Consume a whole batch before evicting query-local title decisions. Small batches and worker failures preserve the exact cooperative local matcher.
+
+### Matching flow and ownership
+
+| Responsibility | Implementation |
+| --- | --- |
+| Visible state, completed identities and expiry | `sports_screen.dart`, `sports_match_session.dart` |
+| Live-first batch selection and serialized worker jobs | `sports_match_batch_plan.dart`, `sports_work_queue.dart` |
+| Worker lifecycle, transfers and guide snapshot dependencies | `sports_matching_worker.dart`, `guide_read_tracker.dart` |
+| Guide reads, optional title index and exact title filtering | `epg_database.dart`, `sports_guide_search_index.dart`, `sports_title_filter.dart` |
+| Programme postings, text facts and prefix reuse | `sports_programme_index.dart` (private part of the matcher) |
+| Evidence scoring, eligibility and shared-feed conflict resolution | `sports_channel_matcher.dart` |
+| Pure text/date/time helpers with focused equivalence tests | `sports_language.dart`, `sports_title_matcher.dart`, `sports_date_matcher.dart`, `sports_programme_time_index.dart` |
+
+Keep candidate selection separate from scoring: an index narrows work but cannot confirm a match. Pure text caches may survive unchanged inputs; decisions must still respect catalogue identity, guide corrections, current time, picks and programme expiry. Keep database resources with their owner and CPU-only work in the matching/filtering workers. A catalogue change while programme preparation yields asks the caller to retry before scoring or publishing.
+
+Team aliases live in `sports_team_aliases.dart`, scoped by league and looked up by
+exact feed identity. Full-name variants stay separate from nicknames. Added
+nicknames require an explicit opponent pair and competition label; they never
+prove a match from incidental prose. Do not infer nicknames by splitting a name,
+use bare shared cities, or add fuzzy spelling corrections. College mascots remain
+excluded. Additional scoreboard `name` metadata is bounded, deduplicated against
+display names and cities, and used only for professional competitions with distinct
+team mascots. The inconsistent `nickname` field is not used as evidence. Existing
+sport, gender, age, date and replay checks
+still apply. Alias changes participate in fixture cache identity and matching
+semantics versioning. Per-fixture name groups use weak caches; lookup indexes are
+lazy and bounded by the bundled directory, with no new network requests.
+
+Reviewed feed abbreviations also participate as contextual guide aliases, excluding
+two-letter codes and ambiguous directory entries. Retrieval keeps its compact
+vocabulary; nickname-pair verification lazily restores complete verified club names
+and tries longest names first. This prevents a valid full opponent name being
+rejected as leftover prose. Only structured spaced dashes (`~`) may join nickname
+opponents; label boundaries (`|`) cannot. Trailing/prefixed different club names,
+multiple fixtures and arbitrary prose still fail the nickname-only check.
+
+Verified club directories: [A-Leagues](https://aleagues.com.au/a-league-clubs/),
+[J.LEAGUE](https://www.jleague.jp/en/j1/club/),
+[AFL](https://www.afl.com.au/teams),
+[NPB](https://www.npb.or.jp/eng/teams/), and
+[KBO](https://www.koreabaseball.com/kbo/league/teaminfo.aspx).
+Keep `sports_team_alias_matching_test.dart` coverage for both query retrieval and
+final scoring, cross-league/same-city collisions, shared college mascots, worker
+transport and cache invalidation. The mixed-league performance test uses identical
+fixtures against the previous matcher and checks that warm reads issue no extra
+guide queries; timing output is diagnostic rather than a hardware-specific gate.
+
+Session publication and later input refreshes share one programme-expiry rule. Drop already-ended programme evidence from incoming replies before recording completion, preserving manual picks and finished-event history. Otherwise a cached historical reply can repeatedly restore evidence that the next batch immediately expires, leaving a completed scan permanently short of its checked count. Programme evidence that expires after publication still requests a fresh check normally.
+
+### Browsing while loading
+
+Measure remote input and frame work during cold matching as well as total matching time. Background guide refreshes share that startup window: XMLTV decompression, UTF-8 decoding, tokenization and timestamp parsing run in `xmltv_parser.dart` on a separate isolate. The caller retains HTTP and database ownership. The worker pulls at most 64 KiB of input per request and waits for each 1,000-row database batch; final channel catalogues transfer when the worker exits. Preserve channel normalization, localized titles, subtitles, timestamps, retention windows and the unfiltered assignment catalogue when changing this path. Errors and the ten-minute timeout cancel the input and terminate the worker; stale-source deletion still requires successful parsing.
+
+TV Sports rows use fixed extents and build lazily. Keep the focused row alive, resolve pending navigation by stable section/card identity, and accumulate arrow steps while an off-screen target mounts. New results preserve the focused card's scroll position; a removed card moves to a surviving neighbour. Deferred restoration must yield to newer user navigation. Regression coverage in `live_layout_navigation_test.dart` exercises rapid arrows, off-screen headings, streamed arrivals/removals and toolbar escape; `xmltv_parser_test.dart` covers streamed gzip/Unicode, filtering, backpressure and cancellation.
+
+### Guide search
+
+Guide rows use SQLite's `(channel_id, start)` primary key, with secondary indexes for expiry and source refreshes. Channel-name matching uses in-memory token postings, checking the shortest posting list before testing a phrase. Measure SQL reads, text analysis and rendering separately before adding indexes.
+
+For device profiling, build `tools/tv_profile.dart` with `IPTV_DISABLE_AUTOPLAY=true` and `IPTV_PROFILE_SPORTS=true`. Add `IPTV_PROFILE_GUIDE_INDEXES=true` to inspect existing guide query plans and sample read timings. This inspection is read-only and logs no guide content. Use the normal entry point for distributed builds.
+
+Sports title search uses an optional persistent FTS4 dictionary (FTS5 where FTS4 is unavailable). Up to four encoded trigrams per ASCII keyword narrow substring candidates; the existing matcher verifies every hit. SQLite deduplicates candidate IDs before transferring titles. Bounded SQL unions and implicit conjunctions also work with Android's basic FTS4 parser.
+
+Unicode and pending titles retain exact checks. Native keywords do not force ASCII keywords to scan the whole dictionary; short ASCII keywords still do. This relies on non-Unicode RegExp case folding ([Dart semantics](https://api.dart.dev/dart-core/RegExp-class.html), [ECMAScript Canonicalize](https://tc39.es/ecma262/2024/multipage/text-processing.html#sec-runtime-semantics-canonicalize-ch)).
+
+Guide writes queue new titles; idle maintenance derives tokens in bounded batches. Missing tables/triggers or index errors fall back to ordinary guide reads without entering database recovery. Cancellation leaves pending titles searchable. Rebuild the dictionary if token/language rules change. Scoped title queries serialize their complete cursor/table lifecycle to avoid temporary-schema locks; failures release the queue for retries. Other guide reads remain independent.
+
+J1 matching recognises `J.League` and `JLeague` as competition vocabulary alongside `J1 League`, without using the short `J1` label to widen guide searches. Abbreviated team evidence still needs both opponents and a fixture connector. A named or dated event feed is evidence of a listing, not verification of its live stream; expired guide entries for rotating slots must not establish a current fixture. The six-fixture regression covers partial provider coverage, stale slots, unrelated Tokyo tennis, wrong opponents and replays.
+
+The title worker caches translated or normalised fallback text only. Ordinary ASCII misses return no fallback and must not evict more expensive Unicode/language results between fixture batches. This cache stores no query results; changed keywords still run the same exact matcher, with the existing entry, character, long-title and worker-lifetime limits.
+
+Native club vocabulary lives in `sports_team_vocabulary.dart`. Verified full Japanese/Korean club names and selected EASL Japanese/Chinese names use the existing cached language fallback; fixture queries stay in their canonical spelling. Native scoreboard identities use the same exact lookup. Do not infer clubs from bare cities, mascots or automatic transliteration. Preserve women's/youth qualifiers, opponent and time checks; FC Tokyo's short name must not identify Tokyo Verdy. An unnamed numbered feed or expired programme still cannot confirm a fixture.
+
+JEF United Ichihara-Chiba, JEF United Chiba and JEF Utd Chiba share an exact full-name alias lookup at fixture preparation, matching ESPN's names to the [official club identity](https://www.jleague.jp/en/club/chiba/). Original names stay eligible and native titles retain the existing translation path. No extra guide requests or per-row alias scans are needed. J1 and K League disable sport-only suggestions: generic football coverage cannot identify these competitions' event streams. Exact fixtures, current guide evidence, explicitly listed broadcasters, league-specific suggestions and saved picks keep their normal checks. The fallback policy participates in match/cache identity. Do not repair a stale numbered event feed by borrowing a different provider's slot number or ignoring guide timestamps.
+
+Club identities are checked against the [J.LEAGUE bilingual directory](https://archive.j-league.or.jp/teams), [K League club pages](https://www.kleague.com/club/club.do?teamId=K10), [KFA club list](https://img.kfa.or.kr/data_rule/2025_korea_cup_operation_rule_01.pdf), [EASL Japanese directory](https://www.easl.basketball/ja/teams) and [Taoyuan's official site](https://www.taoyuanpilots.tw/). This is a bounded vocabulary, not general Asian-language translation. Native guide dictionary rows already use exact fallback verification, so these native-only additions do not require rebuilding the search index.
+
+Sports broadcaster aliases expand only explicit listings through existing exact channel-name buckets. The stored canonical channel text is unchanged, so new aliases do not invalidate the startup text cache. Added alias candidates require US region evidence; an unscoped FS1 listing must not select an Australian Fox Sports 1 feed. Existing exact-name candidates retain their normal checks. Linear ACCN/SECN/BTN/CBSSN names must remain separate from ACCNX, SECN+, B1G+/BTN+, parent networks and alternate/overflow feeds. Region and current-guide vetoes still apply. The [ACC](https://theacc.com/news/2019/3/11/general-acc-network-frequently-asked-questions.aspx) and [SEC](https://www.secsports.com/news/2021/08/about-sec-networksec-network) document these linear/digital distinctions. A Coupang Play or K League TV listing without opponents or guide evidence must not confirm an arbitrary feed.
+
+College school aliases use exact normalized identity lookups, including [UNC Greensboro/UNCG](https://uncgspartans.com/), [UNC Wilmington/UNCW](https://uncwsports.com/), [UAB](https://uabsports.com/sports/football/schedule), [UMBC](https://umbcretrievers.com/) and [UIC](https://web3.ncaa.org/directory/orgDetail?id=302). Campus qualifiers must not identify Alabama, Maryland, Illinois or UNC's other teams; Boston U means Boston University, never Boston College or a generic Boston team. One fixture context shares its opponent phrases between retrieval and synopsis checks. Compact gender labels include both `Ice Hockey (W)` and `W Ice Hockey` (and the corresponding men's labels); they must not cross NCAA men's/women's fixtures. `sports_listed_network_test.dart` exercises the broadcaster contract for every configured league/guide category, alongside targeted school, sport, gender, country and streaming negatives. Compare fixed-input scoring and guide requests against the previous matcher before retaining changes; live feed timing alone cannot prove a performance gain.
+
+Query-local channel IDs use bounded native write batches with no returned insert IDs: eight statements of at most 500 IDs per transfer. These temporary writes need no transaction: a failed batch discards the incomplete scope before the ordinary scoped cursor runs. Do not cache scopes across catalogues or use a partially populated table after a write error. Test failures after an earlier statement succeeds, as well as catalogue changes and final partial batches.
+
+### Scheduling and programme preparation
+
+Cold-start measurements must enter Sports during guide loading and distinguish first suggestions, completed Live + soon matching and the whole day's completion. Provisional broadcaster suggestions can precede the guide preload; they never replace a completed match. All live fixtures are checked together before later fixtures, preserving shared-feed conflict checks. Prepared programme postings can be reused or extended only when their row contents and tennis context agree; caches remain bounded and guide corrections still invalidate decisions. Fully prepared windows skip temporary text-map construction. Early guide snapshots can become eligible for persistent results after startup completes, but refreshing, failed or changed snapshots must not be saved.
+
+Later fixtures run in batches of at most 128 events spanning eight hours. Reconsider newly arrived live fixtures between batches, checking the entire live cohort before promoting shared-feed assignments. Seed tennis tournament vocabulary from the complete schedule first. Completed identities survive batch boundaries; partial browse snapshots never acquire a completed-pass signature. Reused broad guide reads are narrowed to the batch's scoring window before constructing programme postings, retaining overlapping slots and the existing boundary margin.
+
+Publish exact guide coverage during index preparation when the bounded early worker is available; otherwise use progressive discovery alongside the first fixture query. Discovery still precedes later-fixture batches, and newly discovered identities cause a live-cohort recheck. Keep the matching worker's snapshot owned until scoring and discovery both finish. If the initial title query fails, retain guide-only coverage from the current snapshot while reporting the failure. Title reads start at the earliest scoring reference and use programme overlap, preserving broadcasts that started earlier. Keep the full future window for delayed sessions and all-day events.
+
+Start full guide reads before provisional current-guide scoring, so native SQLite work can overlap worker scoring. Skip the provisional pass when the reads are already ready. Keep provisional confidence and caches separate; publish full tennis coverage after provisional scoring returns. Failed reads remain retryable. Save the completed input signature only after the batch plan has checked all current inputs, so queued score updates do not repeat an already completed pass.
+
+Forward progress from both the initial broadcaster hints and current-guide preview, including when Possible channels is selected. Publish the first usable result immediately, then coalesce completions at 150 ms intervals and flush before cache bookkeeping. The full scorer can publish an exact name/guide match before unrelated live fixtures finish only when none can claim that feed: derive a conservative dependency set from the same opponent, programme and court postings used by scoring. Bound this set to 65,536 event/feed memberships and fall back to waiting for the full live cohort when exceeded. Shared/weak assignments retain their existing conflict checks; new fixture identities keep incoming confidence provisional until rechecked. Provisional fixture callbacks do not overwrite exact guide-discovery bindings; completed batches still apply normal conflict resolution. Compare complete results with and without progress, exercise duplicate feeds, and verify a rendered Possible channel while the full guide query remains pending.
+
+Programme postings retain at most two indexes and 160,000 rows. Keep the latest index and favour the larger reusable window over small tail batches; select the longest exact prefix when extending an index. Release storage before allocating a replacement. Guide generation, row contents/order and tennis context must still match before reusing postings. This cache does not extend match freshness.
+
+Programme time candidates retain two hour endpoints per row instead of repeating row IDs in hourly sets. Preserve the original 35-minute start margin, inclusive stop bucket, truncation toward zero before the Unix epoch and unconditional candidate fallback for ranges over 16 hours. Exact programme time checks still run during scoring. Compare membership against the old hourly sets, including prefix extension, malformed intervals and extreme dates.
+
+### Cache validity and bounded text work
+
+Completed worker batches track current/next channel reads with bounded bitsets (64 batches, at most 1 MiB). Snapshot turnover invalidates batches that consulted changed channels, including absent programmes. New or removed synopsis evidence invalidates all batches that used the synopsis pool. A database refresh resets every decision; untracked, disk-restored or evicted dependencies also require a fresh check after snapshot changes. Keep the original result expiry, and resolve shared-feed conflicts again when combining retained and newly checked events. Dependencies are never persisted.
+
+The worker can persist bounded channel-name normalization and network aliases. Rebuild IDs, guide links, exclusions and postings from the current playlist; never restore these from the text cache. Cache reads verify format version, checksum and size limits, with ordinary normalization as fallback. Bump `SportsChannelTextCache.version` when the normalization or alias rules change. Version 2 retains validated entries from version 1 unless their names contain Japanese/Korean/Chinese script affected by the new vocabulary. Accents, flags and decorative quality suffixes keep their existing cache entries. Future normalization changes must not inherit this migration without equivalence evidence. Disk I/O and encoding stay in the worker.
+
+Idle, replay and ended-name checks are lazy, in-memory facts stored in one byte per channel. Replace them atomically with every rebuilt channel index, including same-size renames and reordering. Game state, event dates and current guide eligibility are still evaluated for each request; never cache the complete eligibility decision as a channel-name fact.
+
+Date checks reuse the three calendar dates around the reference while it remains in the same UTC day. The reference is still derived from the event and current clock on every check. Only those three date records are retained; crossing UTC midnight or rewinding into another day replaces them. Local times retain the original duration arithmetic across daylight-saving changes, and extreme dates retain the original overflow behaviour. Preserve explicit-year and ambiguous day/month rules.
+
+Current/next and scoped title reads use native SQLite cursors with bounded transfers. ASCII fallback lookup uses Aho–Corasick; Unicode case folding and translation retain the original semantics. Text caches have entry and character limits. Background scoring yields less frequently than UI work, while result notifications remain throttled. `IPTV_PROFILE_GUIDE_FTS=true` remains a separate temporary word-index benchmark, not a production matching benchmark.
+
+Dictionary title verification runs in one reusable worker, with at most 1,024 titles per transfer; cursors and temporary tables stay with the database owner. The candidate cursor fetches the same bounded 1,024-title batch from SQLite, avoiding four smaller platform transfers before verification can start. The worker retains query-independent translation and normalization for up to 16,384 titles and 2 Mi characters, and releases its cache after 30 seconds idle. Small tails and worker failures use the same local matcher. Literal ASCII hits also short-circuit mixed-language queries, even when titles contain native text or decoration. On a miss, mixed native query/title pairs retain the original combined regular expression's case folding, followed by the unchanged translation fallback. Compare exact title sets on one unchanged guide with both query orders, then measure cold screen entry separately. A newer guide or different fixtures can change total matching time independently of the code.
+
+Single-day scoped title queries can materialize conservative candidates entirely in SQLite, avoiding the global title transfer and exact-hit write loop. For more than one 1,024-title batch, a bounded probe counts overlapping candidate programme rows up to the title count plus one. Only when there are no more programme rows than candidate titles does the caller defer exact verification until its programme cursor. Small dictionaries and multi-day windows retain dictionary verification; unavailable indexes and failed probes retain the ordinary exact cursor fallback. Candidate results explicitly state whether verification has already occurred. Never accept an unverified candidate as a match. The scoped reader uses the same language matcher, a bounded cache of pure fallback text (16,384 entries / 2 Mi characters), query-local title decisions and the existing cursor yield interval. No persistent schema migration or synchronous index rebuild is required. Compare all ordered programme fields, exercise both plans and failure cleanup, then measure complete cold matching separately.
+
+The title cache uses a linked list for recency and eviction. Repeatedly removing `Map.keys.first` can scan deleted slots as a dictionary-sized query churns the cache; changing the keywords must not turn a bounded cache into repeated linear eviction work. Include a full-dictionary short-keyword query in device comparisons, not only selective indexed searches.
+
+Bulk title filtering precomputes the ASCII automaton's transitions in the worker, using a compact alphabet and 16-bit state IDs. Retained arrays are limited to 1 MiB; larger tables, more than 65,536 states and empty patterns keep the sparse matcher. Small local checks also keep the sparse path to avoid extra setup on the UI thread. Unicode and mixed native matching retain the existing regular expressions and language fallback. Validate exact title results, overlapping suffixes and both table limits before comparing device timings.
+
+Programme identity indexing skips description normalization when an ASCII synopsis cannot contain a fixture connector, or when the title provides no sport context and the synopsis cannot name an explicit sport. Both rejection checks derive their expressions and translated aliases from the same vocabulary as full verification. Sports-titled and dedicated tennis/motorsport coverage retain their existing synopsis path; a positive shortcut result never supplies evidence by itself. Apostrophes that can join letters under the shared fixture-normalization rule, `@` and non-ASCII text retain full analysis; ordinary ASCII possessives and quotes use the same rejection checks as other punctuation; tennis and motorsport coverage titles retain descriptions even without connectors. Verify byte-for-byte identity equality on unchanged guide rows in both execution orders before measuring cold entry. Never use this shortcut alone to establish a match.
+
+Generic sports guide titles may identify both opponents in a bounded synopsis
+sentence: “A and B meet at a venue for a game”. Require verified participant
+names, the present-tense venue/game clause, compatible sport/division and a current
+programme. A conjunction alone, incidental mentions, wrong campuses, previews,
+replays and past/future qualifiers do not establish a fixture. Compile the extra
+pair expression lazily only after ordinary pair validation fails and the synopsis
+contains “meet at”; use the existing cached synopsis index, with no extra guide
+queries. A frozen 424-fixture device snapshot recovered eight TNT variants for
+UConn–Michigan; the other 423 results and 40 discovered guide cards were unchanged.
+The broadcaster was cross-checked against [UConn's official match preview](https://uconnhuskies.com/news/2026/11/5/mens-basketball-no-4-huskies-head-to-boston-for-title-game-rematch).
+
+Compact K League scoreboard names also resolve to verified full Korean club
+identities through `sports_team_aliases.dart`. Keep these aliases scoped to the
+two K League competitions, use full club names rather than bare native city
+names, and preserve separate Suwon FC/Suwon Bluewings and Seoul E-Land/FC Seoul
+identities. This uses the existing lazy alias index without changing global
+normalization or persisted channel-text cache versions. Sources and the broader
+possible-match audit are recorded in [sports-matching-coverage.md](sports-matching-coverage.md).
+
+B.League uses the same scoped index for its full bilingual club directory and
+checks explicit senior/youth age qualifiers. Its scoreboard parser reads live
+linear-TV panels already embedded in the schedule, keyed by exact game ID;
+optional malformed/duplicate panels are ignored without losing fixtures.
+Matching semantics version 20 invalidates older derived decisions after upgrade,
+while preserving the catalogue's channel-text cache.
+
+
+Conflict checks share only text-derived facts across fixtures: routing-label removal, explicit sports and general gender markers. Their cache uses the existing 8,192-entry and 1 Mi character-cost limits, accounts for the fixed sport vocabulary, and bypasses inputs over 2,048 code units. Sport, gender, tournament, session and opponent decisions remain fixture-specific; no match outcomes or guide objects enter this shared cache. `sports_conflict_evidence_test.dart` checks the same school pair across sports and genders in both fixture orders, plus guide corrections that rotate a channel between those events.
+
+Name normalization writes short ASCII labels directly into a bounded byte buffer. Non-ASCII input falls back with the entire original string, preserving Unicode lowercasing, accents, scripts and padding; inputs over 2,048 code units also retain the rune path. Check exact output equality at buffer boundaries and on mixed-language guide text in both benchmark orders. This changes computation only, not normalization rules or cache identity.
+
+### Supplemental evidence and replays
+
+Scoreboard hints preserve country and TV/streaming metadata. Optional NHL/MLB broadcast schedules share bounded day requests and a 30-minute disk cache. MLB radio, app-only and post-game listings are excluded; listings without market information require guide corroboration. Network failures do not block local matching.
+
+Replays and Highlights share one current-guide result. Current programme analysis, including misses, survives refreshes; departed slots are discarded and the working set is bounded. Large cold scans use one worker with 64-programme batches, then publish immutable partial results at most every 400ms. Clearly labelled programmes are processed first; ambiguous guide-copy evidence waits for the full scan.
+
+Idle preparation follows event matching. Programme boundaries, guide corrections and catalogue changes expire results; unchanged full-timeline loads do not. Keep tests for gaps, expiry, cancellation, worker/local equivalence, catalogue replacement and focus during progressive updates. `profileGuideBatchReads()` in the diagnostic tools compares SQLite batch sizes without changing the database.
+
+## Local settings
+
+Copy `.env.example` to `.env` and run `chmod 600 .env`. Use unquoted `KEY=value` entries; escape backslashes as `\\`. Keep keystores and private datasets outside the checkout.
+
+Gradle reads the four Android signing settings; environment variables take precedence. **Never pass the whole `.env` to `--dart-define-from-file`**: that could embed secrets in the app.
+
+The optional public build setting `PAIR_RELAY_BASE` selects a self-hosted phone-pairing relay. These values are visible in distributed binaries; playlist credentials belong in runtime settings. LAN phone pairing needs no relay.
+
+Sports scores, schedules and channel matching do not require private build credentials. The sports services use public endpoints and the user's playlist/guide. `PRIVATE_*` entries in `.env.example` are file paths for optional offline tests, not API keys; the normal app does not read them. Public feeds may still be unavailable or rate-limited.
+
+Keep device serials, addresses and private fixture paths in `.env`. Keep logs and device captures outside source. Reviewed screenshots using sample data belong in [docs/screenshots](screenshots/README.md).
+
+[Release preparation](release.md) · [Dependency inventory](dependencies/README.md) · [Development tools](../tools/README.md)
+
+## Android scope
+
+The app retains IPTV playlists, Live TV, Sports matching, Movies, Series, local history, embedded subtitles and multiview. Media-server/archive catalogues, detailed match summaries, account scrobbling, profile management, online subtitle add-ons, desktop players and the inactive APK updater/settings transfer have been removed. Phone-to-TV playlist entry remains available. Sports replays and highlights load when selected rather than warming in the background.
+
+Keep the existing stored viewer namespace even though profile management is gone: changing it would hide saved favourites, history and resume positions for upgraded installations. Do not delete legacy keys or alter catalogue schemas as part of UI cleanup. The Android Media3/FFmpeg decoder is still required for IPTV playback; it is independent of the removed media-server integration.
+
+
+### Category visibility and optional standings
+
+Category snapshots are immutable and shared until the owning catalogue changes. Library notifications invalidate Movies/Series snapshots without invalidating Live TV or restarting its matching. Group Management saves selections as they change and keeps Done visible; the remote Right key reaches Done from any category row. Movies and Series metadata loads only when their management tab is opened, without downloading titles.
+
+Visibility uses `hidden_groups_by_type` in the existing playlist/viewer namespace. Until a scoped edit, all types inherit the legacy hidden groups. The first edit stores all three scopes together so identically named Live TV, Movies and Series categories remain independent after restart. Serialized writes preserve rapid changes and failed writes retain the last saved state.
+
+Standings is an on-demand Sports tab inside the event pane; league management and sports favourites use bounded overlays. Team membership uses a set; saved IDs and ordering retain their existing format. Names are remembered from already-loaded games or explicitly opened tables. Add team remains above the favourites list. The standings service is created on demand, has no polling/startup hooks, limits concurrent requests to two and cached leagues to 16, and parses bounded responses off the UI isolate. Successful results expire after 30 minutes; failures use a short retry delay and preserve any saved table. Requests time out and abort after 12 seconds.
+
+Missing tables can try one explicitly labelled previous season, then offer an alphabetical team directory. International rugby tests offer teams directly. Never manufacture national NCAA standings from independent conferences, infer positions from alphabetical order, or present a previous season as current. Provider availability differs by league and season.
+
+The inline standings pane shares the existing preview and player key. Event polling, matching batches and score callbacks pause outside Events; completed service requests may still populate shared caches. Returning presents retained events before resuming through the existing cache and matching queue. Completed score snapshots within the 30-second poll interval can be reused; interrupted, failed or older loads still refresh. Hidden event/standings trees are removed rather than laid out offstage; a bounded `SportsStandingsBrowseState` retains league, filters and scroll position. Standings supplies its selectors/actions to the same toolbar layout as Events, Replays and Highlights. The header and body share one preview-width calculation. Events keeps its controls in the top toolbar. A compact time button selects the existing four modes; the calendar icon selects a day. Phones and narrow/enlarged TV layouts combine time/channel choices in a single Filters panel, keeping sport and league selectors wide. Time filtering stays local, and channel confidence rules are unchanged. TV traversal orders tab, filter and action groups before comparing unscrolled positions so clipped tabs remain reachable. Standings league selection is scoped to the selected sport, without redundant sport and sort controls; favourites still supports all-sport discovery. Use pane constraints for responsive controls and pass keyboard visibility from the outer Scaffold so portrait search can compact the preview without replacing it. Overlays pause event work explicitly because dialog routes do not trigger the page-route observer.
+
+Standings browsing uses sport, league and conference selectors with local search. Only confirming a different league loads data; cancelled selectors do not fetch. Keep per-league search/filter/scroll state bounded and preserve keyed row state when removing favourites. Small cached logos, portraits or flags come from the existing response, with initials when absent. The shared sports picker must retain search focus when an empty result becomes populated. Cover narrow phones, landscape keyboards, enlarged text and TV remote input in `sports_teams_screen_test.dart` and `sports_presentation_test.dart`.
+
+Sports channel picker order is presentation-only. Before a manual choice, enrichment may improve ranking. After a choice, reuse the viewed order and change the selected/playing badges; a newly searched channel is placed beside the original suggestion. The shared matcher retains only channel IDs for 24 recently viewed fixtures, at most 6,000 IDs total and 15 minutes of inactivity. Reconcile against current rows so removed/rejected channels and stale confidence cannot be resurrected. Catalogue/fixture changes start a new order. See `sports_picker_consistency_test.dart`.
+
+The Watch on channel browser filters the loaded candidate set locally. Suggested order stays separate from channel-name, country/region and playlist ordering. Country parsing is conservative: conflicting or absent channel/category labels remain unspecified. Saved picks do not count as event-specific or likely evidence. Metadata parsing and stable merge sorting yield in short slices, with generations cancelling obsolete work. Default browsing bypasses this work. Keep visible rows reconciled to current evidence during updates, restore row identity after filters/search, start at the top after an explicit sort change, and keep search input distinct from its pending results. Filter preferences are scoped to 24 events for the current Sports screen; they do not alter saved matches or issue guide/provider requests. `sports_channel_browser_test.dart` covers filtering, cancellation, session bounds and phone/TV controls.
+
+Standings headers and rows share explicit rank, crest, statistic and favourite-action widths. Do not infer trailing space from Material ListTile defaults: tap-target sizing can shift the row columns without shifting headings. Row focus decorates a stable child; alternating backgrounds and separators do not add scrolling listeners or rebuild statistics. Geometry tests cover rugby, racing and college records across TV, phone and enlarged text.
+
+Schedule only loads while its tab is opened. With no browsing selection, its first visit shows the current-day overview. Explicit browsing selections are shared with Standings; remembered choices take precedence without changing Events. One most recent window is retained for two minutes for immediate returns; an incomplete window retries. An unselected standalone pane makes no requests. One selected league uses shared score-service HTTP limits and off-isolate parsing. ESPN monthly boards are bounded to 12 cached snapshots with ten-minute freshness; regional providers reuse their daily/monthly/season keys. Exact local date boundaries filter and deduplicate fixtures, with adjacent provider dates included across timezone boundaries. Leaving cancels future queued window work; an in-flight response may complete into cache. Failures preserve available cached fixtures with an incomplete-data message and never modify Events error state. Schedule browsing never runs channel matching or starts playback.
+
+Optional regional providers (`NPB`, `KBO`, `ABL`, `B.League`) declare `enabledByDefault: false`; both default and legacy “all” preferences preserve the previous startup workload, while explicit selections remain enabled. Standings reads [NPB](https://npb.jp/bis/eng/2026/stats/), [KBO](https://eng.koreabaseball.com/Standings/TeamStandings.aspx), [ABL’s MLB feed](https://statsapi.mlb.com/api/v1/standings?leagueId=595&season=2025&standingsTypes=regularSeason&hydrate=team) and [B.League](https://www.bleague.jp/en/standings-stats/). NPB monthly fixtures, KBO and B.League daily fixtures, and ABL season fixtures share the score service cache and parser queue. Public responses are bounded to 2 MiB, with explicit provider timezones and stable club identifiers. Changed markup or unknown identities fail rather than guessing. ABL uses the labelled previous completed table when preseason has no current standings. No per-team logo/metadata fan-out is required.
+
+Sports dialogs use `showSportsDialog`, retaining guarded origin/close behavior
+and phone transitions while removing the 150 ms Material route transition on TV.
+Wide choice dialogs align with the content side. League pickers memoize sorted
+options, filter locally through labelled Sport/Order controls, and keep result
+rows lazy. League management search never changes the enabled set; toggles save
+in place and clearing a query retains those selections. Nested standings uses
+the same selectors, search and table controls as the inline pane.
+
+Sports filter and record popups share `SportsCompactDialog` and `SportsOptionButton`: bounded width/height, stationary title/actions, scrollable content, 34 px TV controls and 40 px compact-phone / 48 px regular touch targets (growing with text scaling). Channel filter edits remain drafts until Show channels; closing cancels, and Reset all only closes its current route. Schedule suppresses provider timezone strings beside local kickoff times, keeps exceptional statuses, and uses compact striped date-grouped rows.
+
+Compact Sports density applies to portrait phones and short landscape viewports. Shared control sizing, day tiles, search insets and table geometry retain text-scale floors. Team details show the identity once in the header and use only supplied records and the existing sport-specific standings profile for summary metrics. Detail links adapt to pane width and text size; no new requests or animations are introduced.
+
+`CompactChoiceList` retains lazy rows and stable focus identities. Its optional
+content builder defers schedule time formatting and row construction to mounted
+rows; keep that content outside focus repaint builders. Filtering and updated
+snapshots still replace the content, including score visibility and clock format.
+ Page/Channel keys move by the current viewport, Home/End jump directly, and opt-in TV footers expose the same actions for lists over 30 results. Right moves from a result to page controls; Up returns to the remembered result. Restored or manually scrolled offsets determine paging when the old focused row is no longer visible. Standings Left returns from a team row to search while favourite stars retain their own directional behavior. Navigation tests exercise 5,000 grouped rows, bounded focus nodes, rapid paging, filtering and restored offsets.
+
+Sports details reuse the instant Sports panel, preserving preview ownership and browsing state. Schedule fixtures, standings team rows and the channel picker information action open details explicitly; hidden scores require a reveal before requesting game details. One ESPN summary or team response supplies available comparisons, lineups and rosters. Numeric provider identities and game competitors must agree. Responses are capped at 2 MiB, parsed off the UI isolate, limited to two concurrent requests and cached in 24 bounded entries. No player, logo, linked-resource or background polling fan-out is added. Pregame comparisons are season data and are labelled accordingly. Regional feeds retain their known overview and optional exact-ID team fixtures without sending regional identifiers to ESPN. The team fixtures action explicitly loads the next 30 days through the existing schedule service; no team schedule is loaded while simply browsing standings. Detail rows remain lazy with shared header/cell widths, and full row values are available through a compact popup.
+
+Schedule calendar summaries retain only sport counts for at most 62 dates. All-sports Day remains a single requested date; opening Week/Month does not prefetch dates. Load week visits at most seven dates sequentially through the existing two-worker day loader, reuses fresh summaries and cancels queued work on navigation or disposal. Month shows known counts, with unloaded/partial dates distinguished from confirmed empty dates. Single-league calendars use the existing bounded range loader with real month boundaries. Day ordering and sport grouping are local and retain the same fixture identities and score-hiding behavior.
+
+
+Sports favourites resolve legacy ID-only entries one league at a time while the
+favourites pane is open, preserving saved order and the last browsed league.
+If a current table lacks a saved club, one cached ESPN directory request can
+recover its identity without assigning a rank. Directory requests share the
+standings service limits and total cache bound; explicit retry bypasses the
+short failure cooldown.
+Sports entry points open favourites in the content-side overlay, preserving the
+preview. Its list uses explicit detail activation, so scrolling does not start
+team-detail requests. Standalone wide layouts still support a detail column;
+there, remote focus waits 250 ms and keeps only the latest selection behind one
+active request. Responses reuse the bounded detail cache,
+and extra fixtures remain an explicit action. Team records appear directly in
+the summary. No favourite metadata or details are requested at app startup.
+
+Playlist refresh confirmation starts with Cancel focused and has no TV route
+animation; phone transitions keep their existing behavior. The launching tile
+stays focusable until confirmation; held activation is guarded. A per-playlist
+refresh restricts the existing catalogue sync to that enabled playlist, while
+M3U refresh retains its normal single-list load. The progress route removes only
+itself on completion or error.
+
+Favourite selection and detail completion use local listenables: neither should
+rebuild the search controls or refilter the saved list. Rows retain their text,
+logos and actions across focus/selection paints, with distinct focus and selected
+indicators. Keep the list lazy with a short off-screen cache; enlarged text may
+increase row height. Tests cover rapid remote scrolling while a request is pending,
+retained scroll position, removal/undo and closing before completion.
+
+Refresh actions own their focus nodes. After a blocking catalogue update completes
+or fails, restore the originating action only while its route is still current;
+non-blocking M3U refresh must not steal focus from continued browsing.
+
+Sports overlays use the hub's preview-width calculation to centre within the
+landscape content column. They use transparent modal barriers: preview brightness
+is preserved while input remains in the active popup. Portrait and constrained
+viewports stay centred across the available width. Keep the wrapper tree stable
+across rotation so search and selection survive. Keyboard insets reduce height
+without changing portrait alignment.
+
+The shared Sports toolbar retains its element and focus tree across tab changes;
+its horizontal scroll position persists. Payloads still unmount when hidden.
+TV Schedule uses a small lookahead beyond the viewport. Its browse state
+caches one text/date index and one filtered projection, invalidated by fixture
+identity, timezone, scope, search, ordering and favourite revision. League lookup
+is direct, with no catalogue scan for the all-sports overview. Keep touch list
+prefetching unchanged and verify remote paging at virtual boundaries.
+Grouped choice lists supply their indexed total height to the sliver delegate;
+an estimated average can otherwise clamp a last-result jump before its target.
+
+Schedule owns a local horizontal control path: the header enters Day, Down enters
+dates/results, and Up from dates returns to the last attached local control.
+Standings exits its first row through Search, then League, without replaying the
+directional history of the left tab strip. Test these paths with real key events.
+League management filters its cached catalogue by sport, saved state and text.
+Bulk edits apply only to the visible IDs. Clearing all league stars is an editing
+draft: Restore selection or choose replacements before saving. Closing an empty
+draft retains the last saved set. Writes are guarded, failures restore the saved
+selection, and Close waits for save finalisation. Long lists share bounded row focus
+and indexed page shortcuts.
+
+The saved enabled-league preferences represent favourite leagues; preserve their
+keys and IDs. The legacy single favourite is the optional Opening league.
+Events, Schedule and Standings share a labelled Show dropdown with explicit All,
+Favourites, Favourite leagues and Favourite teams & athletes choices. The selected
+row is checked; opening or cancelling does not change results or start requests.
+One typed scope travels across tabs without modifying saved favourites. Sport, league, date
+and channel filters still apply. Management remains separate from filtering.
+Favourites includes every game/row in a saved league plus individually followed
+teams or athletes in other leagues; combine these with OR, not intersection.
+The narrower choices include only league membership or followed participants.
+Build their feed catalogue from the corresponding memberships; do not load the
+whole catalogue for a team-only filter. Cache projections and calendar counts by
+the full enum value, not just a boolean, so narrower scopes cannot reuse a stale
+combined result. The default feed union contains saved and followed-team leagues.
+Standings applies the same rule locally to its current table. Calendar counts use
+the displayed scope and invalidate on favourite membership changes.
+The scope menu shows saved counts without requests; missing favourites are
+explained separately from unavailable feeds. A standings failure retains Retry
+under every filter. Scope choices and cancellation preserve remote focus.
+
+Schedule retains one ordered index per fixture snapshot/order. Scope, date and
+search changes filter that index without repeated sorting. Already ordered feed
+indices are reused directly; unsorted feeds and grouping retain a bounded sorted
+copy. Time ties use stable
+league/event identities. Calendar filtering recomputes counts from the current
+loaded window without extending its source timestamp. Narrowing a covered
+catalogue can reuse that snapshot; widening to unknown leagues must not publish
+complete totals or fetch a month automatically. Cancel pending week queues and
+ignore their late results when scope or membership changes.
+
+All makes the full local catalogue available and loads the requested view only.
+Events uses the same scoring cache, date coverage, parser and ranking with a
+cancellable six-worker queue. Leaving or narrowing its scope stops scheduling new
+requests; shared in-flight results can still populate the cache. Status/progress
+updates stop when the view is inactive. Schedule keeps its existing two-worker
+queue, explicit day/calendar loading and bounded overview cache. Returning to
+Favourites reuses cached data. Hidden tabs never start additional work merely
+because a browsing filter changed. Keep feed generations separate from the
+saved preference set and reject responses from previous scopes.
+
+Membership uses league-scoped IDs and a weak per-game cache invalidated after
+saved membership/identity changes. Supplied field-sport entry lists include
+athletes outside the displayed leaders. Racing additionally requires the saved
+name to agree with the supplied athlete name, since driver and constructor IDs
+can overlap. Missing participant data never implies an athlete is entered.
+
+Schedule completed-game visibility is local to its retained browse state and defaults
+to hidden. Only provider-confirmed finals are removed; postponed, cancelled, delayed
+and suspended fixtures remain visible. Chronological lists include a non-focusable
+current-time marker, with one mounted-view minute timer and no polling. Showing
+completed fixtures reveals the first live fixture or the next start around now.
+Grouped lists retain their sport grouping and have no time marker. Multi-day league
+lists highlight the visible/focused row's date without changing the actual date
+filter or loading another window; all-sports Day still loads one date on request.
+Pending fixture updates appear in the top control row and preserve the first visible
+fixture identity when applied. The shared indexed list includes marker heights in
+its scroll extent and reports active-row changes without rebuilding the fixture list.
+
+Events retains one ranked base projection and one favourites subset. Changes to the
+feed, match evidence, filter scope, time bucket or favourites revision invalidate the
+base; toggling favourites alone does not sort again. Card-key index maps belong to
+the same immutable section snapshot. Keep the existing matching and active-browse
+order safeguards; presentation caches must never change channel confidence.
+
+`SportsMatchSession` retains hidden event evidence for filter changes, bounded to
+2,000 events including the active input count and five minutes from the original
+check. Restoring revalidates fixture identity, catalogue, guide version, manual
+picks, rejections and programme/listing boundaries. Partial results remain partial;
+filtering never extends their age. Memory pressure drops hidden results. The two
+revisit snapshots are keyed by viewer/day and evidence inputs, not a separate copy
+for every sport/league combination. The matching worker still resolves shared-feed
+conflicts for the current cohort using its existing per-event evidence cache.
+
+Match overviews display already-supplied scoreboard leaders and live situation data,
+including possession and last play. These add no service calls and remain behind
+score-reveal protection. Provider coverage varies; omitted data stays omitted.
+
+Long Schedule date strips use indexed horizontal layout and bounded label metrics.
+Arrow keys reveal unmounted dates before focusing them; selection changes scroll the
+date into view without taking focus from the fixtures. Keep enlarged text, both list
+ends and rapid reversals covered in `sports_schedule_days_test.dart`.
+TV event and replay shelves limit overscan on both axes. Standings and Sports pickers
+also retain a short lookahead. Do not apply the TV limits to touch scrolling. Test
+several sports at once: a single populated shelf cannot expose the multiplied cost
+of vertical and horizontal prefetch. Preserve exact geometry and deferred focus when
+crossing an unbuilt row or card.
+
+
+Replay channel indexing retains one unfinished cursor across cancelled tab visits.
+The cursor is reusable only for the same immutable channel-list instance and playlist
+revision. A replacement snapshot or revision discards it; only a completed index is
+published. Advance the cursor before yielding so cancellation cannot duplicate a
+channel or omit one on resume. Programme classification, guide freshness and partial
+programme-result guards remain independent of this channel-only index. The pipeline
+regression tests count catalogue reads across interruptions and compare completed
+results with an uninterrupted scan, including replacement/revision invalidation.
+
+When profiling navigation, inspection code must not register inherited-widget
+dependencies on the inspected elements. In particular, calling `ModalRoute.of` or
+`Focus.of` across the tree can itself cause route/focus changes to rebuild the tree.
+Separate native remote events, direct callback tests, UI-frame submission and network
+completion. Reselection/no-op actions must not be reported as slow transitions just
+because they do not request another frame.
+
+Sports initial focus is a fallback for an unfocused route, not a score-loading
+completion action. Before applying it, check that the route is current and that
+no real control inside Sports already owns focus. A delayed first score batch
+must preserve an already selected tab and an open result-scope menu.
+
+Sports Events keeps labelled result filters together and calendar/overflow in one
+trailing action group. TV controls retain fixed heights and ordinary focus traversal;
+there are no new data requests, animations or intrinsic layout passes. Favourite
+league management uses a compact search-first TV layout while keeping touch targets
+and keyboard behaviour on phones. Very narrow phones place Events actions below
+the sport/league selectors so their labels remain readable.
+
+Events uses `gamesForDayWhileActive` for every result scope, including saved
+favourite leagues. Do not use the eager `gamesForDay` path for a mounted browse
+view: a large favourites set can otherwise enqueue hundreds of downloads after
+the user leaves. The generation/activity predicate stops scheduling new requests
+while preserving shared in-flight responses and cache freshness. Returning creates
+a new generation, reuses completed feeds and loads the remaining coverage.
+
+
+Sports matching coverage is recorded in [sports-matching-coverage.md](sports-matching-coverage.md).
+The catalogue inventory includes both default and optional leagues. Public directory
+captures are test evidence only: never download a global team catalogue during app
+startup or automatically turn every API nickname into a matching alias. Directories
+contain duplicate teams, shared cities, obsolete entries and placeholder opponents.
+
+`_TeamAliasEvidence` must always cache the full immutable fixture vocabulary, even
+when its first candidate only used primary names. Normalize competition labels with
+the same language vocabulary as guide text. Both sides of an explicit fixture must
+supply independent opponent evidence, and a longer known club/campus identity must
+not confirm its shorter neighbour. Keep full-name positives alongside rejection tests.
+
+`tools/tv_sports_alias_audit.dart` is an opt-in diagnostic entry point. It captures
+anonymised channel IDs and guide/event metadata, never stream URLs or credentials.
+Its repeated worker-isolate runs reuse a frozen snapshot and a fixed clock. The
+in-memory guide benchmark excludes SQLite/network latency and is not an end-to-end
+startup benchmark. Separate quiet matching runs from remote navigation under load;
+record both, rather than comparing an idle baseline with a busy updated run. Remove
+the diagnostic build after testing. None of these capture tools run in normal builds.
+
+
+Complete team names containing dotted initials can also supply a compact spelling
+(`D.C. United` / `DC United`, `Manta F.C.` / `Manta FC`). Keep another identifying
+word; never derive a bare initialism from a name such as `A.B.C.`. Soccer United/Utd
+and Saint/St variants retain the remaining name and use the existing competition +
+explicit-opponent checks. Do not abbreviate a leading United in country names or
+expand St blindly to Saint/State/Stade. These variants are prepared once per immutable
+fixture, not by rewriting channel/guide rows or requesting extra team directories.
+
+The [Crvena Zvezda club site](https://www.crvenazvezdafk.com/en) uses both Crvena
+Zvezda and Red Star Belgrade. The exact soccer identity group contains those full
+names only, never the shared Red Star label or the French Red Star FC 93 identity.
+This changes fixture vocabulary, not guide/channel text normalisation; the matching
+semantics key changes while the existing channel-text cache remains valid.
+
+Verified UC campus identities use the same college-only, exact school lookup:
+UC Davis, Irvine, Riverside, San Diego, Santa Barbara and UCLA retain their campus
+when expanded to California. Never expand bare UC, Cal or California globally.
+Campus suffix checks also protect the California Golden Bears from another campus's
+fixture; both opponents, sport/gender, schedule and replay rules still apply.
+Names are verified against the [UC campus directory](https://admission.universityofcalifornia.edu/campuses-majors/),
+[UC Irvine naming guide](https://communications.uci.edu/editorial/nomenclature/index.php),
+[UC Davis](https://admission.universityofcalifornia.edu/campuses-majors/davis/) and
+[UC San Diego naming guide](https://univcomms.ucsd.edu/resources/trademarks-licensing/index.html).
+The captured-directory diagnostic reports expanded campus spellings separately from
+observed guide titles. These aliases add no API calls or directory loading at runtime.
+
+Guide session discovery can opt into tennis/golf coverage with explicit sport and
+round/tournament evidence. It still requires live programme evidence, a current or
+near-future slot, and all replay, studio and placeholder exclusions. These are
+labelled guide broadcasts, not inferred player fixtures: do not alter tennis
+opponent scoring or overwrite a completed scoreboard state. Replays and other
+shared-vocabulary callers retain the default classification scope. A localised
+skating session title may use an explicit skating genre in its synopsis.
+
+Reject empty numbered PPV advertisements before sport classification; this is the
+same unconditional exclusion applied earlier, with no relaxed identity or freshness
+rules. Corrected descriptions must become eligible after a guide revision. Both
+rejection order and new broadcasts preserve progressive publication, warm discovery
+reuse and exact programme-to-channel bindings without extra SQL or provider calls.
+The optional snapshot audit verifies discovery, exact bindings and unchanged fixture
+matches with anonymised captures stored outside the repository.
+
+Events places fixture cards before guide-only coverage within each displayed row.
+Late arrivals retain order within the fixture and coverage groups; the existing
+scroll compensation and keyed focus nodes keep the browsed card visible. Ranking
+precomputes guide status and original indices instead of looking them up inside
+the comparator. Stable partitioning runs only when section data changes, with no
+playlist scans or matching work. Coverage titles use two bounded lines in the same
+fixed card height. Redundant tennis/golf prefixes and decorative live suffixes are
+removed only from card display text; full titles remain in semantics, hover details,
+preview and matching evidence. Hover tooltips do not consume the card's hold gesture.
+
+Guide coalescing normalises accented motorsport venues and explicit numbered
+practice aliases (FP1 / First Practice / Practice One), retaining session and
+overlap boundaries. ONE Friday Fights coverage can omit a matching current-season
+`YYYY: OFF N` wrapper and its exact UTC airing-date stamp for identity only.
+Different dates, card numbers, phases, opponents and uncertain descriptions retain
+their existing guards. Anchored `LIVE EVENT N - [time]` provider slot prefixes are
+removed from grouping/display labels, never from stored EPG programmes. Keep every
+exact channel slot when combining cards; this work stays in the existing discovery
+worker, without additional guide reads or network requests.
+
+Coverage identities also omit strictly recognised trailing XMLTV genre labels and
+an exact UTC airing-day stamp; historical dates, years and unrecognised qualifiers
+remain evidence. A bounded first synopsis line with an explicit stage or number
+can supply the same subtitle another feed puts in its title. Retain all words and
+prefer the informative original title when such variants combine. Named golf
+tournaments require an explicit round; featured-group/hole feeds retain their
+synopsis. Test-cricket grouping reuses validated national opponents and additionally
+requires one unambiguous Test number and day, preserving innings/session boundaries.
+Neither grouping rule modifies the original programmes or changes channel scoring.
+
+Tauihi and explicitly named EuroLeague Women / EuroCup Women broadcasts use distinct
+`Channel guide` competition IDs. They participate in existing guide-league visibility
+preferences and never enqueue scoreboard or schedule requests. Competition names in
+the title take precedence over unrelated leagues in the synopsis; only an explicit
+women's competition label selects the women's league. Synopsis-only basketball
+classification applies the same conflicting-sport checks as title classification.
+Official identities: [Tauihi Basketball Aotearoa](https://tauihi.basketball/) and
+[FIBA club competitions](https://about.fiba.basketball/en/regions/europe/competitions/clubs).
+
+International Test cricket guide coverage requires an explicit Test format, cricket
+context and two named national opponents. A synopsis-only opponent pair must lead
+the description; conflicting or unknown pairings reject the listing. Recognition
+runs only on cricket candidates, uses compiled expressions and caps the synopsis
+at 640 characters. Existing live, expiry, replay and placeholder checks still apply.
+The `guide.test-cricket` competition uses exact guide bindings and the existing
+visibility preferences; it does not request scores or schedules. Generic cricket
+and rugby discovery remain excluded. The national-name vocabulary follows the
+[ICC full members](https://www.icc-cricket.com/about/members/full-members), whose
+representative teams qualify for official Test matches; this is a conservative
+recognition vocabulary, not a source of fixture or live-state evidence.
+
+Regional football names use the contextual club-feed alias lookup, once per fixture
+name. Bayern Munich/München/Muenchen/Monachium, Internazionale/Inter Milan and
+FC Cologne/1. FC Köln are recognised only with a named competition and explicit
+opponents. Do not replace city words globally or add bare Bayern, Inter, Milan or
+Cologne as inferred identities. Extra squad words, conflicting sports, youth/women
+qualifiers and replays retain the existing evidence checks. Matching cache semantics
+version 16 prevents reuse of decisions made before this vocabulary was available.
+
+Sources: [FC Bayern's official site](https://fcbayern.com/en),
+[Bayern's Polish kit catalogue](https://www.adidas.pl/fc_bayern_munchen),
+[Inter's official club information](https://www.inter.it/en/news/category/club),
+and [the DFB's Cologne club record](https://datencenter.dfb.de/en/clubs/1-fc-cologne-e-v).
+
+Sambo guide discovery requires a named competition in the title and explicit live
+evidence, retaining existing expiry, replay and placeholder checks. A synopsis-only
+mention is insufficient; training, previews, documentary copy and conflicting sports
+are rejected. `guide.sambo` is guide-only, with the existing visibility preferences,
+martial-arts icon and exact programme bindings. It requests no scores or schedules.
+The [FIAS competition calendar](https://sambo.sport/en/events/chempionat-mira-po-sambo-2026/)
+verifies the sport/competition identity, not the accuracy of individual guide metadata.
+Do not infer athlete fixtures, scores or current venues from those broadcasts.
+
+Northwestern State's `N'Western St`/`NWestern St` guide forms use the college-only
+exact school alias table. The State qualifier is mandatory; never add a bare
+Northwestern or shared NSU abbreviation. Both opponents and existing sport/division,
+replay and freshness checks remain required. The captured matchup is corroborated
+by [Northwestern State's game report](https://nsudemons.com/news/2026/11/5/demon-basketball-offensive-glass-costly-for-demons-in-loss-at-mississippi-state.aspx).
+Matching semantics version 17 supersedes earlier cached decisions for this vocabulary.
+
+
+Guide focus checks the live time viewport before revealing a programme retained
+outside it for keyboard traversal. Cached block widgets must not retain an old
+visibility flag. Left/Right continues to position the timeline explicitly; a
+vertical move across a guide gap must keep the existing time column.
+
+Per-source EPG diagnostics are session-only and bounded to 128 entries. Their
+separate notifier must not change matching evidence revisions. The settings UI
+reads profile metadata, never builds EPG channel-ID sets during widget rendering.
+Cached feeds are distinct from zero-row imports; failures expose only a safe HTTP
+status, never exception text or credential-bearing URLs.
+
+Custom XMLTV feeds may extend their ID filter using unique full display names.
+Case and whitespace are normalized, while punctuation, country/language and
+quality qualifiers remain significant. Reject duplicate names in either a
+playlist or the feed directory; explicit IDs and manual/working assignments keep
+priority. The worker builds name indexes once per channel directory entry and
+publishes assignments only after successful parsing. Import only requested names,
+retain namespaces and existing stream backpressure, and yield during catalogue
+preparation. Provider/built-in feed imports retain their original ID filters.
+
+`tools/tv_guide_import_profile.dart` exercises the parser, transport and refresh
+pipeline on-device against loopback synthetic XMLTV and an isolated in-memory
+SQLite database. It alternates ID and name filters over identical retained row
+counts, checks ambiguity and HTTP-failure retention, and can run while the normal
+guide is navigated. It never changes provider settings, guide data or playlists;
+replace the diagnostic APK with the normal entry point after testing.
+
+### Live matching audits
+
+`tools/tv_sports_alias_audit.dart` now awaits the live catalogue and captures
+`gamesForDayWhileActive`, the same local-day/carryover window used by Events.
+`replayGames` queries a single scoreboard date and must not be used to measure
+current coverage across US/Australian date boundaries. Snapshot times are UTC;
+status, source, active-play state and structured scoreboard broadcast metadata
+round-trip with the fixture. Old captures remain readable but lack those fields.
+The snapshot contains no subscription stream URLs or request headers. Keep it
+outside the checkout and use the optional private snapshot test to replay it.
+
+Guide discovery's fast signal gate scans the same ASCII word boundaries without
+creating regex match objects per word; native-script signals still use the existing
+vocabulary. It does not decide live status, competition identity or match confidence.
+OHL discovery requires a named competition and explicit live evidence, reuses exact
+programme bindings and makes no additional provider or scoreboard requests.
+
+Golf replay exemptions are scoped to the feed's complete tournament title. Only
+“Classic” inside that identity is exempted; replay/highlight labels, earlier named
+years and conflicting rounds remain excluded. Golf round checks recognise `Round 3`,
+`Third Round` and `Day 3`. Stored matching decisions use semantics version 18.
+
+### Guide broadcast grouping
+
+Guide coalescing retains original `EpgProgram` objects; it changes card identity,
+not programme evidence or available channels. The event-card shortlist remains
+limited, while `alternativesFor` exposes every current exact binding from the merged
+card. Tests cover 18 retained choices, including an explicit saved selection, in
+both the direct and worker matchers without SQL/network reads.
+
+Combat titles normalise ONE Fight Night season/OFN wrappers, redundant promotion
+prefixes and exact repeated headings. Generic coverage may join a numbered card
+only for an explicitly named series, live/soon state, identical start/end times and
+a window of at least three hours. There must be exactly one compatible numbered
+identity. Different numbered cards or explicit bouts block that inference; phases,
+studio shows and detailed generic listings are not treated as interchangeable.
+The numbered title remains the representative and every source slot is retained.
+
+Motorsport identities understand qualifying/shootout abbreviations and multi-digit
+race numbers. Missing race-number/support-day details resolve only to one overlapping
+explicit identity. Generic session titles never inherit support coverage. Explicit
+Super2/Super3 and other support-series labels stay separate from the parent series;
+stale support references in descriptions cannot override a clear programme title.
+All grouping remains in the existing worker, with weak identity caches and indexed
+candidate buckets rather than cross-playlist scans or additional requests.
+
+
+### Sports loading status
+
+Events and channel checks have separate, aligned status rows. Percentages describe
+the current stage, not overall completion or match confidence. The details action
+shows live feed counts, matching counts and errors in separate sections. “Refresh
+both” retains the existing event-feed refresh and cached-guide channel recheck; it
+does not import playlists or refresh EPG sources. Refresh remains focusable during
+work without accepting duplicate requests.
+
+Status listeners rebuild only their bounded region, with no timers or animated
+progress. Reserve row height by width/text scale so changing stages does not move
+the event list. Portrait Events keeps two compact progress lines and an icon refresh beside the
+preview title in the existing summary row. Full progress and feed errors remain
+accessible through the live details dialog; larger text preserves the row height. The
+video keeps its dimensions across Sports tabs. TV remote navigation
+connects the details, feed-error and refresh controls to the toolbar and events.
+The two task rows and refresh share one aligned footer block. The details dialog
+receives a small immutable view only while open, using existing progress signals
+and widget updates for final counts/errors. A microtask coalesces updates and
+avoids publishing during a parent build; equal views are ignored. No polling,
+network work or event-list rebuilds are introduced. Its scroll/focus container
+and refresh explanation remain mounted while the live counters update.
+
+Validation covers real progress handoffs, partial failures, duplicate refresh
+suppression, fixed layout during stage changes, and remote scrolling in a short
+details dialog. Live-detail tests cover burst coalescing without parent rebuilds,
+completion/error updates, replaced progress sources, and closing/disposal while
+updates are pending. Responsive checks include 320/390-pixel portrait, 844-pixel
+landscape and TV layouts, plus 1.6× text. A targeted 28-key ARM32 TV run recorded
+16.6 ms median / 78.5 ms maximum input-to-frame time, with no Flutter errors or
+playback. This is a small control-navigation sample, not a whole-app latency or
+cold-start speed comparison.

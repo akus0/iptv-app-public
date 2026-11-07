@@ -1,0 +1,180 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+UID:2026-02-13-19-30-NASCAR-Craftsman-Truck-Series-Fresh-From-Florida-250@r
+ acetvguide.com
+DTSTAMP:20261023T040706Z
+SEQUENCE:1792728426
+DTSTART:20260214T003000Z
+DTEND:20260214T033000Z
+SUMMARY:NASCAR Craftsman Truck Series - Fresh From Florida 250
+LOCATION:Daytona International Speedway · Daytona Beach\, Florida
+DESCRIPTION:TV: FS1\nHow to watch: https://www.racetvguide.com/how-to-watch
+ /nascar-trucks/\nCalendar and TV guide: https://www.racetvguide.com/calend
+ ars/nascar-trucks/
+URL:https://www.racetvguide.com/how-to-watch/nascar-trucks/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-02-14-17-00-NASCAR-O-Reilly-Auto-Parts-Series-United-Rentals-300@r
+ acetvguide.com
+DTSTAMP:20261023T040706Z
+SEQUENCE:1792728426
+DTSTART:20260214T220000Z
+DTEND:20260215T010000Z
+SUMMARY:NASCAR O'Reilly Auto Parts Series - United Rentals 300
+LOCATION:Daytona International Speedway · Daytona Beach\, Florida
+DESCRIPTION:TV: The CW\nHow to watch: https://www.racetvguide.com/how-to-wa
+ tch/nascar-xfinity/\nCalendar and TV guide: https://www.racetvguide.com/ca
+ lendars/nascar-xfinity/
+URL:https://www.racetvguide.com/how-to-watch/nascar-xfinity/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-04-10-03-00-GT-World-Challenge-Europe-Bronze-Test@racetvguide.com
+DTSTAMP:20261023T040706Z
+SEQUENCE:1792728426
+DTSTART:20260410T070000Z
+DTEND:20260410T083000Z
+SUMMARY:GT World Challenge Europe - Bronze Test
+LOCATION:Circuit Paul Ricard · Le Castellet\, France
+DESCRIPTION:TV: GT World YouTube / SRO RaceControl\nHow to watch: https://w
+ ww.racetvguide.com/how-to-watch/gtwc-europe/\nCalendar and TV guide: https
+ ://www.racetvguide.com/calendars/gtwc-europe/
+URL:https://www.racetvguide.com/how-to-watch/gtwc-europe/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-11-14-30-IMSA-WeatherTech-SportsCar-Championship-2026-Season-Re
+ view-Special@racetvguide.com
+DTSTAMP:20261023T040706Z
+SEQUENCE:1792728426
+DTSTART:20261011T183000Z
+DTEND:20261011T193000Z
+SUMMARY:IMSA WeatherTech SportsCar Championship - 2026 Season Review Specia
+ l
+LOCATION:USA
+DESCRIPTION:TV: NBC\nStream: Peacock\nHow to watch: https://www.racetvguide
+ .com/how-to-watch/imsa/\nCalendar and TV guide: https://www.racetvguide.co
+ m/calendars/imsa/
+URL:https://www.racetvguide.com/how-to-watch/imsa/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-16-04-35-WorldSBK-Free-Practice-1@racetvguide.com
+DTSTAMP:20261023T040706Z
+SEQUENCE:1792728426
+DTSTART:20261016T083500Z
+DTEND:20261016T100500Z
+SUMMARY:WorldSBK - Free Practice 1
+LOCATION:Circuito de Jerez - Angel Nieto · Jerez de la Frontera\, Spain
+DESCRIPTION:Stream: WorldSBK VideoPass\nHow to watch: https://www.racetvgui
+ de.com/how-to-watch/worldsbk/\nCalendar and TV guide: https://www.racetvgu
+ ide.com/calendars/worldsbk/
+URL:https://www.racetvguide.com/how-to-watch/worldsbk/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-22-18-00-Moto3-Practice@racetvguide.com
+DTSTAMP:20261023T040706Z
+SEQUENCE:1792728426
+DTSTART:20261022T220000Z
+DTEND:20261022T233000Z
+SUMMARY:Moto3 - Practice
+LOCATION:Phillip Island · Australia
+DESCRIPTION:TV: FS1 / FOX One\nHow to watch: https://www.racetvguide.com/ho
+ w-to-watch/moto3/\nCalendar and TV guide: https://www.racetvguide.com/cale
+ ndars/moto3/
+URL:https://www.racetvguide.com/how-to-watch/moto3/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-22-18-50-Moto2-Practice@racetvguide.com
+DTSTAMP:20261023T040706Z
+SEQUENCE:1792728426
+DTSTART:20261022T225000Z
+DTEND:20261023T002000Z
+SUMMARY:Moto2 - Practice
+LOCATION:Phillip Island · Australia
+DESCRIPTION:TV: FS1 / FOX One\nHow to watch: https://www.racetvguide.com/ho
+ w-to-watch/moto2/\nCalendar and TV guide: https://www.racetvguide.com/cale
+ ndars/moto2/
+URL:https://www.racetvguide.com/how-to-watch/moto2/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-22-19-45-MotoGP-Practice@racetvguide.com
+DTSTAMP:20261023T040706Z
+SEQUENCE:1792728426
+DTSTART:20261022T234500Z
+DTEND:20261023T011500Z
+SUMMARY:MotoGP - Practice
+LOCATION:Phillip Island · Australia
+DESCRIPTION:TV: FS1 / FOX One\nHow to watch: https://www.racetvguide.com/ho
+ w-to-watch/motogp/\nCalendar and TV guide: https://www.racetvguide.com/cal
+ endars/motogp/
+URL:https://www.racetvguide.com/how-to-watch/motogp/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-22-21-45-Repco-Supercars-Championship-Practice-1@racetvguide.co
+ m
+DTSTAMP:20261023T040706Z
+SEQUENCE:1792728426
+DTSTART:20261023T014500Z
+DTEND:20261023T031500Z
+SUMMARY:Repco Supercars Championship - Practice 1
+LOCATION:Surfers Paradise Street Circuit · Surfers Paradise\, Queensland
+DESCRIPTION:TV: RACER Network\nStream: RACER+\nHow to watch: https://www.ra
+ cetvguide.com/how-to-watch/supercars/\nCalendar and TV guide: https://www.
+ racetvguide.com/calendars/supercars/
+URL:https://www.racetvguide.com/how-to-watch/supercars/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-22-23-50-Repco-Supercars-Championship-Practice-2@racetvguide.co
+ m
+DTSTAMP:20261023T040706Z
+SEQUENCE:1792728426
+DTSTART:20261023T035000Z
+DTEND:20261023T052000Z
+SUMMARY:Repco Supercars Championship - Practice 2
+LOCATION:Surfers Paradise Street Circuit · Surfers Paradise\, Queensland
+DESCRIPTION:TV: RACER Network\nStream: RACER+\nHow to watch: https://www.ra
+ cetvguide.com/how-to-watch/supercars/\nCalendar and TV guide: https://www.
+ racetvguide.com/calendars/supercars/
+URL:https://www.racetvguide.com/how-to-watch/supercars/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-23-02-05-Repco-Supercars-Championship-Qualifying-Race-31-@racet
+ vguide.com
+DTSTAMP:20261023T040706Z
+SEQUENCE:1792728426
+DTSTART:20261023T060500Z
+DTEND:20261023T070500Z
+SUMMARY:Repco Supercars Championship - Qualifying (Race 31)
+LOCATION:Surfers Paradise Street Circuit · Surfers Paradise\, Queensland
+DESCRIPTION:TV: RACER Network\nStream: RACER+\nHow to watch: https://www.ra
+ cetvguide.com/how-to-watch/supercars/\nCalendar and TV guide: https://www.
+ racetvguide.com/calendars/supercars/
+URL:https://www.racetvguide.com/how-to-watch/supercars/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-06-04-30-FIA-World-Endurance-Championship-Free-Practice-1@racet
+ vguide.com
+DTSTAMP:20261023T040706Z
+SEQUENCE:1792728426
+DTSTART:20261106T093000Z
+DTEND:20261106T110000Z
+SUMMARY:FIA World Endurance Championship - Free Practice 1
+LOCATION:Monza Circuit · Monza\, Italy
+DESCRIPTION:Stream: HBO Max\nHow to watch: https://www.racetvguide.com/how-
+ to-watch/wec/\nCalendar and TV guide: https://www.racetvguide.com/calendar
+ s/wec/
+URL:https://www.racetvguide.com/how-to-watch/wec/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-18-allday-Formula-E-Race-1@racetvguide.com
+DTSTAMP:20261023T040706Z
+SEQUENCE:1792728426
+DTSTART;VALUE=DATE:20261218
+DTEND;VALUE=DATE:20261219
+SUMMARY:Formula E - Race 1
+LOCATION:Jeddah Corniche Circuit · Jeddah\, Saudi Arabia
+DESCRIPTION:Stream: ESPN Unlimited\nHow to watch: https://www.racetvguide.c
+ om/how-to-watch/formula-e/\nCalendar and TV guide: https://www.racetvguide
+ .com/calendars/formula-e/
+URL:https://www.racetvguide.com/how-to-watch/formula-e/
+END:VEVENT
+END:VCALENDAR
